@@ -1,0 +1,10 @@
+single noenergy nosymm
+cell
+  4.987 4.987 5.652  90.000000  90.000000 120.0
+fractional
+Ge   core  0.4513 0  0
+O    core  0.3969 0.3021 0.0909
+space
+154
+supercell 3 3 3
+dump example2.grs
