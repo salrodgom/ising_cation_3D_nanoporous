@@ -1,4 +1,4 @@
-LINKFLAGS_FOR = -pedantic -O2 -march=native
+LINKFLAGS_FOR = -pedantic -O1 -march=native -Wall
 COMP_FOR = gfortran
 install:
 	${COMP_FOR} ${LINKFLAGS_FOR} farthrest_nodes_subtitutions.f90 -c

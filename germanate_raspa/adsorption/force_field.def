@@ -1,7 +1,7 @@
 # rules to overwrite
 0
 # number of defined interactions
-25
+40
 # type      type2       interaction       
 shOgg       shOgg       buckingham         264165198.9824217 6.71140939597 126919.1005332763
 shOgg       shOss       buckingham         264165198.9824217 6.71140939597 126919.1005332763
@@ -28,5 +28,20 @@ Ge          shOss       buckingham          17376597.4033649 3.07081923315 19505
 Ge          shOgs       buckingham          17376597.4033649 3.07081923315 195055.6536395508
 Ge          shF         buckingham          7908162.84248480 3.125              0.0
 shF         shF         buckingham          6271052.63465450 3.80966893976      0.0
+O	    N_          lennard-jones       98.2639	3.164
+O	    C_          lennard-jones       47.4863	3.329
+O	    Cring_      lennard-jones       92.5053	3.216
+O	    F_          lennard-jones	    47.1079	3.1007 
+O	    H_          lennard-jones       46.8735	2.647
+Si          N_          lennard-jones       41.1677	3.767
+Si          C_          lennard-jones       19.8944	3.963
+Si          Cring_      lennard-jones       38.7551	3.829
+Si          F_          lennard-jones       19.7356	3.8907
+Si          H_          lennard-jones       19.6377	3.151
+Ge          N_          lennard-jones       77.5599	3.7759
+Ge          C_          lennard-jones       37.4718	3.9724
+Ge          Cring_      lennard-jones       73.0143	3.8379
+Ge          F_          lennard-jones       37.1842	3.8999
+Ge          H_          lennard-jones       36.9973	3.1586
 # mixing rules to overwrite
 0

@@ -1,0 +1,2171 @@
+Compiler and run-time data
+===========================================================================
+RASPA 2.0.9
+Compiled as a 64-bits application
+Compiler: gcc 4.9.2
+Compile Date = Oct  4 2016, Compile Time = 18:55:03
+
+Fri Mar 17 19:26:17 2017
+Simulation started on Friday, March 17.
+The start time was 07:26 PM.
+
+Hostname:    The start time was 07:26 PM.
+OS type:     The start time was 07:26 PM.
+OS release:  The start time was 07:26 PM.
+OS version:  The start time was 07:26 PM.
+
+Simulation
+===========================================================================
+Dimensions: 3
+Random number seed: 1489774451
+RASPA directory set to: /home/mcplatano/RASPA/simulations
+String appended to output-files: 
+Number of cycles: 100
+Number of initializing cycles: 100
+Number of equilibration cycles: 0
+Print every: 10
+Triclinic boundary condition applied
+Timestep: 0.000500
+Initialization Ensemble: NVE (constant number of particles N, constant volume V, constant energy E)
+Production run ensemble: NVE (constant number of particles N, constant volume V, constant energy E)
+	Degrees of freedom:                        3816
+	Translational Degrees of freedom:          3744
+	Rotational Degrees of freedom:             72
+	Degrees of freedom Framework:              2232
+
+
+Mutual consistent basic set of units:
+======================================
+Unit of temperature: Kelvin
+Unit of length:      1e-10 [m]
+Unit of time:        1e-12 [s]
+Unit of mass:        1.66054e-27 [kg]
+Unit of charge:      1.60218e-19 [C/particle]
+
+Derived units and their conversion factors:
+===========================================
+Unit of energy:              1.66054e-23 [J]
+Unit of force:               1.66054e-13 [N]
+Unit of pressure:            1.66054e+07 [Pa]
+Unit of velocity:            100 [m/s]
+Unit of acceleration:        1e-08 [m^2/s]
+Unit of diffusion:           1e-08 [m^2/s]
+Unit of dipole moment:       1.60218e-29 [C.m]
+Unit of electric potential:  0.000103643 [V]
+Unit of electric field:      1.03643e+06 [V]
+Unit of polarizability:      1.54587e-35 [-]
+Unit of Coulomb potential:   167101.0800066561  [K]
+Unit of dielectric constant: 0.0000154587       [s^2 C^2/(kg m^3)]
+Unit of wave vectors:        5.3088374589       [cm^1]
+Boltzmann constant:          0.8314464919       [-]
+
+Internal conversion factors:
+===========================================
+Energy to Kelvin:                                    1.2027242847
+FH correction factor                                 2.0211930949
+Heat capacity conversion factor:                    10.0000088723
+From Debye to internal units:                        4.8032067991
+Isothermal compressibility conversion factor:        0.0000000602
+
+Energy conversion factors:
+===========================================
+From mdyne/A to kcal/mol/A^2:           143.933
+From mdyne/A to kj/mol/A^2:             602.214
+From mdyne/A to K/A^2:                  72429.7
+From mdyne A/rad^2 to kcal/mol/deg^2:   0.0438444
+
+
+Properties computed
+===========================================================================
+Movies: yes
+	Movie snapshots are appended to file every 10 cycles
+Radial Distribution Function: no
+Number of molecules GCMC histogram: no
+Histogram of the molecule positions: no
+Free energy profiles: no
+Pore Size Distribution Function: no
+End-to-end distance: no
+Histogram of the energy of the system: no
+Compute thermodynamic factors: no
+Framework spacing histograms: no
+Residence times histograms: no
+Distance histograms: no
+Bend Angle histograms: no
+Dihedral angle histograms: no
+Angle between planes histograms: no
+Molecule properties: no
+Infra-red spectra: no
+Mean-squared displacement using modified order-N algorithm: no
+Velocity-autocorrelation function modified order-N algorithm: no
+Rotational velocity-autocorrelation function modified order-N algorithm: no
+Molecular orientation-autocorrelation function modified order-N algorithm: no
+Bond orientation-autocorrelation function modified order-N algorithm: no
+Mean-squared displacement (conventional algorithm): no
+Velocity-autocorrelation function (conventional algorithm): no
+3D density grid for adsorbates: no
+Compute cation an/or adsorption sites: no
+dcTST snapshots: no
+Compute pressure and stress: no
+
+
+VTK
+===========================================================================
+VTK fractional-range position framework atoms: [-0.001000,1.001000] [-0.001000,1.001000] [-0.001000,1.001000]
+VTK fractional-range position framework bonds: [-0.151000,1.151000] [-0.151000,1.151000] [-0.151000,1.151000]
+VTK fractional-range com-position adsorbate molecules: [-0.101000,1.101000] [-0.101000,1.101000] [-0.101000,1.101000]
+VTK fractional-range com-position cation molecules: [-0.101000,1.101000] [-0.101000,1.101000] [-0.101000,1.101000]
+	3D free energy grid made for the full simulation-cell
+
+
+Thermo/Baro-stat NHC parameters
+===========================================================================
+External temperature: 800 [K]
+Beta: 0.0015034 [energy unit]
+External Pressure: 0 [Pa]
+
+
+Thermostat chain-length: 3
+Timescale parameter for thermostat: 0.150000 [ps]
+Barostat chain-length:   3
+Timescale parameter for barostat:   0.150000 [ps]
+
+Number of Yoshida-Suzuki decomposition steps: 5
+Number of respa steps: 5
+
+
+Method and settings for electrostatics
+===============================================================================
+Dielectric constant of the medium : 1.000000
+Charge from charge-equilibration: no
+Ewald summation is used (exact solution of a periodic system)
+Relative precision                : 1e-08
+Alpha convergence parameter       : 0.317887
+kvec (x,y,z)                      : 9 9 11
+
+
+CFC-RXMC parameters
+===========================================================================
+Number of reactions: 0
+
+
+Rattle parameters
+===========================================================================
+Distance constraint type: r^2-r^2_0
+Bend angle constraint type: theta-theta_0
+Dihedral angle constraint type: phi-phi_0
+Inversion-bend angle constraint type: chi-chi_0
+Out-of-plane distance constraint type: r-r_0
+
+
+Spectra parameters
+===========================================================================
+Compute normal modes: no
+
+
+Minimization parameters
+===========================================================================
+Generalized coordinates are: Cartesian center-of-mass, elements of the orientational matrix p1,p2,p3 and strain
+Potential derivatives are evaluated: analytically
+Translation of the system is removed from the generalized Hessian: no
+Rotation of the system is removed from the generalized Hessian: no
+Maximum step-length: 0.3
+Convergence factor: 1
+Maximum number of minimization steps: 10000
+Use gradients in the line-minimizations: yes
+RMS gradient tolerance: 1e-06
+Maximum gradient tolerance: 1e-06
+
+Distance constraints: 0
+Angle constraints: 0
+Dihedral constraints: 0
+
+Improper dihedral constraints: 0
+
+Inversion-bend constraints: 0
+
+Out-of-plane constraints: 0
+
+Harmonic distance constraints: 0
+Harmonic angle constraints: 0
+Harmonic dihedral constraints: 0
+
+Dihedral mid-point measurements: 0
+
+Number of fixed framework atoms: 0  (active: 744)
+fixed atom-list: 
+Number of active framework atoms: 744  (fixed: 0)
+active atom-list: 
+
+Fixed adsorbate atoms:  
+Fixed adsorbate groups (center-of-mass):  
+Fixed adsorbate groups (orientation):  
+
+Fixed cation atoms:  
+Fixed cation groups (center-of-mass):  
+Fixed cation groups (orientation):  
+
+
+dcTST parameters
+===========================================================================
+Free energy profiles computed: no
+Free energy profiles written every 5000 cycles
+Free energy mapping: mapped to a,b,c-coordinates
+BarrierPosition:       0.0000000000       0.0000000000       0.0000000000
+BarrierNormal:         0.0000000000       0.0000000000       0.0000000000
+Start with a molecule on top of the barrier: no
+Maximum distance to barrier (e.g. distance to minumum free energy):       0.0000000000 [A]
+Maximum trajectory time:      10.0000000000 [ps]
+Each configuration is used with 5 different initial velocities
+
+
+Cbmc parameters
+===========================================================================
+Biasing method: using only the VDW part
+Number of trial positions:                                       10
+Number of trial positions (reinsertion):                         10
+Number of trial positions (partial reinsertion):                 10
+Number of trial positions (identity-change):                     10
+Number of trial positions (Gibbs particle transfer):             10
+Number of trial positions (insertion/deletion):                  10
+Number of trial positions (Widom insertion):                     10
+Number of trial positions coupled Torsion-selection:             100
+Number of trial positions first bead:                            10
+Number of trial positions first bead (reinsertion):              10
+Number of trial positions first bead (partial reinsertion):      10
+Number of trial positions first bead (identity-change):          10
+Number of trial positions first bead (Gibbs particle transfer):  10
+Number of trial positions first bead (insertion/deletion):       10
+Number of trial positions first bead (Widom insertion):          10
+Number of trial moves per open bead:                             150
+Target acceptance ratio small-mc scheme:                         0.400000
+Energy overlap criteria:                                         1e+07
+Minimal Rosenbluth factor:                                       1e-150
+
+
+Pseudo atoms: 30
+===========================================================================
+Pseudo Atom[   0] Name UNIT     Oxidation:          Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.000000000  B-factor:0.000   
+                 Charge=1.000000000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Absolute), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[   1] Name O        Oxidation: +0       Element: O    pdb-name: O    Scat. Types:   9   8 Mass=15.999400000 B-factor:1.000   
+                 Charge=-0.300000000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.100 [A], Framework-atom: yes (charge from pseudo-atoms file)
+Pseudo Atom[   2] Name F        Oxidation: +0       Element: F    pdb-name: F    Scat. Types:  10   9 Mass=18.998404000 B-factor:1.000   
+                 Charge=-1.000000000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.100 [A], Framework-atom: yes (charge from pseudo-atoms file)
+Pseudo Atom[   3] Name Si       Oxidation: +0       Element: Si   pdb-name: Si   Scat. Types:  15  14 Mass=28.085500000 B-factor:1.000   
+                 Charge=0.600000000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.100 [A], Framework-atom: yes (charge from pseudo-atoms file)
+Pseudo Atom[   4] Name Ge       Oxidation: +0       Element: Ge   pdb-name: Ge   Scat. Types:  33  32 Mass=72.640000000 B-factor:1.000   
+                 Charge=0.600000000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.100 [A], Framework-atom:  no
+Pseudo Atom[   5] Name N1_mol1  Oxidation: +0       Element: N    pdb-name: N    Scat. Types:   8   7 Mass=14.006740000 B-factor:1.000   
+                 Charge=-0.380800000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[   6] Name N2_mol1  Oxidation: +0       Element: N    pdb-name: N    Scat. Types:   8   7 Mass=14.006740000 B-factor:1.000   
+                 Charge=-0.362800000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[   7] Name Cring1_mol1 Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=0.343400000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[   8] Name Cring2_mol1 Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=0.162800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[   9] Name Cring3_mol1 Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=0.105300000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[  10] Name C5_mol1  Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=-0.215200000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[  11] Name C6_mol1  Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=-0.234600000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[  12] Name C7_mol1  Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=-0.379800000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[  13] Name C8_mol1  Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=-0.221200000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[  14] Name C9_mol1  Oxidation: +0       Element: C    pdb-name: C    Scat. Types:   7   6 Mass=12.000000000 B-factor:1.000   
+                 Charge=-0.334100000         Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    1.000 [A], Framework-atom:  no
+Pseudo Atom[  15] Name H4_mol1  Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.137400000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  16] Name H51_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.160800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  17] Name H52_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.172000000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  18] Name H53_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.176200000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  19] Name H61_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.163500000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  20] Name H62_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.164800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  21] Name H71_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.188400000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  22] Name H72_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.180800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  23] Name H73_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.179800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  24] Name H81_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.171800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  25] Name H82_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.157300000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  26] Name H83_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.168100000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  27] Name H91_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.171300000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  28] Name H92_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.169000000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+Pseudo Atom[  29] Name H93_mol1 Oxidation: +0       Element: H    pdb-name: H    Scat. Types:   1   1 Mass=1.007940000  B-factor:1.000   
+                 Charge=0.155800000          Polarization=0.000000000  [A^3] (considered a charged atom and no polarization)  Interactions: yes
+                 Anisotropic factor:    0.000 [-] (Relative), Radius:    0.700 [A], Framework-atom:  no
+
+
+Forcefield: local
+===========================================================================
+Minimal distance: 1
+CutOff VDW : 10.000000 (100.000000)
+CutOff VDW switching on: 9.000000 (81.000000)
+CutOff charge-charge : 12.000000 (144.000000)
+CutOff charge-charge switching on: 7.800000 (60.840000)
+CutOff charge-bonddipole : 12.000000 (144.000000)
+CutOff charge-bondipole switching on: 8.400000 (70.560000)
+CutOff bonddipole-bonddipole : 12.000000 (144.000000)
+CutOff bonddipole-bondipole switching on: 9.000000 (81.000000)
+Polarization is neglected
+All potentials are shifted to zero at the Cutoff
+
+General mixing rule: Lorentz-Berthelot mixing rules are used FIRST for cross terms
+0 cross terms are overwritten using the individual mixing rules from the file 'force_field_mixing_rules.def'
+and then 40 terms are overwritten using the specific interactions from the file 'force_field.def'
+
+The force field and all the interactions:
+      O -       O [LENNARD_JONES] p_0/k_B: 114.81000 [K], p_1: 2.85000 [A], shift/k_B:  -0.24596656 [K], tailcorrection: no
+      O -       F [LENNARD_JONES] p_0/k_B:  47.10790 [K], p_1: 3.10070 [A], shift/k_B:  -0.16731162 [K], tailcorrection: no
+      O -      Si [LENNARD_JONES] p_0/k_B:  48.09804 [K], p_1: 3.45150 [A], shift/k_B:  -0.32471309 [K], tailcorrection: no
+      O -      Ge [LENNARD_JONES] p_0/k_B:  90.62226 [K], p_1: 3.46115 [A], shift/k_B:  -0.62211422 [K], tailcorrection: no
+      O - N1_mol1 [LENNARD_JONES] p_0/k_B:  98.26390 [K], p_1: 3.16400 [A], shift/k_B:  -0.39394619 [K], tailcorrection: no
+      O - N2_mol1 [LENNARD_JONES] p_0/k_B:  98.26390 [K], p_1: 3.16400 [A], shift/k_B:  -0.39394619 [K], tailcorrection: no
+      O - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  92.50530 [K], p_1: 3.21600 [A], shift/k_B:  -0.40892353 [K], tailcorrection: no
+      O - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  92.50530 [K], p_1: 3.21600 [A], shift/k_B:  -0.40892353 [K], tailcorrection: no
+      O - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  92.50530 [K], p_1: 3.21600 [A], shift/k_B:  -0.40892353 [K], tailcorrection: no
+      O - C5_mol1 [LENNARD_JONES] p_0/k_B:  47.48630 [K], p_1: 3.32900 [A], shift/k_B:  -0.25817821 [K], tailcorrection: no
+      O - C6_mol1 [LENNARD_JONES] p_0/k_B:  47.48630 [K], p_1: 3.32900 [A], shift/k_B:  -0.25817821 [K], tailcorrection: no
+      O - C7_mol1 [LENNARD_JONES] p_0/k_B:  47.48630 [K], p_1: 3.32900 [A], shift/k_B:  -0.25817821 [K], tailcorrection: no
+      O - C8_mol1 [LENNARD_JONES] p_0/k_B:  47.48630 [K], p_1: 3.32900 [A], shift/k_B:  -0.25817821 [K], tailcorrection: no
+      O - C9_mol1 [LENNARD_JONES] p_0/k_B:  47.48630 [K], p_1: 3.32900 [A], shift/k_B:  -0.25817821 [K], tailcorrection: no
+      O - H4_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H51_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H52_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H53_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H61_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H62_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H71_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H72_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H73_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H81_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H82_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H83_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H91_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H92_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      O - H93_mol1 [LENNARD_JONES] p_0/k_B:  46.87350 [K], p_1: 2.64700 [A], shift/k_B:  -0.06447059 [K], tailcorrection: no
+      F -       F [LENNARD_JONES] p_0/k_B:  19.32980 [K], p_1: 3.73490 [A], shift/k_B:  -0.20930556 [K], tailcorrection: no
+      F -      Si [LENNARD_JONES] p_0/k_B:  19.73560 [K], p_1: 3.89070 [A], shift/k_B:  -0.27287751 [K], tailcorrection: no
+      F -      Ge [LENNARD_JONES] p_0/k_B:  37.18420 [K], p_1: 3.89990 [A], shift/k_B:  -0.52144515 [K], tailcorrection: no
+      F - N1_mol1 [LENNARD_JONES] p_0/k_B:  40.31865 [K], p_1: 3.61805 [A], shift/k_B:  -0.36094258 [K], tailcorrection: no
+      F - N2_mol1 [LENNARD_JONES] p_0/k_B:  40.31865 [K], p_1: 3.61805 [A], shift/k_B:  -0.36094258 [K], tailcorrection: no
+      F - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  37.95564 [K], p_1: 3.67595 [A], shift/k_B:  -0.37366382 [K], tailcorrection: no
+      F - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  37.95564 [K], p_1: 3.67595 [A], shift/k_B:  -0.37366382 [K], tailcorrection: no
+      F - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  37.95564 [K], p_1: 3.67595 [A], shift/k_B:  -0.37366382 [K], tailcorrection: no
+      F - C5_mol1 [LENNARD_JONES] p_0/k_B:  19.47932 [K], p_1: 3.80495 [A], shift/k_B:  -0.23572609 [K], tailcorrection: no
+      F - C6_mol1 [LENNARD_JONES] p_0/k_B:  19.47932 [K], p_1: 3.80495 [A], shift/k_B:  -0.23572609 [K], tailcorrection: no
+      F - C7_mol1 [LENNARD_JONES] p_0/k_B:  19.47932 [K], p_1: 3.80495 [A], shift/k_B:  -0.23572609 [K], tailcorrection: no
+      F - C8_mol1 [LENNARD_JONES] p_0/k_B:  19.47932 [K], p_1: 3.80495 [A], shift/k_B:  -0.23572609 [K], tailcorrection: no
+      F - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.47932 [K], p_1: 3.80495 [A], shift/k_B:  -0.23572609 [K], tailcorrection: no
+      F - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+      F - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.23266 [K], p_1: 3.09240 [A], shift/k_B:  -0.06721919 [K], tailcorrection: no
+     Si -      Si [LENNARD_JONES] p_0/k_B:  20.15000 [K], p_1: 4.05300 [A], shift/k_B:  -0.35568482 [K], tailcorrection: no
+     Si -      Ge [LENNARD_JONES] p_0/k_B:  37.96493 [K], p_1: 4.06265 [A], shift/k_B:  -0.67973850 [K], tailcorrection: no
+     Si - N1_mol1 [LENNARD_JONES] p_0/k_B:  41.16770 [K], p_1: 3.76700 [A], shift/k_B:  -0.46918874 [K], tailcorrection: no
+     Si - N2_mol1 [LENNARD_JONES] p_0/k_B:  41.16770 [K], p_1: 3.76700 [A], shift/k_B:  -0.46918874 [K], tailcorrection: no
+     Si - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  38.75510 [K], p_1: 3.82900 [A], shift/k_B:  -0.48700142 [K], tailcorrection: no
+     Si - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  38.75510 [K], p_1: 3.82900 [A], shift/k_B:  -0.48700142 [K], tailcorrection: no
+     Si - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  38.75510 [K], p_1: 3.82900 [A], shift/k_B:  -0.48700142 [K], tailcorrection: no
+     Si - C5_mol1 [LENNARD_JONES] p_0/k_B:  19.89440 [K], p_1: 3.96300 [A], shift/k_B:  -0.30707864 [K], tailcorrection: no
+     Si - C6_mol1 [LENNARD_JONES] p_0/k_B:  19.89440 [K], p_1: 3.96300 [A], shift/k_B:  -0.30707864 [K], tailcorrection: no
+     Si - C7_mol1 [LENNARD_JONES] p_0/k_B:  19.89440 [K], p_1: 3.96300 [A], shift/k_B:  -0.30707864 [K], tailcorrection: no
+     Si - C8_mol1 [LENNARD_JONES] p_0/k_B:  19.89440 [K], p_1: 3.96300 [A], shift/k_B:  -0.30707864 [K], tailcorrection: no
+     Si - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.89440 [K], p_1: 3.96300 [A], shift/k_B:  -0.30707864 [K], tailcorrection: no
+     Si - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Si - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.63770 [K], p_1: 3.15100 [A], shift/k_B:  -0.07680964 [K], tailcorrection: no
+     Ge -      Ge [LENNARD_JONES] p_0/k_B:  71.53030 [K], p_1: 4.07230 [A], shift/k_B:  -1.29898272 [K], tailcorrection: no
+     Ge - N1_mol1 [LENNARD_JONES] p_0/k_B:  77.55990 [K], p_1: 3.77590 [A], shift/k_B:  -0.89651932 [K], tailcorrection: no
+     Ge - N2_mol1 [LENNARD_JONES] p_0/k_B:  77.55990 [K], p_1: 3.77590 [A], shift/k_B:  -0.89651932 [K], tailcorrection: no
+     Ge - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  73.01430 [K], p_1: 3.83790 [A], shift/k_B:  -0.93033586 [K], tailcorrection: no
+     Ge - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  73.01430 [K], p_1: 3.83790 [A], shift/k_B:  -0.93033586 [K], tailcorrection: no
+     Ge - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  73.01430 [K], p_1: 3.83790 [A], shift/k_B:  -0.93033586 [K], tailcorrection: no
+     Ge - C5_mol1 [LENNARD_JONES] p_0/k_B:  37.47180 [K], p_1: 3.97240 [A], shift/k_B:  -0.58664117 [K], tailcorrection: no
+     Ge - C6_mol1 [LENNARD_JONES] p_0/k_B:  37.47180 [K], p_1: 3.97240 [A], shift/k_B:  -0.58664117 [K], tailcorrection: no
+     Ge - C7_mol1 [LENNARD_JONES] p_0/k_B:  37.47180 [K], p_1: 3.97240 [A], shift/k_B:  -0.58664117 [K], tailcorrection: no
+     Ge - C8_mol1 [LENNARD_JONES] p_0/k_B:  37.47180 [K], p_1: 3.97240 [A], shift/k_B:  -0.58664117 [K], tailcorrection: no
+     Ge - C9_mol1 [LENNARD_JONES] p_0/k_B:  37.47180 [K], p_1: 3.97240 [A], shift/k_B:  -0.58664117 [K], tailcorrection: no
+     Ge - H4_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H51_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H52_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H53_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H61_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H62_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H71_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H72_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H73_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H81_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H82_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H83_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H91_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H92_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+     Ge - H93_mol1 [LENNARD_JONES] p_0/k_B:  36.99730 [K], p_1: 3.15860 [A], shift/k_B:  -0.14681361 [K], tailcorrection: no
+N1_mol1 - N1_mol1 [LENNARD_JONES] p_0/k_B:  84.09780 [K], p_1: 3.50120 [A], shift/k_B:  -0.61850813 [K], tailcorrection: no
+N1_mol1 - N2_mol1 [LENNARD_JONES] p_0/k_B:  84.09780 [K], p_1: 3.50120 [A], shift/k_B:  -0.61850813 [K], tailcorrection: no
+N1_mol1 - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  79.16896 [K], p_1: 3.55910 [A], shift/k_B:  -0.64235111 [K], tailcorrection: no
+N1_mol1 - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  79.16896 [K], p_1: 3.55910 [A], shift/k_B:  -0.64235111 [K], tailcorrection: no
+N1_mol1 - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  79.16896 [K], p_1: 3.55910 [A], shift/k_B:  -0.64235111 [K], tailcorrection: no
+N1_mol1 - C5_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N1_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N1_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N1_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N1_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N1_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N1_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - N2_mol1 [LENNARD_JONES] p_0/k_B:  84.09780 [K], p_1: 3.50120 [A], shift/k_B:  -0.61850813 [K], tailcorrection: no
+N2_mol1 - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  79.16896 [K], p_1: 3.55910 [A], shift/k_B:  -0.64235111 [K], tailcorrection: no
+N2_mol1 - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  79.16896 [K], p_1: 3.55910 [A], shift/k_B:  -0.64235111 [K], tailcorrection: no
+N2_mol1 - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  79.16896 [K], p_1: 3.55910 [A], shift/k_B:  -0.64235111 [K], tailcorrection: no
+N2_mol1 - C5_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N2_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N2_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N2_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N2_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  40.63053 [K], p_1: 3.68810 [A], shift/k_B:  -0.40797567 [K], tailcorrection: no
+N2_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+N2_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  40.11603 [K], p_1: 2.97555 [A], shift/k_B:  -0.11129608 [K], tailcorrection: no
+Cring1_mol1 - Cring1_mol1 [LENNARD_JONES] p_0/k_B:  74.52900 [K], p_1: 3.61700 [A], shift/k_B:  -0.66604378 [K], tailcorrection: no
+Cring1_mol1 - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  74.52900 [K], p_1: 3.61700 [A], shift/k_B:  -0.66604378 [K], tailcorrection: no
+Cring1_mol1 - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  74.52900 [K], p_1: 3.61700 [A], shift/k_B:  -0.66604378 [K], tailcorrection: no
+Cring1_mol1 - C5_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring1_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring1_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring1_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring1_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring1_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring1_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - Cring2_mol1 [LENNARD_JONES] p_0/k_B:  74.52900 [K], p_1: 3.61700 [A], shift/k_B:  -0.66604378 [K], tailcorrection: no
+Cring2_mol1 - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  74.52900 [K], p_1: 3.61700 [A], shift/k_B:  -0.66604378 [K], tailcorrection: no
+Cring2_mol1 - C5_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring2_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring2_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring2_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring2_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring2_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring2_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - Cring3_mol1 [LENNARD_JONES] p_0/k_B:  74.52900 [K], p_1: 3.61700 [A], shift/k_B:  -0.66604378 [K], tailcorrection: no
+Cring3_mol1 - C5_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring3_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring3_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring3_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring3_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  38.24924 [K], p_1: 3.74600 [A], shift/k_B:  -0.42158751 [K], tailcorrection: no
+Cring3_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+Cring3_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  37.76489 [K], p_1: 3.03345 [A], shift/k_B:  -0.11760634 [K], tailcorrection: no
+C5_mol1 - C5_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C5_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C5_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C5_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C5_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C5_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C5_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - C6_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C6_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C6_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C6_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C6_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C6_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - C7_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C7_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C7_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C7_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C7_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - C8_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C8_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C8_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C8_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - C9_mol1 [LENNARD_JONES] p_0/k_B:  19.63000 [K], p_1: 3.87500 [A], shift/k_B:  -0.26493401 [K], tailcorrection: no
+C9_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+C9_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.38143 [K], p_1: 3.16245 [A], shift/k_B:  -0.07747348 [K], tailcorrection: no
+H4_mol1 - H4_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H4_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H51_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H51_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H52_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H52_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H53_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H53_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H61_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H61_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H62_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H62_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H71_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H71_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H72_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H72_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H73_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H73_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H81_mol1 - H81_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H81_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H81_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H81_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H81_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H81_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H82_mol1 - H82_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H82_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H82_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H82_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H82_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H83_mol1 - H83_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H83_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H83_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H83_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H91_mol1 - H91_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H91_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H91_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H92_mol1 - H92_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H92_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+H93_mol1 - H93_mol1 [LENNARD_JONES] p_0/k_B:  19.13600 [K], p_1: 2.44990 [A], shift/k_B:  -0.01654655 [K], tailcorrection: no
+
+
+MoleculeDefinitions:
+===========================================================================
+Component 0 [2e134tmi_cat1] (Cation molecule)
+
+	MoleculeDefinitions: local
+	Component contains (at least some) atoms which are charged
+	Component contains no atoms with point dipoles (polarization)
+	Component has a net charge of 1.000000
+
+	Ideal chain Rosenbluth weight: 3.57076e-09
+	Ideal chain total energy: 0.000000
+
+	Critical temparure [K]: 0.000000
+	Critical pressure [Pa]: 0.000000
+	Acentric factor [-]: 0.000000
+
+	RXMC partition factor [-]: 0.000000
+
+	Vapour=stable, Liquid=metastable
+
+	MolFraction:           1.0000000000 [-]
+	Compressibility:       0.0000000000 [-]
+
+	Density of the bulk fluid phase:       0.0000000000 [kg/m^3]
+
+
+	Amount of excess molecules:       0.0000000000 [-]
+
+	Conversion factor molecules/unit cell -> mol/kg:       0.2195947031 [-]
+	Conversion factor molecules/unit cell -> gr/gr:      30.5527775947 [-]
+	Conversion factor molecules/unit cell -> cm^3 STP/gr:       4.9219903493 [-]
+	Conversion factor molecules/unit cell -> cm^3 STP/cm^3:      10.2513415888 [-]
+	Conversion factor mol/kg -> cm^3 STP/gr:      22.4139757476 [-]
+	Conversion factor mol/kg -> cm^3 STP/cm^3:      46.6830094018 [-]
+
+	Partial pressure: -16605402.00000000000000 [Pa]
+	                    -124540.51499999999942 [Torr]
+	                       -166.05402000000001 [bar]
+	                       -163.88257586972614 [atm]
+
+	Fugacity coefficient:      -1.0000000000 [-]
+
+	Partial fugacity:  16605402.00000000000000 [Pa]
+	                     124540.51499999999942 [Torr]
+	                        166.05402000000001 [bar]
+	                        163.88257586972614 [atm]
+
+	Molecule contains 25 number of atoms
+		atom:    0  is of type:    5 [   N1_mol1] (group: 0)
+		atom:    1  is of type:    7 [Cring1_mol1] (group: 0)
+		atom:    2  is of type:    6 [   N2_mol1] (group: 0)
+		atom:    3  is of type:    8 [Cring2_mol1] (group: 0)
+		atom:    4  is of type:    9 [Cring3_mol1] (group: 0)
+		atom:    5  is of type:   10 [   C5_mol1] (group: 1)
+		atom:    6  is of type:   11 [   C6_mol1] (group: 1)
+		atom:    7  is of type:   12 [   C7_mol1] (group: 1)
+		atom:    8  is of type:   13 [   C8_mol1] (group: 1)
+		atom:    9  is of type:   14 [   C9_mol1] (group: 1)
+		atom:   10  is of type:   15 [   H4_mol1] (group: 1)
+		atom:   11  is of type:   16 [  H51_mol1] (group: 1)
+		atom:   12  is of type:   17 [  H52_mol1] (group: 1)
+		atom:   13  is of type:   18 [  H53_mol1] (group: 1)
+		atom:   14  is of type:   19 [  H61_mol1] (group: 1)
+		atom:   15  is of type:   20 [  H62_mol1] (group: 1)
+		atom:   16  is of type:   21 [  H71_mol1] (group: 1)
+		atom:   17  is of type:   22 [  H72_mol1] (group: 1)
+		atom:   18  is of type:   23 [  H73_mol1] (group: 1)
+		atom:   19  is of type:   24 [  H81_mol1] (group: 1)
+		atom:   20  is of type:   25 [  H82_mol1] (group: 1)
+		atom:   21  is of type:   26 [  H83_mol1] (group: 1)
+		atom:   22  is of type:   27 [  H91_mol1] (group: 1)
+		atom:   23  is of type:   28 [  H92_mol1] (group: 1)
+		atom:   24  is of type:   29 [  H93_mol1] (group: 1)
+
+	Molecule contains 0 chirality centers
+
+	Molecule contains 2 number of groups
+
+		group: 0 containing: 5 elements
+		-------------------------------------------------
+		the group is rigid and nonlinear
+		Mass: 64.013480 [a.u.]
+		Mass: 7.319365 [kg/m^3]
+
+		Rotational Degrees of freedom: 3
+		Diagonalized inertia vector:      85.7312749993
+		                                  46.7604321139
+		                                  38.9709722831
+		number of atoms: 5
+			element: 0 atom: 0 [   N1_mol1] Charge: -0.380800 Anisotropy: 0.000000 Position: -0.001218 -0.360809  1.112281 Connectivity: 3 (1 4 5 )
+			element: 1 atom: 1 [Cring1_mol1] Charge:  0.343400 Anisotropy: 0.000000 Position:  0.001487 -1.098293 -0.025150 Connectivity: 3 (0 2 6 )
+			element: 2 atom: 2 [   N2_mol1] Charge: -0.362800 Anisotropy: 0.000000 Position: -0.000814 -0.312463 -1.133340 Connectivity: 3 (1 3 8 )
+			element: 3 atom: 3 [Cring2_mol1] Charge:  0.162800 Anisotropy: 0.000000 Position:  0.000065  0.956130 -0.664885 Connectivity: 3 (2 4 9 )
+			element: 4 atom: 4 [Cring3_mol1] Charge:  0.105300 Anisotropy: 0.000000 Position:  0.000820  0.928025  0.714616 Connectivity: 3 (0 3 10 )
+		number of permanent dipoles: 0
+		number of polarizabilities: 0
+
+		Dipole:           0.4677053704 [D]
+		Quadrupole:       0.5821620629       4.6798936189      -5.2620556818 [D Angstrom]
+		Quadrupole tensor [D Angstrom]
+				       0.5821683725      -0.0052602311       0.0016072672
+				      -0.0052602311       4.6798867167       0.0012217926
+				       0.0016072672       0.0012217926      -5.2620550892
+
+		group: 1 containing: 20 elements
+		-------------------------------------------------
+		the group is modelled as flexible, i.e. no constraints
+		Mass: 75.119100 [a.u.]
+		Mass: 8.589192 [kg/m^3]
+
+		Rotational Degrees of freedom: 0
+		Diagonalized inertia vector:       0.0000000000
+		                                   0.0000000000
+		                                   0.0000000000
+		element: 0 atom: 5 [   C5_mol1] Charge: -0.215200 Anisotropy: 0.000000 Connectivity: 4 (0 11 12 13 )
+		element: 1 atom: 6 [   C6_mol1] Charge: -0.234600 Anisotropy: 0.000000 Connectivity: 4 (1 7 14 15 )
+		element: 2 atom: 7 [   C7_mol1] Charge: -0.379800 Anisotropy: 0.000000 Connectivity: 4 (6 16 17 18 )
+		element: 3 atom: 8 [   C8_mol1] Charge: -0.221200 Anisotropy: 0.000000 Connectivity: 4 (2 19 20 21 )
+		element: 4 atom: 9 [   C9_mol1] Charge: -0.334100 Anisotropy: 0.000000 Connectivity: 4 (3 22 23 24 )
+		element: 5 atom: 10 [   H4_mol1] Charge:  0.137400 Anisotropy: 0.000000 Connectivity: 1 (4 )
+		element: 6 atom: 11 [  H51_mol1] Charge:  0.160800 Anisotropy: 0.000000 Connectivity: 1 (5 )
+		element: 7 atom: 12 [  H52_mol1] Charge:  0.172000 Anisotropy: 0.000000 Connectivity: 1 (5 )
+		element: 8 atom: 13 [  H53_mol1] Charge:  0.176200 Anisotropy: 0.000000 Connectivity: 1 (5 )
+		element: 9 atom: 14 [  H61_mol1] Charge:  0.163500 Anisotropy: 0.000000 Connectivity: 1 (6 )
+		element: 10 atom: 15 [  H62_mol1] Charge:  0.164800 Anisotropy: 0.000000 Connectivity: 1 (6 )
+		element: 11 atom: 16 [  H71_mol1] Charge:  0.188400 Anisotropy: 0.000000 Connectivity: 1 (7 )
+		element: 12 atom: 17 [  H72_mol1] Charge:  0.180800 Anisotropy: 0.000000 Connectivity: 1 (7 )
+		element: 13 atom: 18 [  H73_mol1] Charge:  0.179800 Anisotropy: 0.000000 Connectivity: 1 (7 )
+		element: 14 atom: 19 [  H81_mol1] Charge:  0.171800 Anisotropy: 0.000000 Connectivity: 1 (8 )
+		element: 15 atom: 20 [  H82_mol1] Charge:  0.157300 Anisotropy: 0.000000 Connectivity: 1 (8 )
+		element: 16 atom: 21 [  H83_mol1] Charge:  0.168100 Anisotropy: 0.000000 Connectivity: 1 (8 )
+		element: 17 atom: 22 [  H91_mol1] Charge:  0.171300 Anisotropy: 0.000000 Connectivity: 1 (9 )
+		element: 18 atom: 23 [  H92_mol1] Charge:  0.169000 Anisotropy: 0.000000 Connectivity: 1 (9 )
+		element: 19 atom: 24 [  H93_mol1] Charge:  0.155800 Anisotropy: 0.000000 Connectivity: 1 (9 )
+
+		Dipole:           0.0000000000 [D]
+		Quadrupole:       0.0000000000       0.0000000000       0.0000000000 [D Angstrom]
+		Quadrupole tensor [D Angstrom]
+				       0.0000000000       0.0000000000       0.0000000000
+				       0.0000000000       0.0000000000       0.0000000000
+				       0.0000000000       0.0000000000       0.0000000000
+
+	Starting bead for growth               : 0
+
+	Degrees of freedom                     : 0
+	Translational degrees of freedom       : 0
+	Rotational degrees of freedom          : 0
+	Vibrational degrees of freedom         : 0
+	Constraint degrees of freedom          : 0
+
+	Number of atoms                        : 25
+
+	Number of constraint bonds             : 0
+	Number of constraint bends             : 0
+	Number of constraint inversion bends   : 0
+	Number of constraint torsions          : 0
+	Number of constraint improper torsions : 0
+	Number of constraint improper torsions : 0
+
+	Number of bonds                        : 25
+	Number of Urey-Bradleys                : 0
+	Number of bends                        : 40
+	Number of inversion bends              : 0
+	Number of torsions                     : 24
+	Number of improper torsions            : 4
+	Number of improper torsions            : 0
+
+	Number of bond/bond cross terms        : 0
+	Number of bond/bend cross terms        : 0
+	Number of bend/bend cross terms        : 0
+	Number of stretch/torsion cross terms  : 0
+	Number of bend/torsion cross terms     : 0
+
+	Number of charges                      : 25
+	Number of bond-dipoles                 : 0
+
+	Number of intra Van der Waals                             : 176
+	Number of intra charge-charge Coulomb                     : 0
+	Number of intra charge-bonddipole Coulomb                 : 0
+	Number of intra bonddipole-bonddipole Coulomb             : 0
+
+	Number of excluded intra charge-charge Coulomb                     : 300
+	Number of excluded intra charge-bonddipole Coulomb                 : 0
+	Number of excluded intra bonddipole-bonddipole Coulomb             : 0
+
+	Number of cbmc-config moves                               : 0
+
+	Particle Moves:             
+		ProbabilityTranslationMove:                  25.000000
+			TranslationDirection:      XYZ
+		Percentage of random translation moves:            25.000000
+		Percentage of rotation moves:                      25.000000
+		Percentage of random rotation moves:               0.000000
+		Percentage of partial reinsertion moves:           0.000000
+		Percentage of reinsertion moves:                   25.000000
+		Percentage of reinsertion-in-place moves:          0.000000
+		Percentage of reinsertion-in-plane moves:          0.000000
+		Percentage of identity-change moves:               0.000000
+		Percentage of swap (insert/delete) moves:          0.000000
+		Percentage of CF swap lambda moves:                0.000000
+		Percentage of CB/CFMC swap lambda moves:           0.000000
+		Percentage of Widom insertion moves:               0.000000
+		Percentage of Gibbs Widom insertion moves:         0.000000
+		Percentage of surface-area moves:                  0.000000
+		Percentage of Gibbs particle-transfer moves:       0.000000
+		Percentage of Gibbs identity-change moves:         0.000000
+		Percentage of CF Gibbs lambda-transfer moves:      0.000000
+		Percentage of CB/CFMC Gibbs lambda-transfer moves: 0.000000
+		Percentage of exchange frac./int. particle moves:  0.000000
+		Percentage of fractional mol. to other box moves:  0.000000
+		Percentage of lambda-change moves:                 0.000000
+		Percentage of fractional to integer moves:         0.000000
+
+	System Moves:
+		Percentage of parallel-tempering moves:            0.000000
+		Percentage of hyper-parallel-tempering moves:      0.000000
+		Percentage of parallel-mol-fraction moves:         0.000000
+			   Component A: 0 B: 1
+		Percentage of chiral inversion moves:              0.000000
+		Percentage of Hybrid-NVE moves:                    0.000000
+		Percentage of Hybrid-NPH moves:                    0.000000
+		Percentage of Hybrid-NPHPR moves:                  0.000000
+		Percentage of volume-change moves:                 0.000000
+		Percentage of box-shape-change moves:              0.000000
+		Percentage of Gibbs volume-change moves:           0.000000
+		Percentage of framework-change moves:              0.000000
+		Percentage of framework-shift moves:               0.000000
+		Percentage of reactive MC moves:                   0.000000
+
+	Moves are restricted: No
+	No biased sampling used for this component
+
+	Number of Bonds: 25
+	--------------------------------------------
+	Bond interaction 0: A=0 B=1 Type:RIGID_BOND
+		r_0=1.3555959438       [A]
+	Bond interaction 1: A=1 B=2 Type:RIGID_BOND
+		r_0=1.3585365995       [A]
+	Bond interaction 2: A=2 B=3 Type:RIGID_BOND
+		r_0=1.3523234644       [A]
+	Bond interaction 3: A=3 B=4 Type:RIGID_BOND
+		r_0=1.3797867023       [A]
+	Bond interaction 4: A=4 B=0 Type:RIGID_BOND
+		r_0=1.3487895003       [A]
+	Bond interaction 5: A=0 B=5 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=339157.600000 [K/A^2], p_1=1.475000   [A]
+	Bond interaction 6: A=2 B=8 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=339157.600000 [K/A^2], p_1=1.475000   [A]
+	Bond interaction 7: A=1 B=6 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=285074.000000 [K/A^2], p_1=1.510000   [A]
+	Bond interaction 8: A=3 B=9 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=285074.000000 [K/A^2], p_1=1.510000   [A]
+	Bond interaction 9: A=6 B=7 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=324974.800000 [K/A^2], p_1=1.526000   [A]
+	Bond interaction 10: A=4 B=10 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=365960.300000 [K/A^2], p_1=1.080000   [A]
+	Bond interaction 11: A=5 B=11 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 12: A=5 B=12 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 13: A=5 B=13 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 14: A=6 B=14 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 15: A=6 B=15 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 16: A=7 B=16 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 17: A=7 B=17 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 18: A=7 B=18 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 19: A=8 B=19 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 20: A=8 B=20 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 21: A=8 B=21 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 22: A=9 B=22 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 23: A=9 B=23 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+	Bond interaction 24: A=9 B=24 Type:HARMONIC_BOND
+		HARMONIC_BOND: p_0/k_B=343001.700000 [K/A^2], p_1=1.105000   [A]
+
+	Number of Bends: 40
+	--------------------------------------------
+	Bend interaction 0: A=1 B=0 C=5 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=70490.000000 [K/rad^2], p_1=128.000000 [degrees]
+	Bend interaction 1: A=4 B=0 C=5 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=70490.000000 [K/rad^2], p_1=128.000000 [degrees]
+	Bend interaction 2: A=1 B=2 C=8 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=70490.000000 [K/rad^2], p_1=128.000000 [degrees]
+	Bend interaction 3: A=3 B=2 C=8 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=70490.000000 [K/rad^2], p_1=128.000000 [degrees]
+	Bend interaction 4: A=0 B=1 C=6 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=50350.000000 [K/rad^2], p_1=120.000000 [degrees]
+	Bend interaction 5: A=2 B=1 C=6 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=50350.000000 [K/rad^2], p_1=120.000000 [degrees]
+	Bend interaction 6: A=2 B=3 C=9 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=50350.000000 [K/rad^2], p_1=120.000000 [degrees]
+	Bend interaction 7: A=4 B=3 C=9 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44509.400000 [K/rad^2], p_1=120.000000 [degrees]
+	Bend interaction 8: A=0 B=4 C=10 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=40280.000000 [K/rad^2], p_1=120.000000 [degrees]
+	Bend interaction 9: A=3 B=4 C=10 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=37259.000000 [K/rad^2], p_1=120.000000 [degrees]
+	Bend interaction 10: A=0 B=5 C=11 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=80560.000000 [K/rad^2], p_1=109.500000 [degrees]
+	Bend interaction 11: A=0 B=5 C=12 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=80560.000000 [K/rad^2], p_1=109.500000 [degrees]
+	Bend interaction 12: A=0 B=5 C=13 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=80560.000000 [K/rad^2], p_1=109.500000 [degrees]
+	Bend interaction 13: A=2 B=8 C=19 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=80560.000000 [K/rad^2], p_1=109.500000 [degrees]
+	Bend interaction 14: A=2 B=8 C=20 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=80560.000000 [K/rad^2], p_1=109.500000 [degrees]
+	Bend interaction 15: A=2 B=8 C=21 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=80560.000000 [K/rad^2], p_1=109.500000 [degrees]
+	Bend interaction 16: A=1 B=6 C=14 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 17: A=1 B=6 C=15 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 18: A=3 B=9 C=22 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 19: A=3 B=9 C=23 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 20: A=3 B=9 C=24 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 21: A=1 B=6 C=7 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=46926.200000 [K/rad^2], p_1=110.500000 [degrees]
+	Bend interaction 22: A=6 B=7 C=16 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 23: A=6 B=7 C=17 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 24: A=6 B=7 C=18 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 25: A=7 B=6 C=14 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 26: A=7 B=6 C=15 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=44710.800000 [K/rad^2], p_1=110.000000 [degrees]
+	Bend interaction 27: A=11 B=5 C=12 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 28: A=11 B=5 C=13 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 29: A=12 B=5 C=13 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 30: A=14 B=6 C=15 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 31: A=16 B=7 C=17 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 32: A=16 B=7 C=18 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 33: A=17 B=7 C=18 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 34: A=19 B=8 C=20 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 35: A=19 B=8 C=21 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 36: A=20 B=8 C=21 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 37: A=22 B=9 C=23 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 38: A=22 B=9 C=24 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+	Bend interaction 39: A=23 B=9 C=24 Type:HARMONIC_BEND
+		HARMONIC_BEND: p_0/k_B=39776.500000 [K/rad^2], p_1=106.400000 [degrees]
+
+	Number of Torsions: 24
+	--------------------------------------------
+	Torsions interaction 0: A=5 B=0 C=1 D=2 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 1: A=5 B=0 C=4 D=3 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 2: A=6 B=1 C=0 D=4 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 3: A=6 B=1 C=2 D=3 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 4: A=8 B=2 C=1 D=0 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 5: A=8 B=2 C=3 D=4 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 6: A=9 B=3 C=2 D=1 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 7: A=9 B=3 C=4 D=0 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=1510.740000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 8: A=10 B=4 C=0 D=1 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 9: A=10 B=4 C=3 D=2 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=1510.740000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 10: A=16 B=7 C=6 D=14 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 11: A=17 B=7 C=6 D=14 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 12: A=18 B=7 C=6 D=14 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 13: A=16 B=7 C=6 D=15 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 14: A=17 B=7 C=6 D=15 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 15: A=18 B=7 C=6 D=15 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 16: A=16 B=7 C=6 D=1 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 17: A=17 B=7 C=6 D=1 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 18: A=18 B=7 C=6 D=1 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=0.000000   [K], p_3/k_B=79.615000  [K]
+	Torsions interaction 19: A=5 B=0 C=1 D=6 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 20: A=6 B=1 C=2 D=8 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 21: A=8 B=2 C=3 D=9 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 22: A=9 B=3 C=4 D=10 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=1510.740000 [K], p_3/k_B=0.000000   [K]
+	Torsions interaction 23: A=10 B=4 C=0 D=5 Type:TRAPPE_DIHEDRAL
+		TRAPPE_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=503.580000 [K], p_3/k_B=0.000000   [K]
+
+	Number of Improper Torsions: 4
+	--------------------------------------------
+	Improper Torsions interaction 0: A=3 B=4 C=10 D=0 Type:TRAPPE_IMPROPER_DIHEDRAL
+		TRAPPE_IMPROPER_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=186.324600 [K], p_3/k_B=0.000000   [K]
+	Improper Torsions interaction 1: A=5 B=0 C=4 D=1 Type:TRAPPE_IMPROPER_DIHEDRAL
+		TRAPPE_IMPROPER_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=186.324600 [K], p_3/k_B=0.000000   [K]
+	Improper Torsions interaction 2: A=8 B=2 C=1 D=3 Type:TRAPPE_IMPROPER_DIHEDRAL
+		TRAPPE_IMPROPER_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=186.324600 [K], p_3/k_B=0.000000   [K]
+	Improper Torsions interaction 3: A=4 B=3 C=2 D=9 Type:TRAPPE_IMPROPER_DIHEDRAL
+		TRAPPE_IMPROPER_DIHEDRAL: p_0/k_B=0.000000   [K], p_1/k_B=0.000000   [K], p_2/k_B=186.324600 [K], p_3/k_B=0.000000   [K]
+
+	number of intra VDW interactions: 176
+	--------------------------------------------
+	interaction 0: A=16 B=0  scaling factor: 1
+	interaction 1: A=16 B=4  scaling factor: 1
+	interaction 2: A=16 B=3  scaling factor: 1
+	interaction 3: A=16 B=2  scaling factor: 1
+	interaction 4: A=16 B=5  scaling factor: 1
+	interaction 5: A=16 B=11  scaling factor: 1
+	interaction 6: A=16 B=12  scaling factor: 1
+	interaction 7: A=16 B=13  scaling factor: 1
+	interaction 8: A=16 B=10  scaling factor: 1
+	interaction 9: A=16 B=9  scaling factor: 1
+	interaction 10: A=16 B=22  scaling factor: 1
+	interaction 11: A=16 B=23  scaling factor: 1
+	interaction 12: A=16 B=24  scaling factor: 1
+	interaction 13: A=16 B=8  scaling factor: 1
+	interaction 14: A=16 B=19  scaling factor: 1
+	interaction 15: A=16 B=20  scaling factor: 1
+	interaction 16: A=16 B=21  scaling factor: 1
+	interaction 17: A=17 B=0  scaling factor: 1
+	interaction 18: A=17 B=4  scaling factor: 1
+	interaction 19: A=17 B=3  scaling factor: 1
+	interaction 20: A=17 B=2  scaling factor: 1
+	interaction 21: A=17 B=5  scaling factor: 1
+	interaction 22: A=17 B=11  scaling factor: 1
+	interaction 23: A=17 B=12  scaling factor: 1
+	interaction 24: A=17 B=13  scaling factor: 1
+	interaction 25: A=17 B=10  scaling factor: 1
+	interaction 26: A=17 B=9  scaling factor: 1
+	interaction 27: A=17 B=22  scaling factor: 1
+	interaction 28: A=17 B=23  scaling factor: 1
+	interaction 29: A=17 B=24  scaling factor: 1
+	interaction 30: A=17 B=8  scaling factor: 1
+	interaction 31: A=17 B=19  scaling factor: 1
+	interaction 32: A=17 B=20  scaling factor: 1
+	interaction 33: A=17 B=21  scaling factor: 1
+	interaction 34: A=18 B=0  scaling factor: 1
+	interaction 35: A=18 B=4  scaling factor: 1
+	interaction 36: A=18 B=3  scaling factor: 1
+	interaction 37: A=18 B=2  scaling factor: 1
+	interaction 38: A=18 B=5  scaling factor: 1
+	interaction 39: A=18 B=11  scaling factor: 1
+	interaction 40: A=18 B=12  scaling factor: 1
+	interaction 41: A=18 B=13  scaling factor: 1
+	interaction 42: A=18 B=10  scaling factor: 1
+	interaction 43: A=18 B=9  scaling factor: 1
+	interaction 44: A=18 B=22  scaling factor: 1
+	interaction 45: A=18 B=23  scaling factor: 1
+	interaction 46: A=18 B=24  scaling factor: 1
+	interaction 47: A=18 B=8  scaling factor: 1
+	interaction 48: A=18 B=19  scaling factor: 1
+	interaction 49: A=18 B=20  scaling factor: 1
+	interaction 50: A=18 B=21  scaling factor: 1
+	interaction 51: A=7 B=5  scaling factor: 1
+	interaction 52: A=7 B=11  scaling factor: 1
+	interaction 53: A=7 B=12  scaling factor: 1
+	interaction 54: A=7 B=13  scaling factor: 1
+	interaction 55: A=7 B=4  scaling factor: 1
+	interaction 56: A=7 B=10  scaling factor: 1
+	interaction 57: A=7 B=3  scaling factor: 1
+	interaction 58: A=7 B=9  scaling factor: 1
+	interaction 59: A=7 B=22  scaling factor: 1
+	interaction 60: A=7 B=23  scaling factor: 1
+	interaction 61: A=7 B=24  scaling factor: 1
+	interaction 62: A=7 B=8  scaling factor: 1
+	interaction 63: A=7 B=19  scaling factor: 1
+	interaction 64: A=7 B=20  scaling factor: 1
+	interaction 65: A=7 B=21  scaling factor: 1
+	interaction 66: A=14 B=5  scaling factor: 1
+	interaction 67: A=14 B=11  scaling factor: 1
+	interaction 68: A=14 B=12  scaling factor: 1
+	interaction 69: A=14 B=13  scaling factor: 1
+	interaction 70: A=14 B=4  scaling factor: 1
+	interaction 71: A=14 B=10  scaling factor: 1
+	interaction 72: A=14 B=3  scaling factor: 1
+	interaction 73: A=14 B=9  scaling factor: 1
+	interaction 74: A=14 B=22  scaling factor: 1
+	interaction 75: A=14 B=23  scaling factor: 1
+	interaction 76: A=14 B=24  scaling factor: 1
+	interaction 77: A=14 B=8  scaling factor: 1
+	interaction 78: A=14 B=19  scaling factor: 1
+	interaction 79: A=14 B=20  scaling factor: 1
+	interaction 80: A=14 B=21  scaling factor: 1
+	interaction 81: A=15 B=5  scaling factor: 1
+	interaction 82: A=15 B=11  scaling factor: 1
+	interaction 83: A=15 B=12  scaling factor: 1
+	interaction 84: A=15 B=13  scaling factor: 1
+	interaction 85: A=15 B=4  scaling factor: 1
+	interaction 86: A=15 B=10  scaling factor: 1
+	interaction 87: A=15 B=3  scaling factor: 1
+	interaction 88: A=15 B=9  scaling factor: 1
+	interaction 89: A=15 B=22  scaling factor: 1
+	interaction 90: A=15 B=23  scaling factor: 1
+	interaction 91: A=15 B=24  scaling factor: 1
+	interaction 92: A=15 B=8  scaling factor: 1
+	interaction 93: A=15 B=19  scaling factor: 1
+	interaction 94: A=15 B=20  scaling factor: 1
+	interaction 95: A=15 B=21  scaling factor: 1
+	interaction 96: A=6 B=11  scaling factor: 1
+	interaction 97: A=6 B=12  scaling factor: 1
+	interaction 98: A=6 B=13  scaling factor: 1
+	interaction 99: A=6 B=10  scaling factor: 1
+	interaction 100: A=6 B=9  scaling factor: 1
+	interaction 101: A=6 B=22  scaling factor: 1
+	interaction 102: A=6 B=23  scaling factor: 1
+	interaction 103: A=6 B=24  scaling factor: 1
+	interaction 104: A=6 B=19  scaling factor: 1
+	interaction 105: A=6 B=20  scaling factor: 1
+	interaction 106: A=6 B=21  scaling factor: 1
+	interaction 107: A=11 B=10  scaling factor: 1
+	interaction 108: A=11 B=3  scaling factor: 1
+	interaction 109: A=11 B=9  scaling factor: 1
+	interaction 110: A=11 B=22  scaling factor: 1
+	interaction 111: A=11 B=23  scaling factor: 1
+	interaction 112: A=11 B=24  scaling factor: 1
+	interaction 113: A=11 B=2  scaling factor: 1
+	interaction 114: A=11 B=8  scaling factor: 1
+	interaction 115: A=11 B=19  scaling factor: 1
+	interaction 116: A=11 B=20  scaling factor: 1
+	interaction 117: A=11 B=21  scaling factor: 1
+	interaction 118: A=12 B=10  scaling factor: 1
+	interaction 119: A=12 B=0  scaling factor: 1
+	interaction 120: A=12 B=9  scaling factor: 1
+	interaction 121: A=12 B=22  scaling factor: 1
+	interaction 122: A=12 B=23  scaling factor: 1
+	interaction 123: A=12 B=24  scaling factor: 1
+	interaction 124: A=12 B=2  scaling factor: 1
+	interaction 125: A=12 B=8  scaling factor: 1
+	interaction 126: A=12 B=19  scaling factor: 1
+	interaction 127: A=12 B=20  scaling factor: 1
+	interaction 128: A=12 B=21  scaling factor: 1
+	interaction 129: A=13 B=10  scaling factor: 1
+	interaction 130: A=13 B=3  scaling factor: 1
+	interaction 131: A=13 B=9  scaling factor: 1
+	interaction 132: A=13 B=22  scaling factor: 1
+	interaction 133: A=13 B=23  scaling factor: 1
+	interaction 134: A=13 B=24  scaling factor: 1
+	interaction 135: A=13 B=2  scaling factor: 1
+	interaction 136: A=13 B=8  scaling factor: 1
+	interaction 137: A=13 B=19  scaling factor: 1
+	interaction 138: A=13 B=20  scaling factor: 1
+	interaction 139: A=13 B=21  scaling factor: 1
+	interaction 140: A=5 B=8  scaling factor: 1
+	interaction 141: A=5 B=19  scaling factor: 1
+	interaction 142: A=5 B=20  scaling factor: 1
+	interaction 143: A=5 B=21  scaling factor: 1
+	interaction 144: A=5 B=9  scaling factor: 1
+	interaction 145: A=5 B=22  scaling factor: 1
+	interaction 146: A=5 B=23  scaling factor: 1
+	interaction 147: A=5 B=24  scaling factor: 1
+	interaction 148: A=19 B=0  scaling factor: 1
+	interaction 149: A=19 B=4  scaling factor: 1
+	interaction 150: A=19 B=10  scaling factor: 1
+	interaction 151: A=19 B=9  scaling factor: 1
+	interaction 152: A=19 B=22  scaling factor: 1
+	interaction 153: A=19 B=23  scaling factor: 1
+	interaction 154: A=19 B=24  scaling factor: 1
+	interaction 155: A=20 B=0  scaling factor: 1
+	interaction 156: A=20 B=4  scaling factor: 1
+	interaction 157: A=20 B=10  scaling factor: 1
+	interaction 158: A=20 B=9  scaling factor: 1
+	interaction 159: A=20 B=22  scaling factor: 1
+	interaction 160: A=20 B=23  scaling factor: 1
+	interaction 161: A=20 B=24  scaling factor: 1
+	interaction 162: A=21 B=0  scaling factor: 1
+	interaction 163: A=21 B=4  scaling factor: 1
+	interaction 164: A=21 B=10  scaling factor: 1
+	interaction 165: A=21 B=9  scaling factor: 1
+	interaction 166: A=21 B=22  scaling factor: 1
+	interaction 167: A=21 B=23  scaling factor: 1
+	interaction 168: A=21 B=24  scaling factor: 1
+	interaction 169: A=8 B=10  scaling factor: 1
+	interaction 170: A=8 B=22  scaling factor: 1
+	interaction 171: A=8 B=23  scaling factor: 1
+	interaction 172: A=8 B=24  scaling factor: 1
+	interaction 173: A=10 B=22  scaling factor: 1
+	interaction 174: A=10 B=23  scaling factor: 1
+	interaction 175: A=10 B=24  scaling factor: 1
+
+
+	number of identity-config changes: 1
+	--------------------------------------------
+	nr fixed 1: 0 
+
+	Number of pockets blocked in a unitcell: 0
+		Pockets are NOT blocked for this component
+
+
+
+Framework Status
+===========================================================================
+Lowenstein's rule obeyed by framework
+	Framework is modelled as: flexible using the model of 
+	==================================================================================
+
+
+	Number of core/shells:                           0
+	Number of bonds:                                 0
+	Number of bond-dipoles:                          0
+	Number of bends:                                 0
+	Number of Urey-Bradleys:                         0
+	Number of Inversion bends:                       0
+	Number of Torsions:                              0
+	Number of Improper Torsions:                     0
+	Number of Out-of-planes:                         0
+	Number of bond-bond cross terms:                 0
+	Number of bond-bend cross terms:                 0
+	Number of bend-bend cross terms:                 0
+	Number of stretch-torsion cross terms:           0
+	Number of bend-torsion cross terms:              0
+
+	Number of charges:                               744
+	Number of bonddipoles:                           0
+
+	Number of Intra VDW:                             276396
+	Number of Intra Coulomb charge-charge:           276396
+	Number of Intra Coulomb charge-bonddipole:       0
+	Number of Intra Coulomb bonddipoles:             0
+	Number of excluded Intra VDW:                    0
+	Number of excluded intra charge-charge:          0
+	Number of excluded intra charge-bonddipole:      0
+	Number of excluded intra bonddipole-bonddipole:  0
+
+
+	Number of 1-2 intra-framework pairs: 2832
+	Number of 1-3 intra-framework pairs: 21312
+	Number of 1-4 intra-framework pairs: 145920
+	Number of 1-2,1-3 intra-framework pairs: 24144
+	Number of 1-2,1-3,1-4 intra-framework pairs: 170064
+	Bond interactions are removed (excluded from VDW and Coulomb interactions)
+	Bend interactions are removed (excluded from VDW and Coulomb interactions)
+	Torsion interactions are *included* in the VDW and Coulomb interactions
+	Remove12NeighboursFromVDWInteraction no
+	Remove13NeighboursFromVDWInteraction no
+	Remove14NeighboursFromVDWInteraction no
+	Remove12NeighboursFromChargeChargeInteraction no
+	Remove13NeighboursFromChargeChargeInteraction no
+	Remove14NeighboursFromChargeChargeInteraction no
+	Remove11NeighboursFromChargeBondDipoleInteraction no
+	Remove12NeighboursFromChargeBondDipoleInteraction no
+	Remove13NeighboursFromChargeBondDipoleInteraction no
+	Remove14NeighboursFromChargeBondDipoleInteraction no
+	Remove12NeighboursFromBondDipoleBondDipoleInteraction no
+	Remove13NeighboursFromBondDipoleBondDipoleInteraction no
+	Remove14NeighboursFromBondDipoleBondDipoleInteraction no
+	InternalFrameworkLennardJonesInteractions yes
+
+
+System Properties
+===========================================================================
+Unit cell size: 11.941200 11.941200 29.400900
+Cell angles (radians)  alpha: 1.570796 beta: 1.570796 gamma: 2.094395
+Cell angles (degrees)  alpha: 90.000000 beta: 90.000000 gamma: 120.000000
+Number of unitcells [a]: 2
+Number of unitcells [b]: 2
+Number of unitcells [c]: 1
+
+TRICLINIC Boundary conditions: alpha!=90 or beta!=90 or gamma!=90
+
+Cartesian axis A is collinear with crystallographic axis a
+Cartesian axis B is collinear with (axb)xA
+Cartesian axis C is collinear with (axb)
+
+lengths of cell vectors:
+ 23.88240  23.88240  29.40090
+cosines of cell angles:
+  0.00000   0.00000  -0.50000
+perpendicular cell widths:
+ 20.68277  20.68277  29.40090
+volume of the cell: 14522.694196201226 (A^3)
+
+Orthogonalization matrix Box
+Transforms fractional coordinates abc into orthonormal Cartesian coordinates xyz
+Deorthogonalization matrix InverseBox
+Transforms orthonormal Cartesian coordinates xyz into fractional coordinates xyz
+
+Box[0]:
+	   23.882400000000   -11.941200000000     0.000000000000
+	    0.000000000000    20.682765103341     0.000000000000
+	    0.000000000000     0.000000000000    29.400900000000
+
+Inverse box[0]:
+	    0.041871838676     0.024174717331    -0.000000000000
+	    0.000000000000     0.048349434662    -0.000000000000
+	    0.000000000000    -0.000000000000     0.034012564241
+
+
+Unitcell box[0]:
+	   11.941200000000    -5.970600000000     0.000000000000
+	    0.000000000000    10.341382551671     0.000000000000
+	    0.000000000000     0.000000000000    29.400900000000
+
+Unitcell inverse box[0]:
+	    0.083743677352     0.048349434662    -0.000000000000
+	    0.000000000000     0.096698869325    -0.000000000000
+	    0.000000000000    -0.000000000000     0.034012564241
+
+lengths of cell vectors (inverse box):
+  0.04187   0.05406   0.03401
+cosines of cell angles (inverse box):
+ -0.00000  -0.00000   0.44721
+perpendicular cell widths (inverse):
+  0.03745   0.04835   0.03401
+volume of the cell: 14522.694196201226 (A^3)
+
+No replicas are used
+Framework is simulated as 'flexible'
+Number of framework atoms: 744
+Number of framework atoms in the unit cell: 186
+Framework Mass: 18215.375616000056 [g/mol]
+Framework Density:  2082.763447571080 [kg/m^3]    0.4801313376064 [cm^3/g]
+Helium void fraction:    0.00000000
+Available pore volume:    0.00000000 [A^3]    0.00000000 [cm^3/g]
+Conversion factor from molecule/unit cell -> kmol/m^3: 0.114341, kmol/m^3 accesible pore volume: inf
+
+Number Of Frameworks (per system): 1
+----------------------------------------------------------------------
+Framework name: stw-00
+Space group: 1
+	Identifier: 1
+	short international Hermann-Mauguin symbol: P 1
+	long international Hermann-Mauguin symbol: P 1
+	Hall symbol: P 1
+	Number of lattice translations: 1 [ (0,0,0) ]
+	acentric/centric: acentric
+	chiral: no
+	enantiomorphic: no
+	number of operators: 1
+		'x,y,z'
+Framework is simulated as 'flexible'
+Shift: 0.000000 0.000000 0.000000
+Number of framework atoms: 744
+Number of asymmetric atoms: 186
+Number of free framework atoms: 744
+Number of fixed framework atoms: 0
+Number of framework atoms in the unit cell: 186
+Framework Mass: 14876.193696000058 [g/mol]
+Framework Density:  1700.958197194727 [kg/m^3]
+Framework has net charge: -24.000000
+         largest charge : 0.600000
+         smallest charge: -1.000000
+
+
+Current Atom Status
+===========================================================================
+Number of framework atoms        : 744
+Number of cations molecules      : 24
+Number of adsorbate molecules    : 0
+Component    0 :   24 molecules
+Pseudo Atoms    0 [    UNIT]:    0 atoms
+Pseudo Atoms    1 [       O]:  480 atoms
+Pseudo Atoms    2 [       F]:   24 atoms
+Pseudo Atoms    3 [      Si]:  240 atoms
+Pseudo Atoms    4 [      Ge]:    0 atoms
+Pseudo Atoms    5 [ N1_mol1]:   24 atoms
+Pseudo Atoms    6 [ N2_mol1]:   24 atoms
+Pseudo Atoms    7 [Cring1_mol1]:   24 atoms
+Pseudo Atoms    8 [Cring2_mol1]:   24 atoms
+Pseudo Atoms    9 [Cring3_mol1]:   24 atoms
+Pseudo Atoms   10 [ C5_mol1]:   24 atoms
+Pseudo Atoms   11 [ C6_mol1]:   24 atoms
+Pseudo Atoms   12 [ C7_mol1]:   24 atoms
+Pseudo Atoms   13 [ C8_mol1]:   24 atoms
+Pseudo Atoms   14 [ C9_mol1]:   24 atoms
+Pseudo Atoms   15 [ H4_mol1]:   24 atoms
+Pseudo Atoms   16 [H51_mol1]:   24 atoms
+Pseudo Atoms   17 [H52_mol1]:   24 atoms
+Pseudo Atoms   18 [H53_mol1]:   24 atoms
+Pseudo Atoms   19 [H61_mol1]:   24 atoms
+Pseudo Atoms   20 [H62_mol1]:   24 atoms
+Pseudo Atoms   21 [H71_mol1]:   24 atoms
+Pseudo Atoms   22 [H72_mol1]:   24 atoms
+Pseudo Atoms   23 [H73_mol1]:   24 atoms
+Pseudo Atoms   24 [H81_mol1]:   24 atoms
+Pseudo Atoms   25 [H82_mol1]:   24 atoms
+Pseudo Atoms   26 [H83_mol1]:   24 atoms
+Pseudo Atoms   27 [H91_mol1]:   24 atoms
+Pseudo Atoms   28 [H92_mol1]:   24 atoms
+Pseudo Atoms   29 [H93_mol1]:   24 atoms
+
+
+Current (initial full energy) Energy Status
+===========================================================================
+
+Internal energy:
+Host stretch energy:                                            0.00000000
+Host UreyBradley energy:                                        0.00000000
+Host bend energy:                                               0.00000000
+Host inversion-bend energy:                                     0.00000000
+Host torsion energy:                                            0.00000000
+Host improper torsion energy:                                   0.00000000
+Host out-of-plane energy:                                       0.00000000
+Host stretch/stretch energy:                                    0.00000000
+Host bend/bend energy:                                          0.00000000
+Host stretch/bend energy:                                       0.00000000
+Host stretch/torsion energy:                                    0.00000000
+Host bend/torsion energy:                                       0.00000000
+
+Adsorbate stretch energy:                                       0.00000000
+Adsorbate UreyBradley energy:                                   0.00000000
+Adsorbate bend energy:                                          0.00000000
+Adsorbate inversion-bend energy:                                0.00000000
+Adsorbate torsion energy:                                       0.00000000
+Adsorbate improper torsion energy:                              0.00000000
+Adsorbate out-of-plane energy:                                  0.00000000
+Adsorbate stretch/stretch energy:                               0.00000000
+Adsorbate bend/bend energy:                                     0.00000000
+Adsorbate stretch/bend energy:                                  0.00000000
+Adsorbate stretch/torsion energy:                               0.00000000
+Adsorbate bend/torsion energy:                                  0.00000000
+Adsorbate intra VDW energy:                                     0.00000000
+Adsorbate intra charge-charge Coulomb energy:                   0.00000000
+Adsorbate intra charge-bonddipole Coulomb energy:               0.00000000
+Adsorbate intra bonddipole-bonddipole Coulomb energy:           0.00000000
+
+Cation stretch energy:                                     194559.58743900
+Cation UreyBradley energy:                                      0.00000000
+Cation bend energy:                                        288157.27334981
+Cation inversion-bend energy:                                   0.00000000
+Cation torsion energy:                                      80895.52882046
+Cation improper torsion energy:                              3150.82992791
+Cation out-of-plane energy:                                     0.00000000
+Cation stretch/stretch energy:                                  0.00000000
+Cation bend/bend energy:                                        0.00000000
+Cation stretch/bend energy:                                     0.00000000
+Cation stretch/torsion energy:                                  0.00000000
+Cation bend/torsion energy:                                     0.00000000
+Cation intra VDW energy:                                   551193.24644754
+Cation intra charge-charge Coulomb energy:                      0.00000000
+Cation intra charge-bonddipole Coulomb energy:                  0.00000000
+Cation intra bonddipole-bonddipole Coulomb energy:              0.00000000
+
+Host/Host energy:                                     1622255215.83369112
+	Host/Host VDW energy:                                 1627781685.21861768
+	Host/Host Coulomb energy:                              -5526469.38492655
+	Host/Host charge-charge Real energy:                   -6350434.60210216
+	Host/Host charge-charge Fourier energy:                  823965.21717561
+	Host/Host charge-bonddipole Real energy:                      0.00000000
+	Host/Host charge-bonddipole Fourier energy:                   0.00000000
+	Host/Host bondipole-bonddipole Real energy:                   0.00000000
+	Host/Host bondipole-bonddipole Fourier energy:                0.00000000
+
+Host/Adsorbate energy:                                        0.00000000
+	Host/Adsorbate VDW energy:                                    0.00000000
+	Host/Adsorbate Coulomb energy:                                0.00000000
+	Host/Adsorbate charge-charge Real energy:                     0.00000000
+	Host/Adsorbate charge-charge Fourier energy:                  0.00000000
+	Host/Adsorbate charge-bonddipole Real energy:                 0.00000000
+	Host/Adsorbate charge-bonddipole Fourier energy:              0.00000000
+	Host/Adsorbate bondipole-bonddipole Real energy:              0.00000000
+	Host/Adsorbate bondipole-bonddipole Fourier energy:           0.00000000
+
+Host/Cation energy:                                    -8971539.27844348
+	Host/Cation VDW energy:                                 1966286.00745850
+	Host/Cation Coulomb energy:                           -10937825.28590198
+	Host/Cation charge-charge Real energy:                  -188792.99155542
+	Host/Cation charge-charge Fourier energy:             -10749032.29434655
+	Host/Cation charge-bonddipole Real energy:                    0.00000000
+	Host/Cation charge-bonddipole Fourier energy:                 0.00000000
+	Host/Cation bondipole-bonddipole Real energy:                 0.00000000
+	Host/Cation bondipole-bonddipole Fourier energy:              0.00000000
+
+Adsorbate/Adsorbate energy:                                        0.00000000
+	Adsorbate/Adsorbate VDW energy:                                    0.00000000
+	Adsorbate/Adsorbate Coulomb energy:                                0.00000000
+	Adsorbate/Adsorbate charge-charge Real energy:                     0.00000000
+	Adsorbate/Adsorbate charge-charge Fourier energy:                  0.00000000
+	Adsorbate/Adsorbate charge-bonddipole Real energy:                 0.00000000
+	Adsorbate/Adsorbate charge-bonddipole Fourier energy:              0.00000000
+	Adsorbate/Adsorbate bondipole-bonddipole Real energy:              0.00000000
+	Adsorbate/Adsorbate bondipole-bonddipole Fourier energy:           0.00000000
+
+Adsorbate/Cation energy:                                           0.00000000
+	Adsorbate/Cation VDW energy:                                       0.00000000
+	Adsorbate/Cation Coulomb energy:                                   0.00000000
+	Adsorbate/Cation charge-charge Real energy:                        0.00000000
+	Adsorbate/Cation charge-charge Fourier energy:                     0.00000000
+	Adsorbate/Cation charge-bonddipole Real energy:                    0.00000000
+	Adsorbate/Cation charge-bonddipole Fourier energy:                 0.00000000
+	Adsorbate/Cation bondipole-bonddipole Real energy:                 0.00000000
+	Adsorbate/Cation bondipole-bonddipole Fourier energy:              0.00000000
+
+Cation/Cation energy:                                     5329958.45974533
+	Cation/Cation VDW energy:                                  281593.06761756
+	Cation/Cation Coulomb energy:                             5048365.39212777
+	Cation/Cation charge-charge Real energy:                    44082.68992944
+	Cation/Cation charge-charge Fourier energy:               5004282.70219833
+	Cation/Cation charge-bonddipole Real energy:                    0.00000000
+	Cation/Cation charge-bonddipole Fourier energy:                 0.00000000
+	Cation/Cation bondipole-bonddipole Real energy:                 0.00000000
+	Cation/Cation bondipole-bonddipole Fourier energy:              0.00000000
+
+Polarization energy:
+	Host polarization energy:                                     0.00000000
+	Adsorbate polarization energy:                                0.00000000
+	Cation polarization energy:                                   0.00000000
+	Host back-polarization energy:                                     0.00000000
+	Adsorbate back-polarization energy:                                0.00000000
+	Cation back-polarization energy:                                   0.00000000
+
+Tail-correction energy:                                       0.00000000
+
+Distance constraints energy:                                  0.00000000
+Angle constraints energy:                                     0.00000000
+Dihedral constraints energy:                                  0.00000000
+Inversion-bend constraints energy:                            0.00000000
+Out-of-plane distance constraints energy:                     0.00000000
+Exclusion constraints energy:                                 0.00000000
+
+===================================================================
+Total energy: 1619731591.480977773666
+	Total Van der Waals: 1630029564.293694
+	Total Coulomb: -11415929.278701
+
+	Total Polarization: 0.000000
+
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Starting simulation
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[Init] Current cycle: 0 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1619731591.4809777737 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:            -8971539.2784434762 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5329958.4597453289 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 10 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1619213338.9867064953 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:            -9368909.1921777409 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5209075.8792080237 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 20 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618868176.4637832642 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:            -9669634.7845977768 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5164638.9487052681 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 30 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618598258.2958559990 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:            -9912603.8148006573 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5137689.8109814320 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 40 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618499125.6277816296 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:           -10009069.4515084438 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5135022.7796156937 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 50 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618426308.6997866631 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:           -10101244.8135268539 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5154381.2136396216 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 60 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618250422.1177115440 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:           -10235960.2589380275 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5113210.0769758383 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 70 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618194369.1747643948 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:           -10283842.9959133789 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5105039.8710037023 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 80 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1618057785.3296833038 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:           -10366002.5022291709 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5067146.6648430079 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+[Init] Current cycle: 90 out of 100
+========================================================================================================
+
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]
+Box-lengths:  23.88240  23.88240  29.40090 Box-angles:   90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0, density: 381.80559 [kg/m^3]
+	absolute adsorption:   6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+	excess adsorption:     6.00000 [mol/uc],         1.3176 [mol/kg],            183.3167 [mg/g]
+	                                                29.5319 [cm^3 STP/g],         61.5080 [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3816 2232 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction
+
+Current total potential energy:        1617993603.7387740612 [K]
+	Current Host-Host energy:            1622255215.8336911201 [K]
+	Current Host-Adsorbate energy:                0.0000000000 [K]
+	Current Host-Cation energy:           -10427230.7670788988 [K]
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]
+	Current Cation-Cation energy:           5064193.3387832195 [K]
+	Current Adsorbate-Cation energy:              0.0000000000 [K]
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+Average Properties at Current cycle: 0 out of 100
+========================================================================================
+
+Framework surface area:       0.0000000000 [m^2/g]        0.0000000000 [m^2/cm^3]       0.0000000000 [A^2]
+	Framework 0 individual surface area:       0.0000000000 [m^2/g]        0.0000000000 [m^2/cm^3]       0.0000000000 [A^2]
+	Cation surface area:                       0.0000000000 [m^2/g]        0.0000000000 [m^2/cm^3]       0.0000000000 [A^2]
+Compressibility:       0.0000000000 [-]
+Henry coefficients
+	Component 0: 0 [mol/kg/Pa] (Rosenbluth factor new: 0 [-])
+Energy <U_gh>_1-<U_h>_0 from Widom
+
+
+Current cycle: 0 out of 100
+========================================================================================================
+
+Time run:   0.000000 [ps]   0.000000 [ns] 
+Net charge: -6.39488e-14 (F: -24, A: 0, C: 24)
+Current Box:  23.88240 -11.94120   0.00000 [A]   Average Box:  23.88240 -11.94120   0.00000 [A]
+               0.00000  20.68277   0.00000 [A]                  0.00000  20.68277   0.00000 [A]
+               0.00000   0.00000  29.40090 [A]                  0.00000   0.00000  29.40090 [A]
+Box-lengths:   23.88240  23.88240  29.40090 [A] Average:  23.88240  23.88240  29.40090 [A]
+Box-angles:   90.00000  90.00000 120.00000 [degrees] Average:  90.00000  90.00000 120.00000 [degrees]
+Volume: 14522.69420 [A^3] Average Volume: 14522.69420 [A^3]
+
+Framework center-of-mass drift:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+Total linear momentum:       0.0000000000 [A]       0.0000000000 [A]       0.0000000000 [A]
+
+Current Stress: 6233517.19461 177.74556 -522.13287 [MPa]   Average Stress: 6233517194.60709 177745.55632 -522132.87154 [kPa]
+                177.74556 6232416.25973 -192.49503 [MPa]                   177745.55632 6232416259.72652 -192495.02671 [kPa]
+                -522.13287 -192.49503 6225926.34423 [MPa]                   -522132.87154 -192495.02671 6225926344.22795 [kPa]
+Average pressure: 6230619932.8538532257 [kPa] 61491437.7779802978 [atm] 62306199.3285385370 [bar]
+
+Loadings per component:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Component 0 (2e134tmi_cat1), current number of integer/fractional/reaction molecules: 24/0/0 (avg.  24.00000), density: 381.80559 (avg. 381.80559) [kg/m^3]
+	absolute adsorption:   6.00000 (avg.   6.00000) [mol/uc],   1.3175682185 (avg.   1.3175682185) [mol/kg], 183.3166655683 (avg. 183.3166655683) [mg/g]
+	                      29.5319420957 (avg.  29.5319420957) [cm^3 STP/g],   61.5080495326 (avg.  61.5080495326) [cm^3 STP/cm^3]
+	excess adsorption:     6.0000000000 (avg.   6.0000000000) [mol/uc],   1.3175682185 (avg.   1.3175682185) [mol/kg], 183.3166655683 (avg. 183.3166655683) [mg/g]
+	                      29.5319420957 (avg.  29.5319420957) [cm^3 STP/g],   61.5080495326 (avg.  61.5080495326) [cm^3 STP/cm^3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Degrees of freedom: 3813 2229 0 1584
+Number of Framework-atoms:    744
+Number of Adsorbates:           0 (0 integer, 0 fractional, 0 reaction)
+Number of Cations:             24 (24 integer, 0 fractional, 0 reaction)
+
+Conserved energy:  1619650697.7745006084 Energy drifts:  0.0000000000           0.0000000000
+Temperature:             813.797 (avg.  813.797), Translational (avg.  813.867), Rotational (avg.  810.136)
+Temperature Framework:   806.237 (avg.  806.237)
+Temperature Cations:     824.435 (avg.  824.435)
+Cell temperature:    0.000 (avg.    0.000)
+Current total kinetic energy:           1289992.5416284599 [K]
+Current total Nose-Hoover energy:        110436.1356963888 [K]
+Current total potential energy:        1617966368.1953020096 [K]  (avg.  1617966368.1953020096)
+	Current Host-Host energy:            1622255215.8336911201 [K]  (avg.  1622255215.8336911201)
+	Current Host-Adsorbate energy:                0.0000000000 [K]  (avg.           0.0000000000)
+	Current Host-Cation energy:           -10454051.5063715968 [K]  (avg.   -10454051.5063715968)
+	Current Adsorbate-Adsorbate energy:           0.0000000000 [K]  (avg.           0.0000000000)
+	Current Cation-Cation energy:           5063778.5346024418 [K]  (avg.     5063778.5346024418)
+	Current Adsorbate-Cation energy:              0.0000000000 [K]  (avg.           0.0000000000)
+
+WARNING: REINSERTION MOVE USED ON CHARGED IONS (IF POSSIBLE, CHANGE TO RANDOM TRANSLATION MOVE TO AVOID NUMERICAL PROBLEMS)
+
+
+
+
+ERROR: unstable integration (energy drift 8.76134e+13 > 1e2, simulation stopped)
+
+Check that: 1) all interaction are defined properly
+            2) the time step is not too large
+            3) the system is equilibrated
+

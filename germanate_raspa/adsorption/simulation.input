@@ -1,35 +1,32 @@
-SimulationType                MC
-NumberOfCycles                5000
-NumberOfInitializationCycles  100
-PrintEvery                    50
-RestartFile                   no
-Forcefield                    local
+SimulationType                   MD
+NumberOfCycles                   100
+NumberOfInitializationCycles     100
+PrintEvery                       10
+RestartFile                      no
 
-ModifyFrameworkAtomConnectedTo O   Oss Si
-ModifyFrameworkAtomConnectedTo O   Ogg Ge
-ModifyFrameworkAtomConnectedTo Oss Ogg Ge
-ModifyFrameworkAtomConnectedTo Ogg Ogs Si
-     
-Framework 0
-FrameworkName       c0001
-UnitCells           1 1 1
-ExternalTemperature 300.0
-Movies yes
-WriteMoviesEvery                 100
+CutOff                           10.0
+ChargeMethod                     Ewald
+Forcefield                       local
+EwaldPrecision                   1e-8
+
+Framework                        0
+Frameworkname                    stw-00
+RemoveAtomNumberCodeFromLabel    yes
+UnitCells                        2 2 1
+RestrictFrameworkAtomsToBox      yes
+ExternalTemperature              800
+ExternalPressure                 0
+Movies                           yes
+WriteMoviesEvery                 10
 FlexibleFramework                yes
-FrameworkDefinitions             local
 
-component 0 MoleculeName                   2e134tmi_flexible
-            MoleculeDefinition             Local
-            RandomTranslationProbability   1.0
-            TranslationProbability         1.0
-            RotationProbability            1.0
-            RegrowProbability              10.0
-            ReinsertionProbability         10.0
+component 0 MoleculeName                   2e134tmi_cat1
+            MoleculeDefinition             local
+            IdealGasRosenbluthWeight       3.57076e-9
+            RotationProbability            1
+            RandomTranslationProbability   1
+            ReinsertionProbability         1
+            TranslationProbability         1
             ExtraFrameworkMolecule         yes
-            CreateNumberOfMolecules        6
+            CreateNumberOfMolecules        24
 
-component 1 MoleculeName                   fluorine
-            MoleculeDefinition             Local
-            ExtraFrameworkMolecule         yes
-            CreateNumberOfMolecules        0
