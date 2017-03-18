@@ -254,20 +254,13 @@ program main
      ener_3(i,l,k)-ener_3(i,k,l)-ener_3(l,i,k)-ener_3(l,k,i)-ener_3(l,k,i)-ener_3(k,i,l)-&
      ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j)-&
      ener_3(j,l,k))/choose_one
-     !real(choose(n_Ge,4))
     rewind(143)
     write(6,*)i,j,k,l,epsilon_,choose_one
     exit check_energy_4
    end if
   end do check_energy_4 
   if(no_presente)then
-   !minener_4(1) = ener_1(i) + ener_3(j,k,l)
-   !minener_4(2) = ener_1(j) + ener_3(i,k,l)
-   !minener_4(3) = ener_1(k) + ener_3(i,j,l)
-   !minener_4(4) = ener_1(l) + ener_3(i,j,k)
-   !epsilon_ = minval( minener_4 )
    epsilon_ = 0.0
-   !write(6,*)'four Ge NO detection',i,j,k,l,epsilon_
   end if
   ener_4(i,j,k,l) = epsilon_
   ener_4(i,j,l,k) = epsilon_

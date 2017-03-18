@@ -1,10 +1,8 @@
 subroutine geometrical_properties(n_atoms,n_T,n_Al,cell_0,cryst_coor,n_configurations,labels,&
-                                  !deg_1,deg_2,deg_3,deg_4,ener_0,ener_1,ener_2,ener_3,ener_4,ii)
                                   ener_0,ener_1,ener_2,ener_3,ener_4,ii)
  implicit none
  integer,intent(in) :: n_atoms,n_T,n_Al,ii
  integer,intent(in) :: n_configurations
-! real,intent(in)    :: deg_1(n_atoms),deg_2(n_atoms,n_atoms),deg_3(n_atoms),deg_4(n_atoms)
  real,intent(in)    :: ener_0, ener_1(n_atoms),ener_2(n_atoms,n_atoms)
  real,intent(in)    :: ener_3(n_atoms,n_atoms,n_atoms)
  real,intent(in)    :: ener_4(n_atoms,n_atoms,n_atoms,n_atoms)
@@ -95,12 +93,10 @@ subroutine make_dist_matrix(n,cell_0,rv,vr,x,dist_matrix)
 end subroutine make_dist_matrix
 
 subroutine farthrest_nodes_subtitutions(n_atoms,n_T,n_Al,ener_0,ener_1,&
-      !ener_2,ener_3,ener_4,deg_1,deg_2,deg_3,deg_4,cell_0,cryst_coor,n_configurations,&
       ener_2,ener_3,ener_4,cell_0,cryst_coor,n_configurations,&
       labels,MC_cycles,T,ii)
  implicit none
  integer,intent(in) :: n_atoms,n_T,ii
- !real,intent(in)    :: deg_1(n_atoms),deg_2(n_atoms,n_atoms),deg_3(n_atoms),deg_4(n_atoms)
  real,intent(in)    :: ener_0, ener_1(n_atoms),ener_2(n_atoms,n_atoms)
  real,intent(in)    :: ener_3(n_atoms,n_atoms,n_atoms)
  real,intent(in)    :: ener_4(n_atoms,n_atoms,n_atoms,n_atoms)
@@ -288,8 +284,6 @@ subroutine farthrest_nodes_subtitutions(n_atoms,n_T,n_Al,ener_0,ener_1,&
  enddo
  call write_gin(cell_0,xcryst,n_atoms,labels,seed)
  write(6,*)'energia: ', energy(n_atoms,n_T,label,ener_0,ener_1,ener_2,ener_3,ener_4)
- !call geometrical_properties(n_atoms,n_T,n_Al,cell_0,cryst_coor,n_configurations,labels,&
- !      ener_0,ener_1,ener_2,ener_3,ener_4,ii)
  end do hybrid_cycles
  close(666)
  WRITE(6,*)'STOP',pot_dist,r/real(m),cost
@@ -347,8 +341,6 @@ END FUNCTION repulsive_potential_Lowenstein
   real,intent(in)     :: ener_1(n_atoms),ener_2(n_atoms,n_atoms),ener_0
   real,intent(in)     :: ener_3(n_atoms,n_atoms,n_atoms)
   real,intent(in)     :: ener_4(n_atoms,n_atoms,n_atoms,n_atoms)
-  !real,intent(in)     :: deg_1(n_atoms),deg_2(n_atoms,n_atoms),deg_3(n_atoms,n_atoms,n_atoms)
-  !real,intent(in)     :: deg_4(n_atoms,n_atoms,n_atoms,n_atoms)
   real                :: R4_UNIFORM,energy,r
   integer,parameter   :: max_ident_numer=10
   CHARACTER (LEN=4)   :: label(1:n_atoms),cation_distribution(0:max_ident_numer,n_T)
@@ -397,15 +389,11 @@ END FUNCTION repulsive_potential_Lowenstein
        energia(1) = energia(2)
        exito = exito + 1.0
     END IF
-    !write(6,'(f20.10,1x,60a2)')energia(1),(label(j)(1:2),j=1,n_atoms)
   END DO MC_step
   r = energy(n_atoms,n_T,label,ener_0,ener_1,ener_2,ener_3,ener_4)
-  !write(6,'(f20.10,1x,60a2)')energia(1),(label(j)(1:2),j=1,n_atoms)
   exito   = exito/REAL(n_atoms*n_atoms)
   coste = r !energia(1)
   eta = coste - eta
-! coste, ocurrencia, exito
-  !write(6,*) coste,exito,eta
   RETURN
  END SUBROUTINE MonteCarlo
 !
@@ -471,9 +459,6 @@ END FUNCTION repulsive_potential_Lowenstein
  END FUNCTION energy
 !
  SUBROUTINE cell(rv,vr,cell_0)
-! ======================
-! GULP
-! ======================
  implicit none
  integer :: i,j
  real, intent(in)  :: cell_0(6)
@@ -530,9 +515,6 @@ END FUNCTION repulsive_potential_Lowenstein
  END SUBROUTINE cell
 !
  SUBROUTINE uncell(rv,cell_0)
-! ======================
-! GULP
-! ======================
   implicit none
   real,intent(out)   :: cell_0(6)
   real,intent(in)    :: rv(3,3)
