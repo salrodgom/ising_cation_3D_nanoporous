@@ -1,0 +1,5080 @@
++ make install
+gfortran -pedantic -O2 -march=native farthrest_nodes_subtitutions.f90 -c
+gfortran -pedantic -O2 -march=native ising_frameworks.f90 -c
+gfortran -pedantic -O2 -march=native ising_frameworks.o farthrest_nodes_subtitutions.o -o ising_frameworks
++ '[' '!' -d CALCS ']'
+++ seq 1 59
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 1.1
+1.1
++ echo 1
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 1.1.output
+++ awk '{print $2}'
++ name=c2076148032.gin
++ cat c2076148032.gin src/oxygen.gin
++ rm c2076148032.gin
++ mv 1.1.output 1.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 1.2
+1.2
++ echo 1
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 1.2.output
+++ awk '{print $2}'
++ name=c1060930444.gin
++ cat c1060930444.gin src/oxygen.gin
++ rm c1060930444.gin
++ mv 1.2.output 1.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 1.3
+1.3
++ echo 1
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 1.3.output
+++ awk '{print $2}'
++ name=c1923327636.gin
++ cat c1923327636.gin src/oxygen.gin
++ rm c1923327636.gin
++ mv 1.3.output 1.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 1.4
+1.4
++ echo 1
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 1.4.output
+++ awk '{print $2}'
++ name=c0952383398.gin
++ cat c0952383398.gin src/oxygen.gin
++ rm c0952383398.gin
++ mv 1.4.output 1.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 2.1
+2.1
++ echo 2
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 2.1.output
+++ awk '{print $2}'
++ name=c0901812469.gin
++ cat c0901812469.gin src/oxygen.gin
++ rm c0901812469.gin
++ mv 2.1.output 2.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 2.2
+2.2
++ echo 2
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 2.2.output
+++ awk '{print $2}'
++ name=c1455992657.gin
++ cat c1455992657.gin src/oxygen.gin
++ rm c1455992657.gin
++ mv 2.2.output 2.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 2.3
+2.3
++ echo 2
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 2.3.output
+++ awk '{print $2}'
++ name=c2113828212.gin
++ cat c2113828212.gin src/oxygen.gin
++ rm c2113828212.gin
++ mv 2.3.output 2.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 2.4
+2.4
++ echo 2
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 2.4.output
+++ awk '{print $2}'
++ name=c1398217033.gin
++ cat c1398217033.gin src/oxygen.gin
++ rm c1398217033.gin
++ mv 2.4.output 2.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 3.1
+3.1
++ echo 3
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 3.1.output
+++ awk '{print $2}'
++ name=c0199794849.gin
++ cat c0199794849.gin src/oxygen.gin
++ rm c0199794849.gin
++ mv 3.1.output 3.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 3.2
+3.2
++ echo 3
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 3.2.output
+++ awk '{print $2}'
++ name=c2099011400.gin
++ cat c2099011400.gin src/oxygen.gin
++ rm c2099011400.gin
++ mv 3.2.output 3.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 3.3
+3.3
++ echo 3
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 3.3.output
+++ awk '{print $2}'
++ name=c1127124925.gin
++ cat c1127124925.gin src/oxygen.gin
++ rm c1127124925.gin
++ mv 3.3.output 3.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 3.4
+3.4
++ echo 3
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 3.4.output
+++ awk '{print $2}'
++ name=c1707780240.gin
++ cat c1707780240.gin src/oxygen.gin
++ rm c1707780240.gin
++ mv 3.4.output 3.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 4.1
+4.1
++ echo 4
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 4.1.output
+++ awk '{print $2}'
++ name=c0640502444.gin
++ cat c0640502444.gin src/oxygen.gin
++ rm c0640502444.gin
++ mv 4.1.output 4.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 4.2
+4.2
++ echo 4
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 4.2.output
+++ awk '{print $2}'
++ name=c2086260478.gin
++ cat c2086260478.gin src/oxygen.gin
++ rm c2086260478.gin
++ mv 4.2.output 4.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 4.3
+4.3
++ echo 4
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 4.3.output
+++ awk '{print $2}'
++ name=c1028941859.gin
++ cat c1028941859.gin src/oxygen.gin
++ rm c1028941859.gin
++ mv 4.3.output 4.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 4.4
+4.4
++ echo 4
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 4.4.output
+++ awk '{print $2}'
++ name=c0539354770.gin
++ cat c0539354770.gin src/oxygen.gin
++ rm c0539354770.gin
++ mv 4.4.output 4.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 5.1
+5.1
++ echo 5
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 5.1.output
+++ awk '{print $2}'
++ name=c1297751958.gin
++ cat c1297751958.gin src/oxygen.gin
++ rm c1297751958.gin
++ mv 5.1.output 5.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 5.2
+5.2
++ echo 5
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 5.2.output
+++ awk '{print $2}'
++ name=c1235532586.gin
++ cat c1235532586.gin src/oxygen.gin
++ rm c1235532586.gin
++ mv 5.2.output 5.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 5.3
+5.3
++ echo 5
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 5.3.output
+++ awk '{print $2}'
++ name=c0706190979.gin
++ cat c0706190979.gin src/oxygen.gin
++ rm c0706190979.gin
++ mv 5.3.output 5.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 5.4
+5.4
++ echo 5
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 5.4.output
+++ awk '{print $2}'
++ name=c1853718355.gin
++ cat c1853718355.gin src/oxygen.gin
++ rm c1853718355.gin
++ mv 5.4.output 5.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 6.1
+6.1
++ echo 6
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 6.1.output
+++ awk '{print $2}'
++ name=c2127349222.gin
++ cat c2127349222.gin src/oxygen.gin
++ rm c2127349222.gin
++ mv 6.1.output 6.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 6.2
+6.2
++ echo 6
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 6.2.output
+++ awk '{print $2}'
++ name=c0473424748.gin
++ cat c0473424748.gin src/oxygen.gin
++ rm c0473424748.gin
++ mv 6.2.output 6.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 6.3
+6.3
++ echo 6
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 6.3.output
+++ awk '{print $2}'
++ name=c0196924192.gin
++ cat c0196924192.gin src/oxygen.gin
++ rm c0196924192.gin
++ mv 6.3.output 6.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 6.4
+6.4
++ echo 6
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 6.4.output
+++ awk '{print $2}'
++ name=c0964317199.gin
++ cat c0964317199.gin src/oxygen.gin
++ rm c0964317199.gin
++ mv 6.4.output 6.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 7.1
+7.1
++ echo 7
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 7.1.output
+++ awk '{print $2}'
++ name=c0228565188.gin
++ cat c0228565188.gin src/oxygen.gin
++ rm c0228565188.gin
++ mv 7.1.output 7.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 7.2
+7.2
++ echo 7
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 7.2.output
+++ awk '{print $2}'
++ name=c1124714132.gin
++ cat c1124714132.gin src/oxygen.gin
++ rm c1124714132.gin
++ mv 7.2.output 7.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 7.3
+7.3
++ echo 7
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 7.3.output
+++ awk '{print $2}'
++ name=c0061164297.gin
++ cat c0061164297.gin src/oxygen.gin
++ rm c0061164297.gin
++ mv 7.3.output 7.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 7.4
+7.4
++ echo 7
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 7.4.output
+++ awk '{print $2}'
++ name=c1354999175.gin
++ cat c1354999175.gin src/oxygen.gin
++ rm c1354999175.gin
++ mv 7.4.output 7.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 8.1
+8.1
++ echo 8
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 8.1.output
+++ awk '{print $2}'
++ name=c0195844649.gin
++ cat c0195844649.gin src/oxygen.gin
++ rm c0195844649.gin
++ mv 8.1.output 8.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 8.2
+8.2
++ echo 8
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 8.2.output
+++ awk '{print $2}'
++ name=c1123022484.gin
++ cat c1123022484.gin src/oxygen.gin
++ rm c1123022484.gin
++ mv 8.2.output 8.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 8.3
+8.3
++ echo 8
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 8.3.output
+++ awk '{print $2}'
++ name=c0580872008.gin
++ cat c0580872008.gin src/oxygen.gin
++ rm c0580872008.gin
++ mv 8.3.output 8.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 8.4
+8.4
++ echo 8
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 8.4.output
+++ awk '{print $2}'
++ name=c1451775517.gin
++ cat c1451775517.gin src/oxygen.gin
++ rm c1451775517.gin
++ mv 8.4.output 8.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 9.1
+9.1
++ echo 9
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 9.1.output
+++ awk '{print $2}'
++ name=c0714915711.gin
++ cat c0714915711.gin src/oxygen.gin
++ rm c0714915711.gin
++ mv 9.1.output 9.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 9.2
+9.2
++ echo 9
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 9.2.output
+++ awk '{print $2}'
++ name=c0625634224.gin
++ cat c0625634224.gin src/oxygen.gin
++ rm c0625634224.gin
++ mv 9.2.output 9.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 9.3
+9.3
++ echo 9
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 9.3.output
+++ awk '{print $2}'
++ name=c2139867276.gin
++ cat c2139867276.gin src/oxygen.gin
++ rm c2139867276.gin
++ mv 9.3.output 9.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 9.4
+9.4
++ echo 9
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 9.4.output
+++ awk '{print $2}'
++ name=c0197451055.gin
++ cat c0197451055.gin src/oxygen.gin
++ rm c0197451055.gin
++ mv 9.4.output 9.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 10.1
+10.1
++ echo 10
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 10.1.output
+++ awk '{print $2}'
++ name=c1683293725.gin
++ cat c1683293725.gin src/oxygen.gin
++ rm c1683293725.gin
++ mv 10.1.output 10.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 10.2
+10.2
++ echo 10
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 10.2.output
+++ awk '{print $2}'
++ name=c1314732752.gin
++ cat c1314732752.gin src/oxygen.gin
++ rm c1314732752.gin
++ mv 10.2.output 10.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 10.3
+10.3
++ echo 10
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 10.3.output
+++ awk '{print $2}'
++ name=c0431226681.gin
++ cat c0431226681.gin src/oxygen.gin
++ rm c0431226681.gin
++ mv 10.3.output 10.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 10.4
+10.4
++ echo 10
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 10.4.output
+++ awk '{print $2}'
++ name=c1397479640.gin
++ cat c1397479640.gin src/oxygen.gin
++ rm c1397479640.gin
++ mv 10.4.output 10.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 11.1
+11.1
++ echo 11
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 11.1.output
+++ awk '{print $2}'
++ name=c1943549995.gin
++ cat c1943549995.gin src/oxygen.gin
++ rm c1943549995.gin
++ mv 11.1.output 11.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 11.2
+11.2
++ echo 11
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 11.2.output
+++ awk '{print $2}'
++ name=c1334164755.gin
++ cat c1334164755.gin src/oxygen.gin
++ rm c1334164755.gin
++ mv 11.2.output 11.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 11.3
+11.3
++ echo 11
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 11.3.output
+++ awk '{print $2}'
++ name=c0244421563.gin
++ cat c0244421563.gin src/oxygen.gin
++ rm c0244421563.gin
++ mv 11.3.output 11.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 11.4
+11.4
++ echo 11
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 11.4.output
+++ awk '{print $2}'
++ name=c0412091392.gin
++ cat c0412091392.gin src/oxygen.gin
++ rm c0412091392.gin
++ mv 11.4.output 11.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 12.1
+12.1
++ echo 12
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 12.1.output
+++ awk '{print $2}'
++ name=c1554277988.gin
++ cat c1554277988.gin src/oxygen.gin
++ rm c1554277988.gin
++ mv 12.1.output 12.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 12.2
+12.2
++ echo 12
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 12.2.output
+++ awk '{print $2}'
++ name=c1637424013.gin
++ cat c1637424013.gin src/oxygen.gin
++ rm c1637424013.gin
++ mv 12.2.output 12.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 12.3
+12.3
++ echo 12
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 12.3.output
+++ awk '{print $2}'
++ name=c0170203805.gin
++ cat c0170203805.gin src/oxygen.gin
++ rm c0170203805.gin
++ mv 12.3.output 12.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 12.4
+12.4
++ echo 12
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 12.4.output
+++ awk '{print $2}'
++ name=c0915342823.gin
++ cat c0915342823.gin src/oxygen.gin
++ rm c0915342823.gin
++ mv 12.4.output 12.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 13.1
+13.1
++ echo 13
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 13.1.output
+++ awk '{print $2}'
++ name=c2117028638.gin
++ cat c2117028638.gin src/oxygen.gin
++ rm c2117028638.gin
++ mv 13.1.output 13.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 13.2
+13.2
++ echo 13
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 13.2.output
+++ awk '{print $2}'
++ name=c1291111770.gin
++ cat c1291111770.gin src/oxygen.gin
++ rm c1291111770.gin
++ mv 13.2.output 13.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 13.3
+13.3
++ echo 13
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 13.3.output
+++ awk '{print $2}'
++ name=c0732675126.gin
++ cat c0732675126.gin src/oxygen.gin
++ rm c0732675126.gin
++ mv 13.3.output 13.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 13.4
+13.4
++ echo 13
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 13.4.output
+++ awk '{print $2}'
++ name=c0615036991.gin
++ cat c0615036991.gin src/oxygen.gin
++ rm c0615036991.gin
++ mv 13.4.output 13.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 14.1
+14.1
++ echo 14
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 14.1.output
+++ awk '{print $2}'
++ name=c2064427304.gin
++ cat c2064427304.gin src/oxygen.gin
++ rm c2064427304.gin
++ mv 14.1.output 14.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 14.2
+14.2
++ echo 14
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 14.2.output
+++ awk '{print $2}'
++ name=c1579268572.gin
++ cat c1579268572.gin src/oxygen.gin
++ rm c1579268572.gin
++ mv 14.2.output 14.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 14.3
+14.3
++ echo 14
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 14.3.output
+++ awk '{print $2}'
++ name=c0825235350.gin
++ cat c0825235350.gin src/oxygen.gin
++ rm c0825235350.gin
++ mv 14.3.output 14.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 14.4
+14.4
++ echo 14
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 14.4.output
+++ awk '{print $2}'
++ name=c1829767749.gin
++ cat c1829767749.gin src/oxygen.gin
++ rm c1829767749.gin
++ mv 14.4.output 14.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 15.1
+15.1
++ echo 15
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 15.1.output
+++ awk '{print $2}'
++ name=c0030198754.gin
++ cat c0030198754.gin src/oxygen.gin
++ rm c0030198754.gin
++ mv 15.1.output 15.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 15.2
+15.2
++ echo 15
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 15.2.output
+++ awk '{print $2}'
++ name=c1532824727.gin
++ cat c1532824727.gin src/oxygen.gin
++ rm c1532824727.gin
++ mv 15.2.output 15.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 15.3
+15.3
++ echo 15
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 15.3.output
+++ awk '{print $2}'
++ name=c0812553063.gin
++ cat c0812553063.gin src/oxygen.gin
++ rm c0812553063.gin
++ mv 15.3.output 15.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 15.4
+15.4
++ echo 15
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 15.4.output
+++ awk '{print $2}'
++ name=c0975189484.gin
++ cat c0975189484.gin src/oxygen.gin
++ rm c0975189484.gin
++ mv 15.4.output 15.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 16.1
+16.1
++ echo 16
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 16.1.output
+++ awk '{print $2}'
++ name=c0319093107.gin
++ cat c0319093107.gin src/oxygen.gin
++ rm c0319093107.gin
++ mv 16.1.output 16.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 16.2
+16.2
++ echo 16
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 16.2.output
+++ awk '{print $2}'
++ name=c1734031627.gin
++ cat c1734031627.gin src/oxygen.gin
++ rm c1734031627.gin
++ mv 16.2.output 16.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 16.3
+16.3
++ echo 16
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 16.3.output
+++ awk '{print $2}'
++ name=c1706999566.gin
++ cat c1706999566.gin src/oxygen.gin
++ rm c1706999566.gin
++ mv 16.3.output 16.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 16.4
+16.4
++ echo 16
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 16.4.output
+++ awk '{print $2}'
++ name=c0686306907.gin
++ cat c0686306907.gin src/oxygen.gin
++ rm c0686306907.gin
++ mv 16.4.output 16.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 17.1
+17.1
++ echo 17
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 17.1.output
+++ awk '{print $2}'
++ name=c0622879160.gin
++ cat c0622879160.gin src/oxygen.gin
++ rm c0622879160.gin
++ mv 17.1.output 17.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 17.2
+17.2
++ echo 17
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 17.2.output
+++ awk '{print $2}'
++ name=c1916987139.gin
++ cat c1916987139.gin src/oxygen.gin
++ rm c1916987139.gin
++ mv 17.2.output 17.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 17.3
+17.3
++ echo 17
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 17.3.output
+++ awk '{print $2}'
++ name=c1917122956.gin
++ cat c1917122956.gin src/oxygen.gin
++ rm c1917122956.gin
++ mv 17.3.output 17.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 17.4
+17.4
++ echo 17
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 17.4.output
+++ awk '{print $2}'
++ name=c1465866021.gin
++ cat c1465866021.gin src/oxygen.gin
++ rm c1465866021.gin
++ mv 17.4.output 17.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 18.1
+18.1
++ echo 18
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 18.1.output
+++ awk '{print $2}'
++ name=c1871100806.gin
++ cat c1871100806.gin src/oxygen.gin
++ rm c1871100806.gin
++ mv 18.1.output 18.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 18.2
+18.2
++ echo 18
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 18.2.output
+++ awk '{print $2}'
++ name=c1335257487.gin
++ cat c1335257487.gin src/oxygen.gin
++ rm c1335257487.gin
++ mv 18.2.output 18.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 18.3
+18.3
++ echo 18
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 18.3.output
+++ awk '{print $2}'
++ name=c1079877972.gin
++ cat c1079877972.gin src/oxygen.gin
++ rm c1079877972.gin
++ mv 18.3.output 18.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 18.4
+18.4
++ echo 18
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 18.4.output
+++ awk '{print $2}'
++ name=c0461145701.gin
++ cat c0461145701.gin src/oxygen.gin
++ rm c0461145701.gin
++ mv 18.4.output 18.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 19.1
+19.1
++ echo 19
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 19.1.output
+++ awk '{print $2}'
++ name=c1680647107.gin
++ cat c1680647107.gin src/oxygen.gin
++ rm c1680647107.gin
++ mv 19.1.output 19.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 19.2
+19.2
++ echo 19
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 19.2.output
+++ awk '{print $2}'
++ name=c1114579798.gin
++ cat c1114579798.gin src/oxygen.gin
++ rm c1114579798.gin
++ mv 19.2.output 19.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 19.3
+19.3
++ echo 19
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 19.3.output
+++ awk '{print $2}'
++ name=c1137501606.gin
++ cat c1137501606.gin src/oxygen.gin
++ rm c1137501606.gin
++ mv 19.3.output 19.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 19.4
+19.4
++ echo 19
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 19.4.output
+++ awk '{print $2}'
++ name=c1023493683.gin
++ cat c1023493683.gin src/oxygen.gin
++ rm c1023493683.gin
++ mv 19.4.output 19.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 20.1
+20.1
++ echo 20
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ bc -l
+++ echo '0 >= 4'
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 20.1.output
+++ awk '{print $2}'
++ name=c1050109146.gin
++ cat c1050109146.gin src/oxygen.gin
++ rm c1050109146.gin
++ mv 20.1.output 20.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 20.2
+20.2
++ echo 20
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 20.2.output
+++ awk '{print $2}'
++ name=c1434692765.gin
++ cat c1434692765.gin src/oxygen.gin
++ rm c1434692765.gin
++ mv 20.2.output 20.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 20.3
+20.3
++ echo 20
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 20.3.output
+++ awk '{print $2}'
++ name=c0179565492.gin
++ cat c0179565492.gin src/oxygen.gin
++ rm c0179565492.gin
++ mv 20.3.output 20.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 20.4
+20.4
++ echo 20
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 20.4.output
+++ awk '{print $2}'
++ name=c0590592241.gin
++ cat c0590592241.gin src/oxygen.gin
++ rm c0590592241.gin
++ mv 20.4.output 20.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 21.1
+21.1
++ echo 21
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 21.1.output
+++ awk '{print $2}'
++ name=c0103966456.gin
++ cat c0103966456.gin src/oxygen.gin
++ rm c0103966456.gin
++ mv 21.1.output 21.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 21.2
+21.2
++ echo 21
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 21.2.output
+++ awk '{print $2}'
++ name=c1143061023.gin
++ cat c1143061023.gin src/oxygen.gin
++ rm c1143061023.gin
++ mv 21.2.output 21.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 21.3
+21.3
++ echo 21
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 21.3.output
+++ awk '{print $2}'
++ name=c1995153976.gin
++ cat c1995153976.gin src/oxygen.gin
++ rm c1995153976.gin
++ mv 21.3.output 21.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 21.4
+21.4
++ echo 21
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 21.4.output
+++ awk '{print $2}'
++ name=c1751382377.gin
++ cat c1751382377.gin src/oxygen.gin
++ rm c1751382377.gin
++ mv 21.4.output 21.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 22.1
+22.1
++ echo 22
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 22.1.output
+++ awk '{print $2}'
++ name=c1315290717.gin
++ cat c1315290717.gin src/oxygen.gin
++ rm c1315290717.gin
++ mv 22.1.output 22.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 22.2
+22.2
++ echo 22
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 22.2.output
+++ awk '{print $2}'
++ name=c1790407422.gin
++ cat c1790407422.gin src/oxygen.gin
++ rm c1790407422.gin
++ mv 22.2.output 22.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 22.3
+22.3
++ echo 22
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 22.3.output
+++ awk '{print $2}'
++ name=c0317504156.gin
++ cat c0317504156.gin src/oxygen.gin
++ rm c0317504156.gin
++ mv 22.3.output 22.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 22.4
+22.4
++ echo 22
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 22.4.output
+++ awk '{print $2}'
++ name=c1974659909.gin
++ cat c1974659909.gin src/oxygen.gin
++ rm c1974659909.gin
++ mv 22.4.output 22.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 23.1
+23.1
++ echo 23
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 23.1.output
+++ awk '{print $2}'
++ name=c1020331144.gin
++ cat c1020331144.gin src/oxygen.gin
++ rm c1020331144.gin
++ mv 23.1.output 23.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 23.2
+23.2
++ echo 23
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 23.2.output
+++ awk '{print $2}'
++ name=c0721157254.gin
++ cat c0721157254.gin src/oxygen.gin
++ rm c0721157254.gin
++ mv 23.2.output 23.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 23.3
+23.3
++ echo 23
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 23.3.output
+++ awk '{print $2}'
++ name=c1630220234.gin
++ cat c1630220234.gin src/oxygen.gin
++ rm c1630220234.gin
++ mv 23.3.output 23.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 23.4
+23.4
++ echo 23
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 23.4.output
+++ awk '{print $2}'
++ name=c1665523730.gin
++ cat c1665523730.gin src/oxygen.gin
++ rm c1665523730.gin
++ mv 23.4.output 23.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 24.1
+24.1
++ echo 24
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 24.1.output
+++ awk '{print $2}'
++ name=c0367951487.gin
++ cat c0367951487.gin src/oxygen.gin
++ rm c0367951487.gin
++ mv 24.1.output 24.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 24.2
+24.2
++ echo 24
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 24.2.output
+++ awk '{print $2}'
++ name=c0347047377.gin
++ cat c0347047377.gin src/oxygen.gin
++ rm c0347047377.gin
++ mv 24.2.output 24.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 24.3
+24.3
++ echo 24
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 24.3.output
+++ awk '{print $2}'
++ name=c2079687389.gin
++ cat c2079687389.gin src/oxygen.gin
++ rm c2079687389.gin
++ mv 24.3.output 24.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 24.4
+24.4
++ echo 24
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 24.4.output
+++ awk '{print $2}'
++ name=c1572525980.gin
++ cat c1572525980.gin src/oxygen.gin
++ rm c1572525980.gin
++ mv 24.4.output 24.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 25.1
+25.1
++ echo 25
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 25.1.output
+++ awk '{print $2}'
++ name=c1024473709.gin
++ cat c1024473709.gin src/oxygen.gin
++ rm c1024473709.gin
++ mv 25.1.output 25.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 25.2
+25.2
++ echo 25
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 25.2.output
+++ awk '{print $2}'
++ name=c0075115165.gin
++ cat c0075115165.gin src/oxygen.gin
++ rm c0075115165.gin
++ mv 25.2.output 25.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 25.3
+25.3
++ echo 25
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 25.3.output
+++ awk '{print $2}'
++ name=c1462907032.gin
++ cat c1462907032.gin src/oxygen.gin
++ rm c1462907032.gin
++ mv 25.3.output 25.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 25.4
+25.4
++ echo 25
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 25.4.output
+++ awk '{print $2}'
++ name=c0189028090.gin
++ cat c0189028090.gin src/oxygen.gin
++ rm c0189028090.gin
++ mv 25.4.output 25.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 26.1
+26.1
++ echo 26
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 26.1.output
+++ awk '{print $2}'
++ name=c2035397174.gin
++ cat c2035397174.gin src/oxygen.gin
++ rm c2035397174.gin
++ mv 26.1.output 26.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 26.2
+26.2
++ echo 26
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 26.2.output
+++ awk '{print $2}'
++ name=c0993153623.gin
++ cat c0993153623.gin src/oxygen.gin
++ rm c0993153623.gin
++ mv 26.2.output 26.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 26.3
+26.3
++ echo 26
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 26.3.output
+++ awk '{print $2}'
++ name=c1856209408.gin
++ cat c1856209408.gin src/oxygen.gin
++ rm c1856209408.gin
++ mv 26.3.output 26.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 26.4
+26.4
++ echo 26
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 26.4.output
+++ awk '{print $2}'
++ name=c1685685110.gin
++ cat c1685685110.gin src/oxygen.gin
++ rm c1685685110.gin
++ mv 26.4.output 26.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 27.1
+27.1
++ echo 27
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 27.1.output
+++ awk '{print $2}'
++ name=c0914041638.gin
++ cat c0914041638.gin src/oxygen.gin
++ rm c0914041638.gin
++ mv 27.1.output 27.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 27.2
+27.2
++ echo 27
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 27.2.output
+++ awk '{print $2}'
++ name=c0965961195.gin
++ cat c0965961195.gin src/oxygen.gin
++ rm c0965961195.gin
++ mv 27.2.output 27.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 27.3
+27.3
++ echo 27
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 27.3.output
+++ awk '{print $2}'
++ name=c0847395687.gin
++ cat c0847395687.gin src/oxygen.gin
++ rm c0847395687.gin
++ mv 27.3.output 27.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 27.4
+27.4
++ echo 27
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 27.4.output
+++ awk '{print $2}'
++ name=c1414210751.gin
++ cat c1414210751.gin src/oxygen.gin
++ rm c1414210751.gin
++ mv 27.4.output 27.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 28.1
+28.1
++ echo 28
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 28.1.output
+++ awk '{print $2}'
++ name=c1342563581.gin
++ cat c1342563581.gin src/oxygen.gin
++ rm c1342563581.gin
++ mv 28.1.output 28.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 28.2
+28.2
++ echo 28
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 28.2.output
+++ awk '{print $2}'
++ name=c0093821324.gin
++ cat c0093821324.gin src/oxygen.gin
++ rm c0093821324.gin
++ mv 28.2.output 28.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 28.3
+28.3
++ echo 28
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 28.3.output
+++ awk '{print $2}'
++ name=c1309453362.gin
++ cat c1309453362.gin src/oxygen.gin
++ rm c1309453362.gin
++ mv 28.3.output 28.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 28.4
+28.4
++ echo 28
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 28.4.output
+++ awk '{print $2}'
++ name=c0061828384.gin
++ cat c0061828384.gin src/oxygen.gin
++ rm c0061828384.gin
++ mv 28.4.output 28.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 29.1
+29.1
++ echo 29
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 29.1.output
+++ awk '{print $2}'
++ name=c0867827300.gin
++ cat c0867827300.gin src/oxygen.gin
++ rm c0867827300.gin
++ mv 29.1.output 29.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 29.2
+29.2
++ echo 29
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 29.2.output
+++ awk '{print $2}'
++ name=c0404100204.gin
++ cat c0404100204.gin src/oxygen.gin
++ rm c0404100204.gin
++ mv 29.2.output 29.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 29.3
+29.3
++ echo 29
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 29.3.output
+++ awk '{print $2}'
++ name=c1712326647.gin
++ cat c1712326647.gin src/oxygen.gin
++ rm c1712326647.gin
++ mv 29.3.output 29.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 29.4
+29.4
++ echo 29
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 29.4.output
+++ awk '{print $2}'
++ name=c0254575843.gin
++ cat c0254575843.gin src/oxygen.gin
++ rm c0254575843.gin
++ mv 29.4.output 29.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 30.1
+30.1
++ echo 30
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 30.1.output
+++ awk '{print $2}'
++ name=c0935799436.gin
++ cat c0935799436.gin src/oxygen.gin
++ rm c0935799436.gin
++ mv 30.1.output 30.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 30.2
+30.2
++ echo 30
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 30.2.output
+++ awk '{print $2}'
++ name=c0075144638.gin
++ cat c0075144638.gin src/oxygen.gin
++ rm c0075144638.gin
++ mv 30.2.output 30.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 30.3
+30.3
++ echo 30
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 30.3.output
+++ awk '{print $2}'
++ name=c1991686990.gin
++ cat c1991686990.gin src/oxygen.gin
++ rm c1991686990.gin
++ mv 30.3.output 30.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 30.4
+30.4
++ echo 30
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 30.4.output
+++ awk '{print $2}'
++ name=c1788653257.gin
++ cat c1788653257.gin src/oxygen.gin
++ rm c1788653257.gin
++ mv 30.4.output 30.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 31.1
+31.1
++ echo 31
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 31.1.output
+++ awk '{print $2}'
++ name=c0155016999.gin
++ cat c0155016999.gin src/oxygen.gin
++ rm c0155016999.gin
++ mv 31.1.output 31.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 31.2
+31.2
++ echo 31
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 31.2.output
+++ awk '{print $2}'
++ name=c2053307230.gin
++ cat c2053307230.gin src/oxygen.gin
++ rm c2053307230.gin
++ mv 31.2.output 31.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 31.3
+31.3
++ echo 31
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 31.3.output
+++ awk '{print $2}'
++ name=c1239042027.gin
++ cat c1239042027.gin src/oxygen.gin
++ rm c1239042027.gin
++ mv 31.3.output 31.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 31.4
+31.4
++ echo 31
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 31.4.output
+++ awk '{print $2}'
++ name=c0596292455.gin
++ cat c0596292455.gin src/oxygen.gin
++ rm c0596292455.gin
++ mv 31.4.output 31.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 32.1
+32.1
++ echo 32
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 32.1.output
+++ awk '{print $2}'
++ name=c1668161022.gin
++ cat c1668161022.gin src/oxygen.gin
++ rm c1668161022.gin
++ mv 32.1.output 32.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 32.2
+32.2
++ echo 32
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 32.2.output
+++ awk '{print $2}'
++ name=c1980001693.gin
++ cat c1980001693.gin src/oxygen.gin
++ rm c1980001693.gin
++ mv 32.2.output 32.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 32.3
+32.3
++ echo 32
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 32.3.output
+++ awk '{print $2}'
++ name=c1111989909.gin
++ cat c1111989909.gin src/oxygen.gin
++ rm c1111989909.gin
++ mv 32.3.output 32.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 32.4
+32.4
++ echo 32
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 32.4.output
+++ awk '{print $2}'
++ name=c1024574492.gin
++ cat c1024574492.gin src/oxygen.gin
++ rm c1024574492.gin
++ mv 32.4.output 32.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 33.1
+33.1
++ echo 33
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 33.1.output
+++ awk '{print $2}'
++ name=c0746580619.gin
++ cat c0746580619.gin src/oxygen.gin
++ rm c0746580619.gin
++ mv 33.1.output 33.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 33.2
+33.2
++ echo 33
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 33.2.output
+++ awk '{print $2}'
++ name=c0757411403.gin
++ cat c0757411403.gin src/oxygen.gin
++ rm c0757411403.gin
++ mv 33.2.output 33.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 33.3
+33.3
++ echo 33
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 33.3.output
+++ awk '{print $2}'
++ name=c2126059532.gin
++ cat c2126059532.gin src/oxygen.gin
++ rm c2126059532.gin
++ mv 33.3.output 33.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 33.4
+33.4
++ echo 33
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 33.4.output
+++ awk '{print $2}'
++ name=c1817760294.gin
++ cat c1817760294.gin src/oxygen.gin
++ rm c1817760294.gin
++ mv 33.4.output 33.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 34.1
+34.1
++ echo 34
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 34.1.output
+++ awk '{print $2}'
++ name=c1832413895.gin
++ cat c1832413895.gin src/oxygen.gin
++ rm c1832413895.gin
++ mv 34.1.output 34.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 34.2
+34.2
++ echo 34
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 34.2.output
+++ awk '{print $2}'
++ name=c1206305816.gin
++ cat c1206305816.gin src/oxygen.gin
++ rm c1206305816.gin
++ mv 34.2.output 34.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 34.3
+34.3
++ echo 34
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 34.3.output
+++ awk '{print $2}'
++ name=c1904840923.gin
++ cat c1904840923.gin src/oxygen.gin
++ rm c1904840923.gin
++ mv 34.3.output 34.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 34.4
+34.4
++ echo 34
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 34.4.output
+++ awk '{print $2}'
++ name=c0801143713.gin
++ cat c0801143713.gin src/oxygen.gin
++ rm c0801143713.gin
++ mv 34.4.output 34.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 35.1
+35.1
++ echo 35
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 35.1.output
+++ awk '{print $2}'
++ name=c0156222520.gin
++ cat c0156222520.gin src/oxygen.gin
++ rm c0156222520.gin
++ mv 35.1.output 35.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 35.2
+35.2
++ echo 35
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 35.2.output
+++ awk '{print $2}'
++ name=c2089794164.gin
++ cat c2089794164.gin src/oxygen.gin
++ rm c2089794164.gin
++ mv 35.2.output 35.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 35.3
+35.3
++ echo 35
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 35.3.output
+++ awk '{print $2}'
++ name=c1215317562.gin
++ cat c1215317562.gin src/oxygen.gin
++ rm c1215317562.gin
++ mv 35.3.output 35.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 35.4
+35.4
++ echo 35
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 35.4.output
+++ awk '{print $2}'
++ name=c0372224516.gin
++ cat c0372224516.gin src/oxygen.gin
++ rm c0372224516.gin
++ mv 35.4.output 35.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 36.1
+36.1
++ echo 36
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 36.1.output
+++ awk '{print $2}'
++ name=c1110008286.gin
++ cat c1110008286.gin src/oxygen.gin
++ rm c1110008286.gin
++ mv 36.1.output 36.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 36.2
+36.2
++ echo 36
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 36.2.output
+++ awk '{print $2}'
++ name=c0406453576.gin
++ cat c0406453576.gin src/oxygen.gin
++ rm c0406453576.gin
++ mv 36.2.output 36.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 36.3
+36.3
++ echo 36
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 36.3.output
+++ awk '{print $2}'
++ name=c1442240387.gin
++ cat c1442240387.gin src/oxygen.gin
++ rm c1442240387.gin
++ mv 36.3.output 36.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 36.4
+36.4
++ echo 36
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 36.4.output
+++ awk '{print $2}'
++ name=c0637693862.gin
++ cat c0637693862.gin src/oxygen.gin
++ rm c0637693862.gin
++ mv 36.4.output 36.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 37.1
+37.1
++ echo 37
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 37.1.output
+++ awk '{print $2}'
++ name=c0702671059.gin
++ cat c0702671059.gin src/oxygen.gin
++ rm c0702671059.gin
++ mv 37.1.output 37.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 37.2
+37.2
++ echo 37
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 37.2.output
+++ awk '{print $2}'
++ name=c0451127961.gin
++ cat c0451127961.gin src/oxygen.gin
++ rm c0451127961.gin
++ mv 37.2.output 37.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 37.3
+37.3
++ echo 37
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 37.3.output
+++ awk '{print $2}'
++ name=c0085017192.gin
++ cat c0085017192.gin src/oxygen.gin
++ rm c0085017192.gin
++ mv 37.3.output 37.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 37.4
+37.4
++ echo 37
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 37.4.output
+++ awk '{print $2}'
++ name=c1860337212.gin
++ cat c1860337212.gin src/oxygen.gin
++ rm c1860337212.gin
++ mv 37.4.output 37.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 38.1
+38.1
++ echo 38
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 38.1.output
+++ awk '{print $2}'
++ name=c1266924813.gin
++ cat c1266924813.gin src/oxygen.gin
++ rm c1266924813.gin
++ mv 38.1.output 38.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 38.2
+38.2
++ echo 38
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 38.2.output
+++ awk '{print $2}'
++ name=c0474182918.gin
++ cat c0474182918.gin src/oxygen.gin
++ rm c0474182918.gin
++ mv 38.2.output 38.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 38.3
+38.3
++ echo 38
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 38.3.output
+++ awk '{print $2}'
++ name=c0340262868.gin
++ cat c0340262868.gin src/oxygen.gin
++ rm c0340262868.gin
++ mv 38.3.output 38.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 38.4
+38.4
++ echo 38
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 38.4.output
+++ awk '{print $2}'
++ name=c1552903642.gin
++ cat c1552903642.gin src/oxygen.gin
++ rm c1552903642.gin
++ mv 38.4.output 38.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 39.1
+39.1
++ echo 39
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 39.1.output
+++ awk '{print $2}'
++ name=c1522880755.gin
++ cat c1522880755.gin src/oxygen.gin
++ rm c1522880755.gin
++ mv 39.1.output 39.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 39.2
+39.2
++ echo 39
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 39.2.output
+++ awk '{print $2}'
++ name=c0475274948.gin
++ cat c0475274948.gin src/oxygen.gin
++ rm c0475274948.gin
++ mv 39.2.output 39.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 39.3
+39.3
++ echo 39
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 39.3.output
+++ awk '{print $2}'
++ name=c0139466016.gin
++ cat c0139466016.gin src/oxygen.gin
++ rm c0139466016.gin
++ mv 39.3.output 39.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 39.4
+39.4
++ echo 39
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 39.4.output
+++ awk '{print $2}'
++ name=c0184172048.gin
++ cat c0184172048.gin src/oxygen.gin
++ rm c0184172048.gin
++ mv 39.4.output 39.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 40.1
+40.1
++ echo 40
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 40.1.output
+++ awk '{print $2}'
++ name=c0215819187.gin
++ cat c0215819187.gin src/oxygen.gin
++ rm c0215819187.gin
++ mv 40.1.output 40.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 40.2
+40.2
++ echo 40
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 40.2.output
+++ awk '{print $2}'
++ name=c1481963315.gin
++ cat c1481963315.gin src/oxygen.gin
++ rm c1481963315.gin
++ mv 40.2.output 40.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 40.3
+40.3
++ echo 40
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 40.3.output
+++ awk '{print $2}'
++ name=c1053983128.gin
++ cat c1053983128.gin src/oxygen.gin
++ rm c1053983128.gin
++ mv 40.3.output 40.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 40.4
+40.4
++ echo 40
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 40.4.output
+++ awk '{print $2}'
++ name=c1249627008.gin
++ cat c1249627008.gin src/oxygen.gin
++ rm c1249627008.gin
++ mv 40.4.output 40.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 41.1
+41.1
++ echo 41
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 41.1.output
+++ awk '{print $2}'
++ name=c1973841445.gin
++ cat c1973841445.gin src/oxygen.gin
++ rm c1973841445.gin
++ mv 41.1.output 41.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 41.2
+41.2
++ echo 41
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 41.2.output
+++ awk '{print $2}'
++ name=c0601381876.gin
++ cat c0601381876.gin src/oxygen.gin
++ rm c0601381876.gin
++ mv 41.2.output 41.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 41.3
+41.3
++ echo 41
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 41.3.output
+++ awk '{print $2}'
++ name=c1503795047.gin
++ cat c1503795047.gin src/oxygen.gin
++ rm c1503795047.gin
++ mv 41.3.output 41.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 41.4
+41.4
++ echo 41
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 41.4.output
+++ awk '{print $2}'
++ name=c1766406317.gin
++ cat c1766406317.gin src/oxygen.gin
++ rm c1766406317.gin
++ mv 41.4.output 41.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 42.1
+42.1
++ echo 42
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 42.1.output
+++ awk '{print $2}'
++ name=c0888786506.gin
++ cat c0888786506.gin src/oxygen.gin
++ rm c0888786506.gin
++ mv 42.1.output 42.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 42.2
+42.2
++ echo 42
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 42.2.output
+++ awk '{print $2}'
++ name=c0806305405.gin
++ cat c0806305405.gin src/oxygen.gin
++ rm c0806305405.gin
++ mv 42.2.output 42.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 42.3
+42.3
++ echo 42
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 42.3.output
+++ awk '{print $2}'
++ name=c1712648367.gin
++ cat c1712648367.gin src/oxygen.gin
++ rm c1712648367.gin
++ mv 42.3.output 42.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 42.4
+42.4
++ echo 42
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 42.4.output
+++ awk '{print $2}'
++ name=c1512731949.gin
++ cat c1512731949.gin src/oxygen.gin
++ rm c1512731949.gin
++ mv 42.4.output 42.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 43.1
+43.1
++ echo 43
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 43.1.output
+++ awk '{print $2}'
++ name=c1671385390.gin
++ cat c1671385390.gin src/oxygen.gin
++ rm c1671385390.gin
++ mv 43.1.output 43.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 43.2
+43.2
++ echo 43
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 43.2.output
+++ awk '{print $2}'
++ name=c0512496825.gin
++ cat c0512496825.gin src/oxygen.gin
++ rm c0512496825.gin
++ mv 43.2.output 43.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 43.3
+43.3
++ echo 43
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 43.3.output
+++ awk '{print $2}'
++ name=c1575155988.gin
++ cat c1575155988.gin src/oxygen.gin
++ rm c1575155988.gin
++ mv 43.3.output 43.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 43.4
+43.4
++ echo 43
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 43.4.output
+++ awk '{print $2}'
++ name=c0439836287.gin
++ cat c0439836287.gin src/oxygen.gin
++ rm c0439836287.gin
++ mv 43.4.output 43.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 44.1
+44.1
++ echo 44
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 44.1.output
+++ awk '{print $2}'
++ name=c0168615465.gin
++ cat c0168615465.gin src/oxygen.gin
++ rm c0168615465.gin
++ mv 44.1.output 44.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 44.2
+44.2
++ echo 44
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 44.2.output
+++ awk '{print $2}'
++ name=c1883113333.gin
++ cat c1883113333.gin src/oxygen.gin
++ rm c1883113333.gin
++ mv 44.2.output 44.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 44.3
+44.3
++ echo 44
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 44.3.output
+++ awk '{print $2}'
++ name=c0681575162.gin
++ cat c0681575162.gin src/oxygen.gin
++ rm c0681575162.gin
++ mv 44.3.output 44.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 44.4
+44.4
++ echo 44
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 44.4.output
+++ awk '{print $2}'
++ name=c0213128662.gin
++ cat c0213128662.gin src/oxygen.gin
++ rm c0213128662.gin
++ mv 44.4.output 44.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 45.1
+45.1
++ echo 45
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 45.1.output
+++ awk '{print $2}'
++ name=c1910604297.gin
++ cat c1910604297.gin src/oxygen.gin
++ rm c1910604297.gin
++ mv 45.1.output 45.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 45.2
+45.2
++ echo 45
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 45.2.output
+++ awk '{print $2}'
++ name=c0507692695.gin
++ cat c0507692695.gin src/oxygen.gin
++ rm c0507692695.gin
++ mv 45.2.output 45.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 45.3
+45.3
++ echo 45
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 45.3.output
+++ awk '{print $2}'
++ name=c1663702821.gin
++ cat c1663702821.gin src/oxygen.gin
++ rm c1663702821.gin
++ mv 45.3.output 45.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 45.4
+45.4
++ echo 45
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 45.4.output
+++ awk '{print $2}'
++ name=c1661125899.gin
++ cat c1661125899.gin src/oxygen.gin
++ rm c1661125899.gin
++ mv 45.4.output 45.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 46.1
+46.1
++ echo 46
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 46.1.output
+++ awk '{print $2}'
++ name=c1883980955.gin
++ cat c1883980955.gin src/oxygen.gin
++ rm c1883980955.gin
++ mv 46.1.output 46.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 46.2
+46.2
++ echo 46
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 46.2.output
+++ awk '{print $2}'
++ name=c0495409853.gin
++ cat c0495409853.gin src/oxygen.gin
++ rm c0495409853.gin
++ mv 46.2.output 46.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 46.3
+46.3
++ echo 46
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 46.3.output
+++ awk '{print $2}'
++ name=c1036054326.gin
++ cat c1036054326.gin src/oxygen.gin
++ rm c1036054326.gin
++ mv 46.3.output 46.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 46.4
+46.4
++ echo 46
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 46.4.output
+++ awk '{print $2}'
++ name=c1706802414.gin
++ cat c1706802414.gin src/oxygen.gin
++ rm c1706802414.gin
++ mv 46.4.output 46.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 47.1
+47.1
++ echo 47
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 47.1.output
+++ awk '{print $2}'
++ name=c1524731514.gin
++ cat c1524731514.gin src/oxygen.gin
++ rm c1524731514.gin
++ mv 47.1.output 47.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 47.2
+47.2
++ echo 47
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 47.2.output
+++ awk '{print $2}'
++ name=c1282905013.gin
++ cat c1282905013.gin src/oxygen.gin
++ rm c1282905013.gin
++ mv 47.2.output 47.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 47.3
+47.3
++ echo 47
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 47.3.output
+++ awk '{print $2}'
++ name=c1664068254.gin
++ cat c1664068254.gin src/oxygen.gin
++ rm c1664068254.gin
++ mv 47.3.output 47.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 47.4
+47.4
++ echo 47
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 47.4.output
+++ awk '{print $2}'
++ name=c1445231388.gin
++ cat c1445231388.gin src/oxygen.gin
++ rm c1445231388.gin
++ mv 47.4.output 47.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 48.1
+48.1
++ echo 48
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 48.1.output
+++ awk '{print $2}'
++ name=c1759738940.gin
++ cat c1759738940.gin src/oxygen.gin
++ rm c1759738940.gin
++ mv 48.1.output 48.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 48.2
+48.2
++ echo 48
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 48.2.output
+++ awk '{print $2}'
++ name=c0467682877.gin
++ cat c0467682877.gin src/oxygen.gin
++ rm c0467682877.gin
++ mv 48.2.output 48.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 48.3
+48.3
++ echo 48
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 48.3.output
+++ awk '{print $2}'
++ name=c0455735706.gin
++ cat c0455735706.gin src/oxygen.gin
++ rm c0455735706.gin
++ mv 48.3.output 48.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 48.4
+48.4
++ echo 48
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 48.4.output
+++ awk '{print $2}'
++ name=c0355285008.gin
++ cat c0355285008.gin src/oxygen.gin
++ rm c0355285008.gin
++ mv 48.4.output 48.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 49.1
+49.1
++ echo 49
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 49.1.output
+++ awk '{print $2}'
++ name=c1001806178.gin
++ cat c1001806178.gin src/oxygen.gin
++ rm c1001806178.gin
++ mv 49.1.output 49.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 49.2
+49.2
++ echo 49
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 49.2.output
+++ awk '{print $2}'
++ name=c1945913707.gin
++ cat c1945913707.gin src/oxygen.gin
++ rm c1945913707.gin
++ mv 49.2.output 49.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 49.3
+49.3
++ echo 49
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 49.3.output
+++ awk '{print $2}'
++ name=c1556907248.gin
++ cat c1556907248.gin src/oxygen.gin
++ rm c1556907248.gin
++ mv 49.3.output 49.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 49.4
+49.4
++ echo 49
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 49.4.output
+++ awk '{print $2}'
++ name=c2072794653.gin
++ cat c2072794653.gin src/oxygen.gin
++ rm c2072794653.gin
++ mv 49.4.output 49.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 50.1
+50.1
++ echo 50
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 50.1.output
+++ awk '{print $2}'
++ name=c2037112538.gin
++ cat c2037112538.gin src/oxygen.gin
++ rm c2037112538.gin
++ mv 50.1.output 50.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 50.2
+50.2
++ echo 50
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 50.2.output
+++ awk '{print $2}'
++ name=c1310854114.gin
++ cat c1310854114.gin src/oxygen.gin
++ rm c1310854114.gin
++ mv 50.2.output 50.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 50.3
+50.3
++ echo 50
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 50.3.output
+++ awk '{print $2}'
++ name=c0337890427.gin
++ cat c0337890427.gin src/oxygen.gin
++ rm c0337890427.gin
++ mv 50.3.output 50.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 50.4
+50.4
++ echo 50
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 50.4.output
+++ awk '{print $2}'
++ name=c2008023701.gin
++ cat c2008023701.gin src/oxygen.gin
++ rm c2008023701.gin
++ mv 50.4.output 50.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 51.1
+51.1
++ echo 51
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 51.1.output
+++ awk '{print $2}'
++ name=c1163113671.gin
++ cat c1163113671.gin src/oxygen.gin
++ rm c1163113671.gin
++ mv 51.1.output 51.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 51.2
+51.2
++ echo 51
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 51.2.output
+++ awk '{print $2}'
++ name=c0410589796.gin
++ cat c0410589796.gin src/oxygen.gin
++ rm c0410589796.gin
++ mv 51.2.output 51.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 51.3
+51.3
++ echo 51
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 51.3.output
+++ awk '{print $2}'
++ name=c0695441402.gin
++ cat c0695441402.gin src/oxygen.gin
++ rm c0695441402.gin
++ mv 51.3.output 51.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 51.4
+51.4
++ echo 51
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 51.4.output
+++ awk '{print $2}'
++ name=c1123576331.gin
++ cat c1123576331.gin src/oxygen.gin
++ rm c1123576331.gin
++ mv 51.4.output 51.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 52.1
+52.1
++ echo 52
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 52.1.output
+++ awk '{print $2}'
++ name=c2103299575.gin
++ cat c2103299575.gin src/oxygen.gin
++ rm c2103299575.gin
++ mv 52.1.output 52.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 52.2
+52.2
++ echo 52
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ bc -l
+++ echo '0 >= 4'
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 52.2.output
+++ awk '{print $2}'
++ name=c1806523649.gin
++ cat c1806523649.gin src/oxygen.gin
++ rm c1806523649.gin
++ mv 52.2.output 52.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 52.3
+52.3
++ echo 52
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 52.3.output
+++ awk '{print $2}'
++ name=c1687503733.gin
++ cat c1687503733.gin src/oxygen.gin
++ rm c1687503733.gin
++ mv 52.3.output 52.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 52.4
+52.4
++ echo 52
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 52.4.output
+++ awk '{print $2}'
++ name=c0507758606.gin
++ cat c0507758606.gin src/oxygen.gin
++ rm c0507758606.gin
++ mv 52.4.output 52.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 53.1
+53.1
++ echo 53
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 53.1.output
+++ awk '{print $2}'
++ name=c0814945752.gin
++ cat c0814945752.gin src/oxygen.gin
++ rm c0814945752.gin
++ mv 53.1.output 53.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 53.2
+53.2
++ echo 53
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 53.2.output
+++ awk '{print $2}'
++ name=c1957964454.gin
++ cat c1957964454.gin src/oxygen.gin
++ rm c1957964454.gin
++ mv 53.2.output 53.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 53.3
+53.3
++ echo 53
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 53.3.output
+++ awk '{print $2}'
++ name=c0926511435.gin
++ cat c0926511435.gin src/oxygen.gin
++ rm c0926511435.gin
++ mv 53.3.output 53.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 53.4
+53.4
++ echo 53
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 53.4.output
+++ awk '{print $2}'
++ name=c0267712053.gin
++ cat c0267712053.gin src/oxygen.gin
++ rm c0267712053.gin
++ mv 53.4.output 53.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 54.1
+54.1
++ echo 54
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 54.1.output
+++ awk '{print $2}'
++ name=c1376261428.gin
++ cat c1376261428.gin src/oxygen.gin
++ rm c1376261428.gin
++ mv 54.1.output 54.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 54.2
+54.2
++ echo 54
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 54.2.output
+++ awk '{print $2}'
++ name=c1344553744.gin
++ cat c1344553744.gin src/oxygen.gin
++ rm c1344553744.gin
++ mv 54.2.output 54.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 54.3
+54.3
++ echo 54
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 54.3.output
+++ awk '{print $2}'
++ name=c1154522525.gin
++ cat c1154522525.gin src/oxygen.gin
++ rm c1154522525.gin
++ mv 54.3.output 54.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 54.4
+54.4
++ echo 54
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 54.4.output
+++ awk '{print $2}'
++ name=c0253690295.gin
++ cat c0253690295.gin src/oxygen.gin
++ rm c0253690295.gin
++ mv 54.4.output 54.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 55.1
+55.1
++ echo 55
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 55.1.output
+++ awk '{print $2}'
++ name=c0338567312.gin
++ cat c0338567312.gin src/oxygen.gin
++ rm c0338567312.gin
++ mv 55.1.output 55.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 55.2
+55.2
++ echo 55
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 55.2.output
+++ awk '{print $2}'
++ name=c0224445488.gin
++ cat c0224445488.gin src/oxygen.gin
++ rm c0224445488.gin
++ mv 55.2.output 55.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 55.3
+55.3
++ echo 55
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 55.3.output
+++ awk '{print $2}'
++ name=c1397806174.gin
++ cat c1397806174.gin src/oxygen.gin
++ rm c1397806174.gin
++ mv 55.3.output 55.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 55.4
+55.4
++ echo 55
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 55.4.output
+++ awk '{print $2}'
++ name=c0339729714.gin
++ cat c0339729714.gin src/oxygen.gin
++ rm c0339729714.gin
++ mv 55.4.output 55.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 56.1
+56.1
++ echo 56
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 56.1.output
+++ awk '{print $2}'
++ name=c1566649263.gin
++ cat c1566649263.gin src/oxygen.gin
++ rm c1566649263.gin
++ mv 56.1.output 56.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 56.2
+56.2
++ echo 56
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 56.2.output
+++ awk '{print $2}'
++ name=c0108610751.gin
++ cat c0108610751.gin src/oxygen.gin
++ rm c0108610751.gin
++ mv 56.2.output 56.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 56.3
+56.3
++ echo 56
++ go
+++ ps aux
+++ sed /grep/d
+++ wc -l
+++ grep ising
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 56.3.output
+++ awk '{print $2}'
++ name=c1303348920.gin
++ cat c1303348920.gin src/oxygen.gin
++ rm c1303348920.gin
++ mv 56.3.output 56.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 56.4
+56.4
++ echo 56
++ go
+++ ps aux
+++ sed /grep/d
+++ grep ising
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 56.4.output
+++ awk '{print $2}'
++ name=c0770029501.gin
++ cat c0770029501.gin src/oxygen.gin
++ rm c0770029501.gin
++ mv 56.4.output 56.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 57.1
+57.1
++ echo 57
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 57.1.output
+++ awk '{print $2}'
++ name=c1508496642.gin
++ cat c1508496642.gin src/oxygen.gin
++ rm c1508496642.gin
++ mv 57.1.output 57.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 57.2
+57.2
++ echo 57
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 57.2.output
+++ awk '{print $2}'
++ name=c0653278065.gin
++ cat c0653278065.gin src/oxygen.gin
++ rm c0653278065.gin
++ mv 57.2.output 57.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 57.3
+57.3
++ echo 57
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 57.3.output
+++ awk '{print $2}'
++ name=c1851551817.gin
++ cat c1851551817.gin src/oxygen.gin
++ rm c1851551817.gin
++ mv 57.3.output 57.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 57.4
+57.4
++ echo 57
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 57.4.output
+++ awk '{print $2}'
++ name=c1058808462.gin
++ cat c1058808462.gin src/oxygen.gin
++ rm c1058808462.gin
++ mv 57.4.output 57.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 58.1
+58.1
++ echo 58
++ go
+++ ps aux
+++ grep ising
+++ wc -l
+++ sed /grep/d
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 58.1.output
+++ awk '{print $2}'
++ name=c0351645323.gin
++ cat c0351645323.gin src/oxygen.gin
++ rm c0351645323.gin
++ mv 58.1.output 58.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 58.2
+58.2
++ echo 58
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 58.2.output
+++ awk '{print $2}'
++ name=c1151504532.gin
++ cat c1151504532.gin src/oxygen.gin
++ rm c1151504532.gin
++ mv 58.2.output 58.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 58.3
+58.3
++ echo 58
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 58.3.output
+++ awk '{print $2}'
++ name=c1395246941.gin
++ cat c1395246941.gin src/oxygen.gin
++ rm c1395246941.gin
++ mv 58.3.output 58.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 58.4
+58.4
++ echo 58
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 58.4.output
+++ awk '{print $2}'
++ name=c0140061784.gin
++ cat c0140061784.gin src/oxygen.gin
++ rm c0140061784.gin
++ mv 58.4.output 58.4.gin CALCS
++ for molar_fraction in '$(seq 1 59)'
+++ seq 1 4
++ for repetition in '$(seq 1 4)'
++ echo 59.1
+59.1
++ echo 59
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 59.1.output
+++ awk '{print $2}'
++ name=c1785230097.gin
++ cat c1785230097.gin src/oxygen.gin
++ rm c1785230097.gin
++ mv 59.1.output 59.1.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 59.2
+59.2
++ echo 59
++ go
+++ ps aux
+++ grep ising
+++ sed /grep/d
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 59.2.output
+++ awk '{print $2}'
++ name=c1306292321.gin
++ cat c1306292321.gin src/oxygen.gin
++ rm c1306292321.gin
++ mv 59.2.output 59.2.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 59.3
+59.3
++ echo 59
++ go
+++ ps aux
+++ wc -l
+++ grep ising
+++ sed /grep/d
++ ni=0
+++ bc -l
+++ echo '0 >= 4'
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 59.3.output
+++ awk '{print $2}'
++ name=c1246835019.gin
++ cat c1246835019.gin src/oxygen.gin
++ rm c1246835019.gin
++ mv 59.3.output 59.3.gin CALCS
++ for repetition in '$(seq 1 4)'
++ echo 59.4
+59.4
++ echo 59
++ go
+++ ps aux
+++ sed /grep/d
+++ grep ising
+++ wc -l
++ ni=0
+++ echo '0 >= 4'
+++ bc -l
++ '[' 0 == 1 ']'
++ ./ising_frameworks
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+++ grep filename: 59.4.output
+++ awk '{print $2}'
++ name=c1297314140.gin
++ cat c1297314140.gin src/oxygen.gin
++ rm c1297314140.gin
++ mv 59.4.output 59.4.gin CALCS

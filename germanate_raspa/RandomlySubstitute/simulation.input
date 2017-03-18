@@ -1,0 +1,27 @@
+SimulationType                MC #Minimization
+#MinimizationMethod            Newton-Raphson
+#MinimizationVariables         Cartesian
+NumberOfCycles                0
+NumberOfInitializationCycles  0
+PrintEvery                    1
+
+#Ensemble                      NVT
+#ComputeElasticConstants       yes
+
+Forcefield                    local
+Framework                     0
+FrameworkName                 itq
+UnitCells                     2 2 2
+#ReplicaUnitCells              1 1 1
+RemoveAtomNumberCodeFromLabel yes
+ExternalTemperature           300.0
+#Movies yes
+#WriteMoviesEvery 1
+RandomlySubstitute 30 Si Ge
+ModifyFrameworkAtomConnectedTo O   Oss Si
+ModifyFrameworkAtomConnectedTo O   Ogg Ge
+ModifyFrameworkAtomConnectedTo Oss Ogg Ge
+ModifyFrameworkAtomConnectedTo Ogg Ogs Si
+     
+FlexibleFramework                yes
+FrameworkDefinitions             local

@@ -1,0 +1,23 @@
+#!/usr/bin/gnuplot -persist
+#set term postscript color eps enhanced blacktext 'Helvetica,24'
+#set out 'internal_energy.eps'
+set ylabel "Free energy difference (with respect quartz) / eV" 
+set xlabel "Ge molar fraction / a.u."
+set y2label 'Rendimiento / %'
+set size ratio 1
+set key bottom right
+set xrange [0:1]
+set y2range [0:50]
+set y2tics
+e_quartz_si=-10432.72150366
+e_quartz_ge=-9866.77608526
+temperature1=3
+plot   'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1) w p pt 6 ps 2 lc rgb 'blue' title '3 K'
+temperature2=450
+replot 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature2) w p pt 6 ps 2 lc rgb 'red' title '450 K'
+replot '../../exp_Camblor_Reus/rendimiento.txt' w lp pt 6 ps 2 lc rgb 'black' axes x1y2 title 'EXP'
+set term postscript color eps enhanced blacktext 'Helvetica,24'
+set out 'internal_energy.eps'
+replot
+exit 
+#    EOF

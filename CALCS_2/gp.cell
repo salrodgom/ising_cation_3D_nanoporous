@@ -1,0 +1,12 @@
+#!/usr/bin/gnuplot -persist
+set size ratio 1
+set term postscript color eps enhanced blacktext 'Helvetica,24'
+set out 'cell.eps'
+set xlabel 'Ge molar fraction / a.u.'
+set ylabel 'a / '
+set xrange [0:1]
+set key bottom
+plot 'cell_ave' u ($1/60.0):2 w p pt 7 ps 2 title 'MC/EM (0 Kelvin)',\
+     '../../exp_Camblor_Reus/cell_RR_01_a.txt' w lp pt 6 ps 2 lc rgb 'blue' title 'EXP RR...01',\
+     '../../exp_Camblor_Reus/cell_RR_03_a.txt' w lp pt 6 ps 2 lc rgb 'black' title 'EXP RR...03'
+#    EOF
