@@ -1,5 +1,5 @@
 # ising_cation_3D_nanoporous
-## ...
+
 Exchange cations in STW zeolite (Si4+ and Ge4+) with an effective hamiltonian MC code.
 
 ## Copyrights
