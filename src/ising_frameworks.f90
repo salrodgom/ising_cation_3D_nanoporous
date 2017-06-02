@@ -87,13 +87,13 @@ program main
   read(113,*,iostat=err_apertura) epsilon_
   IF( err_apertura /= 0 ) exit read_matrix_1
   ener_1(k)=epsilon_-ener_0
-  write(6,*)k,ener_1(k) !/real(deg)
+  !write(6,*)k,ener_1(k) !/real(deg)
   do j=2,deg
    READ (112,'(A)',IOSTAT=err_apertura) line
    IF( err_apertura /= 0 ) exit read_matrix_1
    read(line,*)l,m,i,n
    ener_1(i)=ener_1(k)
-   write(6,*)k,i,ener_1(i) !/real(deg)
+   !write(6,*)k,i,ener_1(i) !/real(deg)
   end do
  end do read_matrix_1
  end if
@@ -132,7 +132,7 @@ program main
    !real(choose(n_Ge,2))
   ener_2(i,j)= epsilon_
   ener_2(j,i)= ener_2(i,j)
-  write(6,*)i,j,ener_2(i,j)
+  !write(6,*)i,j,ener_2(i,j)
   do k=2,deg
    read(122,'(A)',iostat=err_apertura) line
    IF( err_apertura /= 0 ) exit read_matrix_2
@@ -140,7 +140,7 @@ program main
    read(line,*)jj,kk,l,m,n
    ener_2(l,m) = epsilon_
    ener_2(m,l) = epsilon_
-   write(6,*)i,j,ener_2(l,m)
+   !write(6,*)i,j,ener_2(l,m)
   end do
  end do read_matrix_2
  end if
@@ -189,7 +189,7 @@ program main
   !deg_3(k,j,i) = deg
   !deg_3(k,i,j) = deg
   !deg_3(j,k,i) = deg
-  write(6,*)i,j,k,ener_3(i,j,k),choose_one
+  !write(6,*)i,j,k,ener_3(i,j,k),choose_one
   do k=2,deg
    READ (132,'(A)',IOSTAT=err_apertura) line
    IF( err_apertura /= 0 ) exit read_matrix_3
@@ -206,7 +206,7 @@ program main
    !deg_3(n,m,l) = deg
    !deg_3(m,n,l) = deg
    !deg_3(n,l,m) = deg
-   write(6,*)i,j,k,ener_3(l,m,n),choose_one
+   !write(6,*)i,j,k,ener_3(l,m,n),choose_one
   end do
  end do read_matrix_3
  end if
@@ -255,7 +255,7 @@ program main
      ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j)-&
      ener_3(j,l,k))/choose_one
     rewind(143)
-    write(6,*)i,j,k,l,epsilon_,choose_one
+    !write(6,*)i,j,k,l,epsilon_,choose_one
     exit check_energy_4
    end if
   end do check_energy_4 
