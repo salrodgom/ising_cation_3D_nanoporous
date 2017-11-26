@@ -3,7 +3,7 @@ PI=$(echo "scale=20; 4*a(1)" | bc -l)
 kB=8.61734E-5     # eV/K
 temperature=448.0 # K
 kT=$(echo "${kB}*${temperature}" | sed 's/[eE]+*/*10^/g' | bc -l)
-MC_steps=5000
+MC_steps=3000
 #
 function abs () {
  if [ $(echo "$1 < 0.0" | bc -l) == 1 ] ; then
@@ -39,7 +39,7 @@ for molar_fraction in $(seq 1 59) ; do
      energy_reference=$(echo ${line2} | awk '{print $1}')
      delta=$(echo "(${energy}) - (${energy_reference})" | bc -l)
      delta=$(abs $delta)
-     if [ $(echo "$delta <= 0.0001" | bc -l) == 1 ] ; then
+     if [ $(echo "$delta <= 0.00001" | bc -l) == 1 ] ; then
       let n++
      fi
    done < configurations.txt
@@ -66,4 +66,5 @@ for molar_fraction in $(seq 1 59) ; do
   done < configuration.${molar_fraction}.txt
   mv zero.configuration.${molar_fraction}.txt CALCS/configuration.${molar_fraction}.txt
   mv ${molar_fraction}.output CALCS/.
+  rm configuration.${molar_fraction}.txt
 done
