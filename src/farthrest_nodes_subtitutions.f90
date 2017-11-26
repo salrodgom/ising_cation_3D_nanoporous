@@ -264,7 +264,8 @@ subroutine farthrest_nodes_subtitutions(n_atoms,n_T,n_Al,ener_0,ener_1,&
  if(n_Al<n_T)then
  k=0
  rrr=0.0
- DO WHILE ( k<=MC_cycles )
+ !do 
+  DO WHILE ( k<=MC_cycles )
     ! Metropolis:
     call MonteCarlo(n_atoms,n_T,dist_matrix,n_Al,SEED,xcryst,label,cell_0,rv,q,&
          ener_0,ener_1,ener_2,ener_3,ener_4,cost,T)
@@ -277,7 +278,8 @@ subroutine farthrest_nodes_subtitutions(n_atoms,n_T,n_Al,ener_0,ener_1,&
        cost,(pivots(j),j=1,n_Al)
     rrr=cost
     k=k+1
- END DO
+  END DO
+ !end do
  end if
  do i=1,n_atoms
   labels(n_configurations,i,1)=label(i)

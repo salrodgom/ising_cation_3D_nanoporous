@@ -5,11 +5,11 @@ program main
  integer                    :: err_apertura,nop1
  integer,parameter          :: n_atoms =   60 ! 60 T + 120 Os + 120 Oc + 12 F
  integer,parameter          :: n_T_atoms = 60
- integer                    :: n_Ge = 0
- integer,parameter          :: MC_steps = 200
+ integer                    :: n_Ge = 12
+ integer                    :: MC_steps = 100
  integer,parameter          :: n_configurations = 0
- character(len=120)          :: file_name,line
- real,parameter             :: temperature = 448.0
+ character(len=120)         :: file_name,line
+ real,parameter             :: temperature = 1000.0 !448.0
  integer, parameter         :: NOPMAX=10000
  integer                    :: k_max_1,k_max_2,k_max_3,k_max_4
  real                       :: ener_0=-7745.86721305, epsilon_, energy_123,energy
@@ -21,13 +21,39 @@ program main
  real                       :: ener_4(n_atoms,n_atoms,n_atoms,n_atoms) = 0.0
  real                       :: minener_4(1:4),choose_one
  real                       :: cell_0(1:6)
- logical                    :: MC_flag = .true.,no_presente=.true.,restart_file=.false.
+ logical                    :: MC_flag = .false.,no_presente=.false.,restart_file=.false.
  integer,allocatable        :: RestartPosition(:,:)
  real,dimension(NOPMAX,3,3) :: mgroup1
  real,dimension(NOPMAX,3)   :: vgroup1
  real,dimension(0:n_configurations,n_atoms,3)             :: cryst_coor
  character(len=4),dimension(0:n_configurations,n_atoms,2) :: label
- read(5,*)  n_Ge
+! arguments in line:
+ integer                                      :: num_args = 0
+ character(len=100),dimension(:), allocatable :: args
+! Read Arguments in line
+ num_args=command_argument_count()
+ allocate(args(num_args))
+ do i = 1, num_args
+  call get_command_argument(i,args(i))
+ end do
+ if(num_args >= 1)then
+  do i=1,num_args
+   select case(args(i))
+    case('-h','--help')
+     call print_help()
+     stop
+    case('-n','--n_Ge')
+     read(args(i+1),*) n_Ge
+    case('-mc','--MC_Cycles')
+     read(args(i+1),*) MC_steps
+     MC_flag = .true.
+    case('-r','--restart')
+     restart_file=.true.
+    case('-w4b','--without-four-body')
+     no_presente=.true.
+   end select
+  end do
+ end if
  if(restart_file) then
   allocate(RestartPosition(n_Ge,3))
  end if
@@ -237,7 +263,7 @@ program main
   read(141,'(A)',IOSTAT=err_apertura) line
   if( err_apertura /= 0 ) exit read_matrix_4
   read(line,*)ijk,deg,i,j,k,l
-  no_presente=.true.
+  !no_presente=.true.
   check_energy_4: do
    read(143,*,iostat=err_apertura) epsilon_,jj
    if( err_apertura /= 0 )then
@@ -392,7 +418,7 @@ program main
 ! {{{
  if(restart_file)then
   ! RestartPosition(i,ii),i=1,n_Ge )
-  do j=1,2
+  do j=1,n_configurations
    write(6,*)"======================"
    write(6,*)"Selected configuration:"
    read(5,*) ( RestartPosition(i,j),i=1,n_Ge )
@@ -419,6 +445,7 @@ program main
   end do
  end if
  end if
+ write(6,'(a)')'Finish simulation'
  stop
 contains
   real (kind=4) function choose (n, k)
@@ -442,4 +469,11 @@ contains
    end if
    return
   end function factorial
+ subroutine print_help()
+    print '(a)', '  -h,  --help, Print usage information and exit'
+    print '(a)', '  -n,  --n_Ge, Use free energy for Average Calculations'
+    print '(a)', '  -mc, --MC_Cycles, Quasi-Random-Virtual Structure'
+    print '(a)', '  -r,  --restart, From Restart File'
+    print '(a)', 'If you need a bigger system change n_cells or initialisation_steps'
+ end subroutine print_help
 end program main
