@@ -21,7 +21,7 @@ program main
  real                       :: ener_4(n_atoms,n_atoms,n_atoms,n_atoms) = 0.0
  real                       :: minener_4(1:4),choose_one
  real                       :: cell_0(1:6)
- logical                    :: MC_flag = .true.,no_presente=.true.,restart_file=.true.
+ logical                    :: MC_flag = .true.,no_presente=.true.,restart_file=.false.
  integer,allocatable        :: RestartPosition(:,:)
  real,dimension(NOPMAX,3,3) :: mgroup1
  real,dimension(NOPMAX,3)   :: vgroup1
