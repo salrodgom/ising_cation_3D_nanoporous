@@ -1,0 +1,58 @@
+#!/usr/bin/gnuplot -persist
+set term postscript eps color enhanced blacktext 'Helvetica,20'
+set out 'NMR_all_modes.eps'
+set xlabel 'Ge Molar Fraction Overall, x'
+set ylabel '(Ge_x,Si_{1-x})/D4R Relative Population'
+set key outside
+set size ratio 1
+#
+# 2       // 0  number of Ge 0 by D4R
+# 3       // 1  number of Ge 1 by D4R
+# 4       // 2  number of Ge 2 by D4R
+# 5       // 3  number of Ge 2 by D4R as direct neighbour
+# 6       // 4  number of Ge 2 by D4R as face diagonal neighbour
+# 7       // 5  number of Ge 2 by D4R as cube diagonal neighbour
+# 8       // 6  number of Ge 3 by D4R
+# 9       // 7  number of Ge 3 by D4R as 3 atoms chain
+# 10       // 8  number of Ge 3 by D4R as 2 direct neighbour and 1 not direct neighbour
+# 11      // 9  number of Ge 3 by D4R as 3 face diagonal neighbour
+# 12       // 10 number of Ge 4 by D4R
+# 13       // 11 number of Ge 4 by D4R as 1 central atom and 3 direct neighbours
+# 14       // 12 number of Ge 4 by D4R as forming a square
+# 15      // 13 number of Ge 4 by D4R as 4 atoms chain
+# 16       // 14 number of Ge 4 by D4R as 3 atoms chain and 1 isolated
+# 17       // 15 number of Ge 4 by D4R as 2 pairs of 2 direct neighbour
+# 18       // 16 number of Ge 5 by D4R
+# 19       // 17 number of Ge 5 by D4R as forming a square and 1 isolated
+# 20       // 18 number of Ge 5 by D4R as 1 central atom and 3 direct neighbours and 1 isolated
+# 21       // 19 number of 5 by D4R as 5 atoms chain
+# 22       // 19 number of Ge 6 by D4R
+# 23       // 20 number of Ge 6 by D4R as forming a square and 2 direct neighbours
+# 24       // 20 number of Ge 6 by D4R as forming a square and 2 Ge in face diagonal
+# 25       // 21 numbre of Ge 6 by D4R as 6 atoms chai
+# 26       // 22 number of Ge 7 by D4R
+# 27       // 23 number of Ge 8 by D4R
+set xrange [0:1]
+set yrange [0:1]
+plot 'NMR.txt' u ($1/60):2  w lp pt 6 lc rgb 'red'    t '0a',\
+     'NMR.txt' u ($1/60):3  w lp pt 6 lc rgb 'green'  t '1a',\
+     'NMR.txt' u ($1/60):5  w lp pt 6 lc rgb 'blue'   t '2a',\
+     'NMR.txt' u ($1/60):6  w lp pt 8 lc rgb 'green'   t '2b',\
+     'NMR.txt' u ($1/60):7  w lp pt 4 lc rgb 'green'   t '2c',\
+     'NMR.txt' u ($1/60):9  w lp pt 8 lc rgb 'blue'  t '3a',\
+     'NMR.txt' u ($1/60):10 w lp pt 4 lc rgb 'blue'  t '3b',\
+     'NMR.txt' u ($1/60):11 w lp pt 10 lc rgb 'green'  t '3c',\
+     'NMR.txt' u ($1/60):13 w lp pt 6 lc rgb 'black' t '4a',\
+     'NMR.txt' u ($1/60):14 w lp pt 10 lc rgb 'blue' t '4b',\
+     'NMR.txt' u ($1/60):15 w lp pt 12 lc rgb 'blue' t '4c',\
+     'NMR.txt' u ($1/60):16 w lp pt 14 lc rgb 'blue' t '4d',\
+     'NMR.txt' u ($1/60):17 w lp pt 16 lc rgb 'blue' t '4e',\
+     'NMR.txt' u ($1/60):19 w lp pt 8 lc rgb 'black' t '5a',\
+     'NMR.txt' u ($1/60):20 w lp pt 4 lc rgb 'black' t '5b',\
+     'NMR.txt' u ($1/60):21 w lp pt 20 lc rgb 'blue' t '5c',\
+     'NMR.txt' u ($1/60):23 w lp pt 10 lc rgb 'black'   t '6a',\
+     'NMR.txt' u ($1/60):24 w lp pt 12 lc rgb 'black'   t '6b',\
+     'NMR.txt' u ($1/60):25 w lp pt 2 lc rgb 'blue'   t '6c',\
+     'NMR.txt' u ($1/60):26 w lp pt 14 lc rgb 'black'  t '7a',\
+     'NMR.txt' u ($1/60):27 w lp pt 16 lc rgb 'black'  t '8a',\
+     'NMR.txt' u ($1/60):28 w lp pt 1 lc rgb 'violet'  t 'total'

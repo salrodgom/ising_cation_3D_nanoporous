@@ -180,7 +180,7 @@ subroutine farthrest_nodes_subtitutions(n_atoms,n_T,n_Al,ener_0,ener_1,&
  call make_dist_matrix(n_atoms,cell_0,rv,vr,xcryst,dist_matrix)
  open(666,file='configurations.txt',iostat=ierr)
  if(ierr/=0)stop 'error openning configuration'
- hybrid_cycles: do ppp=1,10
+ hybrid_cycles: do ppp=1,1
  if(ppp>=1)then ! hacemos todo Si again
   do i=1,n_atoms
    label(i)='Si  '

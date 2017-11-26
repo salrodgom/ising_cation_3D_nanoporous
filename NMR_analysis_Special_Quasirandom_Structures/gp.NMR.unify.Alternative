@@ -1,0 +1,36 @@
+#!/usr/bin/gnuplot -persist
+set term postscript eps color enhanced blacktext 'Helvetica,20'
+set out 'NMR.unify.Alternative.eps'
+set xlabel 'Ge Molar Fraction Overall'
+set ylabel 'Population'
+set key outside
+# 2 0  number of Ge 0 by D4R
+# 3 1  number of Ge 1 by D4R
+# 4 2  number of Ge 2 by D4R
+# 5 3  number of Ge 2 by D4R as direct neighbour
+# 6 4  number of Ge 2 by D4R as face diagonal neighbour
+# 7 5  number of Ge 2 by D4R as cube diagonal neighbour
+# 8 6  number of Ge 3 by D4R
+# 9 7  number of Ge 3 by D4R as 3 atoms chain
+# 10 8  number of Ge 3 by D4R as 2 direct neighbour and 1 not direct neighbour
+# 11 9  number of Ge 3 by D4R as 3 face diagonal neighbour
+# 12 10 number of Ge 4 by D4R
+# 13 11 number of Ge 4 by D4R as 1 central atom and 3 direct neighbours
+# 14 12 number of Ge 4 by D4R as forming a square
+# 15 13 number of Ge 4 by D4R as 4 atoms chain
+# 16 14 number of Ge 4 by D4R as 3 atoms chain and 1 isolated
+# 17 15 number of Ge 4 by D4R as 2 pairs of 2 direct neighbour
+# 18 16 number of Ge 5 by D4R
+# 19 17 number of Ge 6 by D4R
+# 20 18 number of Ge 7 by D4R
+# 21 19 number of Ge 8 by D4R
+set xrange [0:1]
+set yrange [0:1]
+plot 'NMR_unify.txt' u ($1/60):2 w lp lt 1 pt 7 lc rgb 'red'   t '  I (sim)',\
+     '../I_pick.txt' u 1:2    w lp lt 2 pt 6 lc rgb 'red'   t '  I (exp)',\
+     'NMR_unify.txt' u ($1/60):3 w lp lt 1 pt 7 lc rgb 'green' t ' II (sim)',\
+     '../II_pick.txt'         w lp lt 2 pt 6 lc rgb 'green' t ' II (exp)',\
+     'NMR_unify.txt' u ($1/60):4 w lp lt 1 pt 7 lc rgb 'blue'  t 'III (sim)',\
+     '../III_pick.txt'        w lp lt 2 pt 6 lc rgb 'blue'  t 'III (exp)',\
+     'NMR_unify.txt' u ($1/60):5 w lp lt 1 pt 7 lc rgb 'black' t ' IV (sim)',\
+     '../IV_pick.txt'         w lp lt 2 pt 6 lc rgb 'black' t ' IV (exp)'

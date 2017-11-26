@@ -1,0 +1,1360 @@
+
+
+*******************************************************************************
+Mon Jun 12 15:37:29 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 30225.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.942068
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+d               = 1
+
+After 212 iterations the fit converged.
+final sum of squares of residuals : 22.6862
+rel. change during last iteration : -9.66555e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.630875
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.398003
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 30.8193          +/- 95.84        (311%)
+b               = 0.542051         +/- 9.054        (1670%)
+c               = 0.0152832        +/- 4.075        (2.666e+04%)
+d               = 12.2315          +/- 1038         (8485%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b               1.000  1.000 
+c               1.000  1.000  1.000 
+d              -1.000 -1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:39:04 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 30279.5           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = 1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.31132e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:39:04 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:39:28 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 30279.5           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = 1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.31132e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:39:28 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:40:04 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29820.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = -1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.24685e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:40:04 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:41:04 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29820.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = -1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.24685e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:41:04 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:41:05 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 39.9557           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 45.1017
+
+initial set of free parameter values
+
+a               = -21.2842
+b               = -1.19405
+c               = 11.2822
+d               = -0.98011
+e               = 1e-30
+f               = 1e-30
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -1.99006e-09
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.85233
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.726467
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Mon Jun 12 15:41:35 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29820.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = -1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.24684e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:41:35 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:41:36 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 39.9557           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 45.1017
+
+initial set of free parameter values
+
+a               = -21.2842
+b               = -1.19405
+c               = 11.2822
+d               = -0.98011
+e               = 1e-10
+f               = 0.4
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 39.9556
+rel. change during last iteration : -8.95797e-07
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.85233
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.726466
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 1.183e+09    (5.557e+09%)
+b               = -1.19405         +/- 9.973e+06    (8.353e+08%)
+c               = 11.2822          +/- 1.405e+07    (1.245e+08%)
+d               = -0.98011         +/- 3.666e+07    (3.741e+09%)
+e               = -0.000104345     +/- 21.57        (2.068e+07%)
+f               = 0.4              +/- 3.366e+10    (8.415e+12%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      e      f      
+a               1.000 
+b              -1.000  1.000 
+c               1.000 -1.000  1.000 
+d               1.000 -1.000  1.000  1.000 
+e               0.058 -0.058  0.058  0.058  1.000 
+f              -1.000  1.000 -1.000 -1.000 -0.058  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:42:29 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29820.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = -1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.24685e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:42:29 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:42:31 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 39.9557           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 39.0593
+
+initial set of free parameter values
+
+a               = -21.2842
+b               = -1.19405
+c               = 11.2822
+d               = -0.98011
+e               = 1e-10
+f               = 0.4
+g               = 1e-10
+h               = 0.4
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 39.9556
+rel. change during last iteration : -2.83069e-06
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.868262
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.753879
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 1.691e+09    (7.946e+09%)
+b               = -1.19405         +/- 1.426e+07    (1.194e+09%)
+c               = 11.2822          +/- 2.009e+07    (1.781e+08%)
+d               = -0.98011         +/- 5.242e+07    (5.349e+09%)
+e               = -0.000139125     +/- 1.132e+07    (8.138e+12%)
+f               = 0.4              +/- 3.609e+10    (9.022e+12%)
+g               = -0.000121725     +/- 87.36        (7.177e+07%)
+h               = 0.4              +/- 1.86e+10     (4.651e+12%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      e      f      g      h      
+a               1.000 
+b              -1.000  1.000 
+c               1.000 -1.000  1.000 
+d               1.000 -1.000  1.000  1.000 
+e              -0.516  0.516 -0.516 -0.516  1.000 
+f              -1.000  1.000 -1.000 -1.000  0.516  1.000 
+g              -0.078  0.078 -0.078 -0.078  0.163  0.077  1.000 
+h               0.516 -0.516  0.516  0.516 -1.000 -0.516 -0.163  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:43:38 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29820.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = -1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.24685e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:43:38 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:43:40 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 39.9557           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.0220217
+
+initial set of free parameter values
+
+e               = 1e-10
+f               = 0.4
+g               = 1e-10
+h               = 0.4
+
+After 49 iterations the fit converged.
+final sum of squares of residuals : 33.6912
+rel. change during last iteration : -9.39533e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.768813
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.591073
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+e               = 1.19116          +/- 4684         (3.932e+05%)
+f               = 0.625285         +/- 54.62        (8736%)
+g               = -7.7453          +/- 62.9         (812.1%)
+h               = 0.638671         +/- 119.8        (1.876e+04%)
+
+
+correlation matrix of the fit parameters:
+
+               e      f      g      h      
+e               1.000 
+f               1.000  1.000 
+g               0.915  0.919  1.000 
+h              -1.000 -1.000 -0.914  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:43:40 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 33.6912           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 55.185
+
+initial set of free parameter values
+
+b               = -1.19405
+d               = -0.98011
+f               = 0.625285
+h               = 0.638671
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 29.655
+rel. change during last iteration : -1.79616e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.721293
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.520263
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -1.21925         +/- 0.02154      (1.766%)
+d               = -1.00048         +/- 0.01837      (1.837%)
+f               = 0.677177         +/- 3.711        (548%)
+h               = 0.734868         +/- 0.4655       (63.35%)
+
+
+correlation matrix of the fit parameters:
+
+               b      d      f      h      
+b               1.000 
+d               0.998  1.000 
+f              -0.892 -0.897  1.000 
+h               0.858  0.865 -0.996  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 15:43:40 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29.655            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 39.8745
+
+initial set of free parameter values
+
+a               = -21.2842
+b               = -1.21925
+c               = 11.2822
+d               = -1.00048
+e               = 1.19116
+f               = 0.677177
+g               = -7.7453
+h               = 0.734868
+
+After 480 iterations the fit converged.
+final sum of squares of residuals : 6.72514
+rel. change during last iteration : -9.94198e-06
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.356215
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.126889
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -20.8423         +/- 3.011e+10    (1.445e+11%)
+b               = -3.23967         +/- 1.827e+09    (5.639e+10%)
+c               = 2.37499          +/- 2.631e+09    (1.108e+11%)
+d               = -4.32484         +/- 3.023e+09    (6.99e+10%)
+e               = 1.99623          +/- 3.279e+10    (1.642e+12%)
+f               = 0.751645         +/- 4.025e+09    (5.354e+11%)
+g               = -9.70216         +/- 35.44        (365.3%)
+h               = 0.976337         +/- 6.759e+08    (6.923e+10%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      e      f      g      h      
+a               1.000 
+b              -0.058  1.000 
+c              -0.777  0.674  1.000 
+d               0.351  0.914  0.318  1.000 
+e              -0.860  0.559  0.989  0.176  1.000 
+f              -0.854  0.569  0.991  0.187  1.000  1.000 
+g              -0.061  0.038  0.069  0.011  0.070  0.070  1.000 
+h               0.860 -0.559 -0.989 -0.176 -1.000 -1.000 -0.070  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 16:28:31 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29820.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.107705
+
+initial set of free parameter values
+
+a               = -1
+c               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 15572.3
+rel. change during last iteration : -9.24685e-09
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 16.2461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 263.937
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -172.284         +/- 26.37        (15.31%)
+c               = 176.862          +/- 53.1         (30.02%)
+
+
+correlation matrix of the fit parameters:
+
+               a      c      
+a               1.000 
+c              -0.816  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 16:28:31 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15572.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 64.4962
+
+initial set of free parameter values
+
+a               = -172.284
+b               = 0.4
+c               = 176.862
+d               = 0.4
+
+After 1393 iterations the fit converged.
+final sum of squares of residuals : 39.9557
+rel. change during last iteration : -9.90236e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837244
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.700977
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -21.2842         +/- 525.1        (2467%)
+b               = -1.19405         +/- 4.446        (372.3%)
+c               = 11.2822          +/- 5.408        (47.94%)
+d               = -0.98011         +/- 16.22        (1655%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c               0.987 -0.986  1.000 
+d               1.000 -1.000  0.988  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 16:28:33 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 39.9557           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.0220217
+
+initial set of free parameter values
+
+e               = 1e-10
+f               = 0.4
+g               = 1e-10
+h               = 0.4
+
+After 49 iterations the fit converged.
+final sum of squares of residuals : 33.6912
+rel. change during last iteration : -9.39533e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.768813
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.591073
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+e               = 1.19116          +/- 4684         (3.932e+05%)
+f               = 0.625285         +/- 54.62        (8736%)
+g               = -7.7453          +/- 62.9         (812.1%)
+h               = 0.638671         +/- 119.8        (1.876e+04%)
+
+
+correlation matrix of the fit parameters:
+
+               e      f      g      h      
+e               1.000 
+f               1.000  1.000 
+g               0.915  0.919  1.000 
+h              -1.000 -1.000 -0.914  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 16:28:33 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 33.6912           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 55.185
+
+initial set of free parameter values
+
+b               = -1.19405
+d               = -0.98011
+f               = 0.625285
+h               = 0.638671
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 29.655
+rel. change during last iteration : -1.79616e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.721293
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.520263
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -1.21925         +/- 0.02154      (1.766%)
+d               = -1.00048         +/- 0.01837      (1.837%)
+f               = 0.677177         +/- 3.711        (548%)
+h               = 0.734868         +/- 0.4655       (63.35%)
+
+
+correlation matrix of the fit parameters:
+
+               b      d      f      h      
+b               1.000 
+d               0.998  1.000 
+f              -0.892 -0.897  1.000 
+h               0.858  0.865 -0.996  1.000 
+
+
+*******************************************************************************
+Mon Jun 12 16:28:33 2017
+
+
+FIT:    data read from 'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1)
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 29.655            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 39.8745
+
+initial set of free parameter values
+
+a               = -21.2842
+b               = -1.21925
+c               = 11.2822
+d               = -1.00048
+e               = 1.19116
+f               = 0.677177
+g               = -7.7453
+h               = 0.734868
+
+After 480 iterations the fit converged.
+final sum of squares of residuals : 6.72514
+rel. change during last iteration : -9.94198e-06
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.356215
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.126889
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -20.8423         +/- 3.011e+10    (1.445e+11%)
+b               = -3.23967         +/- 1.827e+09    (5.639e+10%)
+c               = 2.37499          +/- 2.631e+09    (1.108e+11%)
+d               = -4.32484         +/- 3.023e+09    (6.99e+10%)
+e               = 1.99623          +/- 3.279e+10    (1.642e+12%)
+f               = 0.751645         +/- 4.025e+09    (5.354e+11%)
+g               = -9.70216         +/- 35.44        (365.3%)
+h               = 0.976337         +/- 6.759e+08    (6.923e+10%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      e      f      g      h      
+a               1.000 
+b              -0.058  1.000 
+c              -0.777  0.674  1.000 
+d               0.351  0.914  0.318  1.000 
+e              -0.860  0.559  0.989  0.176  1.000 
+f              -0.854  0.569  0.991  0.187  1.000  1.000 
+g              -0.061  0.038  0.069  0.011  0.070  0.070  1.000 
+h               0.860 -0.559 -0.989 -0.176 -1.000 -1.000 -0.070  1.000 
