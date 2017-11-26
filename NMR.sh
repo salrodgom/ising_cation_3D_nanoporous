@@ -1,9 +1,9 @@
-#!/bin/bash -x
+#!/bin/bash
 PI=$(echo "scale=20; 4*a(1)" | bc -l)
 kB=8.61734E-5     # eV/K
 temperature=448.0 # K
 kT=$(echo "${kB}*${temperature}" | sed 's/[eE]+*/*10^/g' | bc -l)
-MC_steps=2000
+MC_steps=5000
 #
 function abs () {
  if [ $(echo "$1 < 0.0" | bc -l) == 1 ] ; then

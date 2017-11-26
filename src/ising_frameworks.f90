@@ -9,7 +9,7 @@ program main
  integer                    :: MC_steps = 100
  integer,parameter          :: n_configurations = 0
  character(len=120)         :: file_name,line
- real,parameter             :: temperature = 1000.0 !448.0
+ real,parameter             :: temperature = 2000.0 !448.0
  integer, parameter         :: NOPMAX=10000
  integer                    :: k_max_1,k_max_2,k_max_3,k_max_4
  real                       :: ener_0=-7745.86721305, epsilon_, energy_123,energy
