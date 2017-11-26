@@ -168,9 +168,19 @@ program NMR
  count_(0,0) = 6.0
  count_(60,n_resonator_max-1) = 6.0
  !
- do n_Ge=1,59
+ read_properties: do n_Ge=1,59
   n_lines=0
-  open(u, file='inputs/analysis_'//trim(str(n_Ge))//'.txt',status='old')
+  open(u, file='inputs/analysis_'//trim(str(n_Ge))//'.txt',status='old',iostat=ierr)
+  if(ierr/=0) then
+   ensemble(n_Ge)%n_configurations=1
+   ensemble(n_Ge)%id=n_Ge
+   ensemble(n_Ge)%peso(1)=0
+   ensemble(n_Ge)%resonator(1,0:n_resonator_max-1)=0
+   ensemble(n_Ge)%T_population(1,1:5)=0
+   ensemble(n_Ge)%CIFFile(1)=" "
+   ensemble(n_Ge)%partition_function=0.0
+   cycle read_properties
+  end if
   inquire(u,EXIST=lex,name=filename)
   inquire_analysis: do
    read(u,'(a)',iostat=ierr) line
@@ -211,7 +221,7 @@ program NMR
   end do
   write(6,*)'===='
   close(u)
- end do
+ end do read_properties
  write(6,'(a)')'Counts:'
  do n_Ge=0,60
   write(6,'(26(f5.2,1x))')(count_(n_Ge,j), j=0,n_resonator_max-1 )

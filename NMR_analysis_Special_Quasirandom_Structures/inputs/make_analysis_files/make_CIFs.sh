@@ -8,6 +8,7 @@ rm tmp.gin
 for nGe in $(seq 1 59) ; do
  file=configuration.${nGe}.txt
  if [ -f $file ] ; then
+  sed -i "s/\.cif//g" $file
   while read line ; do
    Relative=$(echo $line | awk -v col=1 '{print $col}')
    Absolute=$(echo $line | awk -v col=2 '{print $col}')
