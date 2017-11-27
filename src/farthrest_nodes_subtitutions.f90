@@ -274,6 +274,8 @@ subroutine farthrest_nodes_subtitutions(n_atoms,n_T,n_Al,ener_0,ener_1,&
     if(cost/=rrr) write(6,'(f20.10,1x,60a1,1x,a1,i6,a1,i2,a1)') &
        cost,(label_char(j),j=1,n_atoms),'(',k,':',ppp,')'
     write(formatout,*) n_Al
+    !write(6,"(f20.10,1x,"//adjustl(formatout)//"(i2,1x),1x,i5)") &
+    !   cost,(pivots(j),j=1,n_Al)
     write(666,"(f20.10,1x,"//adjustl(formatout)//"(i2,1x),1x,i5)") &
        cost,(pivots(j),j=1,n_Al)
     rrr=cost
@@ -354,13 +356,15 @@ END FUNCTION repulsive_potential_Lowenstein
   REAL                :: delta = 0.0
   REAL,    PARAMETER  :: infinite = 9999999.999999
   REAL,    intent(out):: exito,coste
+  !real                :: tempera
+  !tempera = 20000.0
   exito = 0.0
   MC_step: do k=0,n_T-1
     if(k==0)then
       energia(1) = energy(n_atoms,n_T,label,ener_0,ener_1,ener_2,ener_3,ener_4)!,deg_1,deg_2,deg_3,deg_4)
       eta = energia(1)
     end if
-    cation_distribution(0,1:n_T) = label(1:n_T)
+    cation_distribution(0,1:n_T) = label(1:n_T)           !<- backup del array label
     m = INT(R4_UNIFORM(1.0,real(max_ident_numer+1),SEED))
     do l=1,m
      scan_repetitions: do while(1>0)
@@ -376,7 +380,7 @@ END FUNCTION repulsive_potential_Lowenstein
     energia(2) = energy(n_atoms,n_T,label,ener_0,ener_1,ener_2,ener_3,ener_4)!,deg_1,deg_2,deg_3,deg_4)
     IF ( energia(2) > energia(1) ) THEN
        eta = R4_UNIFORM(0.0,1.0,SEED)
-       IF ( eta > exp(-(energia(2)-energia(1))/(k_B*temperature)) ) THEN
+       IF ( eta > exp(-(energia(2)-energia(1))/(k_B*temperature )) ) THEN
           do l=1,n_T
            label(l) = cation_distribution(0,l)
           end do
@@ -403,20 +407,40 @@ END FUNCTION repulsive_potential_Lowenstein
   IMPLICIT NONE
   integer,intent(in)              :: n_atoms,n_T,seed
   CHARACTER (LEN=4),intent(inout) :: label(1:n_atoms)
-  INTEGER             :: i,j
+  INTEGER                         :: i=0,j=0,k=0
   real                            :: R4_UNIFORM
-!
-  i = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
-  DO WHILE ( label(i) /= 'Si' )
+  integer                         :: n_Ge = 0, n_Ge_post = 0
+  !do while ( n_Ge /= n_Ge_post )
+  ! n_Ge_post=0
+! 
+   do k=1,n_atoms
+    if( label(k) == "Ge" ) n_Ge=n_Ge+1
+   end do 
+! 
+   do while ( i==j .or. label(i) == 'Ge' .or. label(j) == 'Si' )
     i = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
-  END DO
-  j = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
-  DO WHILE ( label(j) /= 'Ge' )
+    !DO WHILE ( label(i) == 'Ge' )
+    ! i = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
+    !END DO
     j = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
-  END DO
-! identity_change
-  label(i) = 'Ge'
-  label(j) = 'Si'
+    !DO WHILE ( label(j) == 'Si' )
+    ! j = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
+    !END DO
+   end do
+!  identity_change
+   label(i) = 'Ge'  ! Si -> Ge
+   label(j) = 'Si'  ! Ge -> Si
+!  check
+   do k=1,n_atoms
+    if( label(k) == "Ge" ) n_Ge_post=n_Ge_post+1
+   end do
+  !end do
+  !write(6,*)'atom:',i,'label:',label(i)
+  !write(6,*)'atom:',j,'label:',label(j)
+  if( n_Ge /= n_Ge_post ) then
+   write(6,*) n_Ge,'/=',n_Ge_post
+   stop 'n_Ge no conservativo'
+  end if
   RETURN
  END SUBROUTINE identity_change_move
 !

@@ -258,21 +258,22 @@ program main
  read(line,*) k_max_4 !<-N.configuraciones totales
  ener_4(1:n_atoms,1:n_atoms,1:n_atoms,1:n_atoms)  = 0.0
  if( err_apertura /=0 ) stop 
- if (n_Ge>=4)then
+ if (n_Ge>=4.or.no_presente.eqv..false.)then
  read_matrix_4: do
   read(141,'(A)',IOSTAT=err_apertura) line
   if( err_apertura /= 0 ) exit read_matrix_4
   read(line,*)ijk,deg,i,j,k,l
-  !no_presente=.true.
+  no_presente=.true.
   check_energy_4: do
    read(143,*,iostat=err_apertura) epsilon_,jj
    if( err_apertura /= 0 )then
-    rewind(143)
+    !rewind(143)
     no_presente=.true.
     exit check_energy_4
    end if
    if(jj==ijk)then
     no_presente = .false.
+    choose_one=1.0
     if(n_Ge<=4)then
      choose_one=1.0
     else
@@ -285,11 +286,12 @@ program main
      ener_3(i,l,k)-ener_3(i,k,l)-ener_3(l,i,k)-ener_3(l,k,i)-ener_3(l,k,i)-ener_3(k,i,l)-&
      ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j)-&
      ener_3(j,l,k))/choose_one
-    rewind(143)
     write(6,*)i,j,k,l,epsilon_,choose_one
+    !stop 'found 4'
     exit check_energy_4
    end if
-  end do check_energy_4 
+  end do check_energy_4
+  rewind(143) 
   if(no_presente)then
    !
    !do i=1,n_atoms
@@ -306,29 +308,53 @@ program main
    !  ener_3(j,l,k))/choose_one
    epsilon_ = 0.0
   end if
+  if( epsilon_ == 0 .and. ener_4(i,j,k,l) /= 0 ) stop
   ener_4(i,j,k,l) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(i,j,l,k) /= 0 ) stop
   ener_4(i,j,l,k) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(i,k,l,j) /= 0 ) stop
   ener_4(i,k,l,j) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(i,k,j,l) /= 0 ) stop
   ener_4(i,k,j,l) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(i,l,j,k) /= 0 ) stop
   ener_4(i,l,j,k) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(i,l,k,j) /= 0 ) stop
   ener_4(i,l,k,j) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(j,i,k,l) /= 0 ) stop
   ener_4(j,i,k,l) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(j,i,l,k) /= 0 ) stop
   ener_4(j,i,l,k) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(j,k,i,l) /= 0 ) stop
   ener_4(j,k,i,l) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(j,k,l,i) /= 0 ) stop
   ener_4(j,k,l,i) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(j,l,k,i) /= 0 ) stop
   ener_4(j,l,k,i) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(j,l,i,k) /= 0 ) stop
   ener_4(j,l,i,k) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(k,i,j,l) /= 0 ) stop
   ener_4(k,i,j,l) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(k,i,l,j) /= 0 ) stop
   ener_4(k,i,l,j) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(k,j,i,l) /= 0 ) stop
   ener_4(k,j,i,l) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(k,j,l,i) /= 0 ) stop
   ener_4(k,j,l,i) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(k,l,i,j) /= 0 ) stop
   ener_4(k,l,i,j) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(k,l,j,i) /= 0 ) stop
   ener_4(k,l,j,i) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(l,i,j,k) /= 0 ) stop
   ener_4(l,i,j,k) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(l,i,k,j) /= 0 ) stop
   ener_4(l,i,k,j) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(l,j,i,k) /= 0 ) stop
   ener_4(l,j,i,k) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(l,j,k,i) /= 0 ) stop
   ener_4(l,j,k,i) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(l,k,i,j) /= 0 ) stop
   ener_4(l,k,i,j) = epsilon_
+  if( epsilon_ == 0 .and. ener_4(l,k,j,i) /= 0 ) stop
   ener_4(l,k,j,i) = epsilon_
   !deg_4(i,j,k,l) = deg
   !deg_4(i,j,l,k) = deg
@@ -360,6 +386,7 @@ program main
    READ (142,'(A)',IOSTAT=err_apertura) line
    IF( err_apertura /= 0 ) exit read_matrix_4
    read(line,*)jj,lmn,l,m,n,o,ii
+!   24 permutaciones
     ener_4(l,m,n,o) = epsilon_
     ener_4(l,m,o,n) = epsilon_
     ener_4(l,n,o,m) = epsilon_
@@ -384,6 +411,7 @@ program main
     ener_4(o,m,n,l) = epsilon_
     ener_4(o,n,l,m) = epsilon_
     ener_4(o,n,m,l) = epsilon_
+!
     !deg_4(l,m,n,o) = deg
     !deg_4(l,m,o,n) = deg
     !deg_4(l,n,o,m) = deg

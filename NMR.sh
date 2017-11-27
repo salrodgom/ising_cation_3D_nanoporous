@@ -18,7 +18,7 @@ while [ $(echo "$ni >= 4" | bc -l) == 1 ] ; do
  sleep 10
  ni=$(ps aux | grep 'ising' | sed '/grep/d' | wc -l)
 done
-./ising_frameworks -n $molar_fraction -mc ${MC_steps} > ${molar_fraction}.output
+./ising_frameworks -n $molar_fraction -mc ${MC_steps} -w4b > ${molar_fraction}.output
 }
 make install
 if [ ! -d CALCS ] ; then mkdir CALCS ; fi
