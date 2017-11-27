@@ -12,21 +12,7 @@ function abs () {
   echo $1
  fi
 }
-function go {
-ni=$(ps aux | grep 'ising' | sed '/grep/d' | wc -l)
-while [ $(echo "$ni >= 4" | bc -l) == 1 ] ; do
- sleep 10
- ni=$(ps aux | grep 'ising' | sed '/grep/d' | wc -l)
-done
-./ising_frameworks -n $molar_fraction -mc ${MC_steps} -w4b > ${molar_fraction}.output
-}
-make install
-if [ ! -d CALCS ] ; then mkdir CALCS ; fi
 for molar_fraction in $(seq 1 59) ; do
-  go
-  name=$(grep 'filename:' ${molar_fraction}.output | awk '{print $2}')
-  cat ${name} src/oxygen.gin > ${molar_fraction}.gin
-  rm ${name}
   # elimino repeticiones
   cp configuration.${molar_fraction}.txt configurations.txt
   sort  configurations.txt -gk1 | uniq > c
