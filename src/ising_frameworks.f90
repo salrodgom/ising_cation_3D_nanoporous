@@ -13,6 +13,7 @@ program main
  integer, parameter         :: NOPMAX=10000
  integer                    :: k_max_1,k_max_2,k_max_3,k_max_4
  real                       :: ener_0=-7745.86721305, epsilon_, energy_123,energy
+ real                       :: ener_end_4 = 0 !-7716.685
  !
  character(len=4)   :: lab(n_atoms)
  real                       :: ener_1(n_atoms) = 0.0
@@ -22,11 +23,13 @@ program main
  real                       :: minener_4(1:4),choose_one
  real                       :: cell_0(1:6)
  logical                    :: MC_flag = .false.,no_presente=.false.,restart_file=.false.
+ logical                    :: debug = .false.
  integer,allocatable        :: RestartPosition(:,:)
  real,dimension(NOPMAX,3,3) :: mgroup1
  real,dimension(NOPMAX,3)   :: vgroup1
  real,dimension(0:n_configurations,n_atoms,3)             :: cryst_coor
  character(len=4),dimension(0:n_configurations,n_atoms,2) :: label
+ character(len=4),dimension(n_atoms) :: label_debug
 ! arguments in line:
  integer                                      :: num_args = 0
  character(len=100),dimension(:), allocatable :: args
@@ -273,40 +276,36 @@ program main
    end if
    if(jj==ijk)then
     no_presente = .false.
-    choose_one=1.0
     if(n_Ge<=4)then
      choose_one=1.0
     else
      choose_one = (n_Ge-3)*(n_Ge-4)/2.0
     end if
-    epsilon_ = (epsilon_-ener_0-ener_1(i)-ener_1(k)-ener_1(j)-ener_1(l)-ener_2(i,j)-ener_2(j,k)-&
-     ener_2(i,k)-ener_2(i,l)-ener_2(j,l)-ener_2(k,l)-&
+    epsilon_ = (epsilon_-ener_0-ener_1(i)-ener_1(j)-ener_1(k)-ener_1(l)-&
+     ener_2(i,j)-ener_2(j,k)-ener_2(k,l)-ener_2(i,l)-ener_2(j,l)-ener_2(k,l)-&
      ener_3(i,j,k)-ener_3(i,k,j)-ener_3(j,i,k)-ener_3(j,k,i)-ener_3(k,i,j)-ener_3(k,j,i)-&
      ener_3(i,j,l)-ener_3(i,l,j)-ener_3(j,i,l)-ener_3(j,l,i)-ener_3(l,i,j)-ener_3(l,j,i)-&
      ener_3(i,l,k)-ener_3(i,k,l)-ener_3(l,i,k)-ener_3(l,k,i)-ener_3(l,k,i)-ener_3(k,i,l)-&
-     ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j)-&
-     ener_3(j,l,k))/choose_one
+     ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j))/choose_one
     write(6,*)i,j,k,l,epsilon_,choose_one
-    !stop 'found 4'
     exit check_energy_4
    end if
   end do check_energy_4
   rewind(143) 
   if(no_presente)then
-   !
+   epsilon_=ener_end_4
    !do i=1,n_atoms
    ! lab(i) = label(ii,i,1)
    !end do
    !epsilon_ = energy(n_atoms,n_T_atoms,lab,ener_0,ener_1,ener_2,ener_3,ener_4)
    !
-   !epsilon_ = (epsilon_-ener_0-ener_1(i)-ener_1(k)-ener_1(j)-ener_1(l)-ener_2(i,j)-ener_2(j,k)-&
-   !  ener_2(i,k)-ener_2(i,l)-ener_2(j,l)-ener_2(k,l)-&
-   !  ener_3(i,j,k)-ener_3(i,k,j)-ener_3(j,i,k)-ener_3(j,k,i)-ener_3(k,i,j)-ener_3(k,j,i)-&
-   !  ener_3(i,j,l)-ener_3(i,l,j)-ener_3(j,i,l)-ener_3(j,l,i)-ener_3(l,i,j)-ener_3(l,j,i)-&
-   !  ener_3(i,l,k)-ener_3(i,k,l)-ener_3(l,i,k)-ener_3(l,k,i)-ener_3(l,k,i)-ener_3(k,i,l)-&
-   !  ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j)-&
-   !  ener_3(j,l,k))/choose_one
-   epsilon_ = 0.0
+   epsilon_ = (epsilon_-ener_0-ener_1(i)-ener_1(k)-ener_1(j)-ener_1(l)-ener_2(i,j)-ener_2(j,k)-&
+     ener_2(i,k)-ener_2(i,l)-ener_2(j,l)-ener_2(k,l)-&
+     ener_3(i,j,k)-ener_3(i,k,j)-ener_3(j,i,k)-ener_3(j,k,i)-ener_3(k,i,j)-ener_3(k,j,i)-&
+     ener_3(i,j,l)-ener_3(i,l,j)-ener_3(j,i,l)-ener_3(j,l,i)-ener_3(l,i,j)-ener_3(l,j,i)-&
+     ener_3(i,l,k)-ener_3(i,k,l)-ener_3(l,i,k)-ener_3(l,k,i)-ener_3(l,k,i)-ener_3(k,i,l)-&
+     ener_3(k,l,i)-ener_3(l,j,k)-ener_3(l,k,j)-ener_3(j,l,k)-ener_3(j,k,l)-ener_3(k,l,j))/choose_one
+   !epsilon_ = 0.0
   end if
   if( epsilon_ == 0 .and. ener_4(i,j,k,l) /= 0 ) stop
   ener_4(i,j,k,l) = epsilon_
@@ -444,6 +443,45 @@ program main
  close(142)
  close(143)
 ! {{{
+ if(debug)then
+  write(6,*) 'debugging'
+  open(unit=111,file='gulp-4-subs/ENERGIES',status='old',iostat=err_apertura)
+  if(err_apertura/=0) stop "[ERROR] reading file with matrix 1"
+  open(222,file="gulp-4-subs/OUTSOD_debug")
+  label_debug(1:n_atoms)="Si  "
+  ccc: do
+   read(111,*,iostat=err_apertura) epsilon_,m
+   if( err_apertura /= 0 ) exit ccc
+   !write(6,*) epsilon_,m
+   open(unit=112,file='gulp-4-subs/OUTSOD',status='old',iostat=err_apertura)
+   read(112,*,iostat=err_apertura) line
+   ddd: do
+    read(112,*,iostat=err_apertura) ijk,deg,i,j,k,l
+    if( err_apertura /= 0 ) exit ddd
+    if(ijk==m)then
+    label_debug(i)="Ge  "
+    label_debug(j)="Ge  "
+    label_debug(k)="Ge  "
+    label_debug(l)="Ge  "
+    !
+     choose_one = ener_0+ener_1(i)+ener_1(j)+ener_1(k)+ener_1(l)+ener_2(i,j)+ener_2(j,k)+&
+       ener_2(i,k)+  ener_2(i,l)+  ener_2(j,l)+  ener_2(k,l)+&
+     ener_3(i,j,k)+ener_3(i,k,j)+ener_3(j,i,k)+ener_3(j,k,i)+ener_3(k,i,j)+ener_3(k,j,i)+&
+     ener_3(i,j,l)+ener_3(i,l,j)+ener_3(j,i,l)+ener_3(j,l,i)+ener_3(l,i,j)+ener_3(l,j,i)+&
+     ener_3(i,l,k)+ener_3(i,k,l)+ener_3(l,i,k)+ener_3(l,k,i)+ener_3(l,k,i)+ener_3(k,i,l)+&
+     ener_3(k,l,i)+ener_3(l,j,k)+ener_3(l,k,j)+ener_3(j,l,k)+ener_3(j,k,l)+ener_3(k,l,j)+&
+     ener_3(j,l,k)
+     write(222,*)epsilon_,energy(n_atoms,n_T_atoms,label_debug,ener_0,ener_1,ener_2,ener_3,ener_4),choose_one
+     label_debug(1:n_atoms)="Si  "
+    end if
+   end do ddd
+   rewind(112)
+   close(112)
+  end do ccc
+  close(111)
+  close(222)
+ end if
+!
  if(restart_file)then
   ! RestartPosition(i,ii),i=1,n_Ge )
   do j=1,n_configurations

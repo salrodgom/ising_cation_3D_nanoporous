@@ -415,14 +415,17 @@ END FUNCTION repulsive_potential_Lowenstein
 ! 
    do k=1,n_atoms
     if( label(k) == "Ge" ) n_Ge=n_Ge+1
-   end do 
+   end do
+!
+   i = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
+   j = INT(R4_UNIFORM(1.1,real(n_T)+1.0,SEED)) 
 ! 
    do while ( i==j .or. label(i) == 'Ge' .or. label(j) == 'Si' )
-    i = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
+    i = INT(R4_UNIFORM(1.1,real(n_T)+1.0,SEED))
     !DO WHILE ( label(i) == 'Ge' )
     ! i = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
     !END DO
-    j = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
+    j = INT(R4_UNIFORM(1.1,real(n_T)+1.0,SEED))
     !DO WHILE ( label(j) == 'Si' )
     ! j = INT(R4_UNIFORM(1.0,real(n_T)+1.0,SEED))
     !END DO
@@ -462,7 +465,6 @@ END FUNCTION repulsive_potential_Lowenstein
    end if
   end do get_spin
   if ( ss==0 ) stop 'no hay Ge, bro'
-!
   do1subs: do i=1,n
    energy = energy + ener_1(i)*spin(i)
    !if (ss>1) then
