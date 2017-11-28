@@ -3,7 +3,7 @@ PI=$(echo "scale=20; 4*a(1)" | bc -l)
 kB=8.61734E-5     # eV/K
 temperature=448.0 # K
 kT=$(echo "${kB}*${temperature}" | sed 's/[eE]+*/*10^/g' | bc -l)
-MC_steps=3000
+MC_steps=1000
 #
 function abs () {
  if [ $(echo "$1 < 0.0" | bc -l) == 1 ] ; then
@@ -18,11 +18,11 @@ while [ $(echo "$ni >= 4" | bc -l) == 1 ] ; do
  sleep 10
  ni=$(ps aux | grep 'ising' | sed '/grep/d' | wc -l)
 done
-./ising_frameworks -n $molar_fraction -mc ${MC_steps} -w4b > ${molar_fraction}.output
+./ising_frameworks -n $molar_fraction -mc ${MC_steps} > ${molar_fraction}.output
 }
 make install
 if [ ! -d CALCS ] ; then mkdir CALCS ; fi
-for molar_fraction in $(seq 1 59) ; do
+for molar_fraction in $(seq 11 59 ) ; do
   go
   name=$(grep 'filename:' ${molar_fraction}.output | awk '{print $2}')
   cat ${name} src/oxygen.gin > ${molar_fraction}.gin
