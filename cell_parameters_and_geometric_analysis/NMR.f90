@@ -95,22 +95,21 @@ program NMR
 ! allocatables
  type                            :: virtual_extension
   real                           :: n_Ge
-  real                           :: cell_parameter(6)
  end type
  type  :: microstate
   integer                        :: id = 0
   integer                        :: n_configurations = 0
   real                           :: peso(1:n_configurations_max) = 0.0
   real                           :: partition_function = 0.0
-  character(len=10)              :: CIFFile(1:n_configurations_max) = " "
+  character(len=1024)            :: CIFFile(1:n_configurations_max) = " "
   integer                        :: resonator(1:n_configurations_max,0:n_resonator_max-1) = 0
   integer                        :: T_population(1:n_configurations_max,1:5) = 0
   real                           :: extended_virtual_n_Ge = 0.0
   real                           :: extended_virtual_n_Ge_sigma = 0.0
   integer                        :: extended_n_configurations = 0
   type(virtual_extension)        :: extended_ensemble(1:n_cells,virtual_n_configurations_max)
-  real                           :: cell_parameter(6,1:n_configurations_max)
-  real                           :: volume(1:n_configurations_max)
+  real                           :: cell_parameter(6,0:n_configurations_max)
+  real                           :: volume(0:n_configurations_max)
   real                           :: rv_matrix(3,3,1:n_configurations_max)
   real                           :: vr_matrix(3,3,1:n_configurations_max)
  end type                        
@@ -122,7 +121,7 @@ program NMR
  real                            :: suma
  real                            :: cell_0(6),vr(3,3),rv(3,3)
  integer                         :: cont,resonator
- character(len=80)               :: filename = " "
+ character(len=1024)             :: filename = " "
  character(len=1024)             :: line = " "
  logical                         :: lex
  ! Read Arguments in line
@@ -154,7 +153,7 @@ program NMR
  ensemble(0)%T_population(1,1:5)=0
  ensemble(0)%extended_virtual_n_Ge=0.0
  ensemble(0)%extended_n_configurations = 1
- ensemble(0)%extended_ensemble(1:n_cells,1:ensemble(0)%extended_n_configurations)%n_Ge = 0.0
+ ensemble(0)%extended_ensemble(1:n_cells,1:1)%n_Ge = 0.0
  !
  ensemble(60)%n_configurations=1
  ensemble(60)%peso(1)=1.0
@@ -163,10 +162,27 @@ program NMR
  ensemble(60)%T_population(1,1:5)=1
  ensemble(60)%extended_virtual_n_Ge=60.0
  ensemble(60)%extended_n_configurations = 1
- ensemble(60)%extended_ensemble(1:n_cells,1:ensemble(0)%extended_n_configurations)%n_Ge = 60.0
+ ensemble(60)%extended_ensemble(1:n_cells,1:1)%n_Ge = 60.0
  !
  count_(0,0) = 6.0
  count_(60,n_resonator_max-1) = 6.0
+ !
+ if( inquire_CIFFiles_flag ) then
+  ! 0
+  call inquire_CIFFile( ensemble(0)%CIFFile(1), cell_0, rv, vr)
+  ensemble(0)%cell_parameter(1:6,1) = cell_0(1:6)
+  ensemble(0)%rv_matrix(1:3,1:3,1) = rv(1:3,1:3)
+  ensemble(0)%vr_matrix(1:3,1:3,1) = vr(1:3,1:3)
+  call cell(ensemble(0)%rv_matrix(1:3,1:3,1),ensemble(0)%vr_matrix(1:3,1:3,1),ensemble(0)%cell_parameter(1:6,1) )
+  ensemble(0)%volume(1) = volume( ensemble(0)%rv_matrix(1:3,1:3,1)  )
+  ! 60
+  call inquire_CIFFile( ensemble(60)%CIFFile(1), cell_0, rv, vr)
+  ensemble(60)%cell_parameter(1:6,1) = cell_0(1:6)
+  ensemble(60)%rv_matrix(1:3,1:3,1) = rv(1:3,1:3)
+  ensemble(60)%vr_matrix(1:3,1:3,1) = vr(1:3,1:3)
+  call cell(ensemble(60)%rv_matrix(1:3,1:3,1),ensemble(60)%vr_matrix(1:3,1:3,1),ensemble(60)%cell_parameter(1:6,1) )
+  ensemble(60)%volume(1) = volume( ensemble(60)%rv_matrix(1:3,1:3,1)  )
+ end if
  !
  read_properties: do n_Ge=1,59
   n_lines=0
@@ -195,6 +211,29 @@ program NMR
    if (ierr/=0) exit
    read(line,*)ensemble(n_Ge)%peso(i),(ensemble(n_Ge)%resonator(i,j),j=0,n_resonator_max-1),&
     (ensemble(n_Ge)%T_population(i,j),j=1,5),ensemble(n_Ge)%CIFFile(i)
+   if( inquire_CIFFiles_flag ) then
+    vjw: do j=1,1024
+     if(line(j:j)=="S") then
+      cont=j
+      exit vjw 
+     end if
+    end do vjw
+    pql: do j=cont,1024
+     if(line(j:j)==" ")then
+      resonator=j
+      exit pql
+     end if
+    end do pql
+    read(line(cont:resonator),'(a)') ensemble(n_Ge)%CIFFile(i)
+    ensemble(n_Ge)%CIFFile(i)="inputs/"//ensemble(n_Ge)%CIFFile(i)
+    ensemble(n_Ge)%CIFFile(i)=adjustl( trim( ensemble(n_Ge)%CIFFile(i) ) )
+    call inquire_CIFFile( ensemble(n_Ge)%CIFFile(i), cell_0, rv, vr)
+    ensemble(n_Ge)%cell_parameter(1:6,i) = cell_0(1:6)
+    ensemble(n_Ge)%rv_matrix(1:3,1:3,i) = rv(1:3,1:3)
+    ensemble(n_Ge)%vr_matrix(1:3,1:3,i) = vr(1:3,1:3)
+    call cell(ensemble(n_Ge)%rv_matrix(1:3,1:3,i),ensemble(n_Ge)%vr_matrix(1:3,1:3,i),ensemble(n_Ge)%cell_parameter(1:6,i) )
+    ensemble(n_Ge)%volume(i) = volume( ensemble(n_Ge)%rv_matrix(1:3,1:3,i)  )
+   end if
   end do
   ensemble(n_Ge)%partition_function=sum( ensemble(n_Ge)%peso( 1:ensemble(n_Ge)%n_configurations ) )
   do i=1,ensemble(n_Ge)%n_configurations
@@ -212,7 +251,11 @@ program NMR
   end do
   write(6,'(a,1x,i4)')'N configurations:',ensemble(n_Ge)%n_configurations
   do i=1,ensemble(n_Ge)%n_configurations
-   write(6,'(a,1x,a)')        'CIFFile:',ensemble(n_Ge)%CIFFile(i)
+   write(6,'(a,1x,a)')        'CIFFile:',ensemble(n_Ge)%CIFFile(i)(1:clen_trim(ensemble(n_Ge)%CIFFile(i)))
+   if( inquire_CIFFiles_flag ) then
+    write(6,'(a,1x,6(f14.7,1x))')    'Cell Parameters:',(ensemble(n_Ge)%cell_parameter(j,i),j=1,6)
+    write(6,'(a,1x,f14.7)')    'Volume:',ensemble(n_Ge)%volume(i)
+   end if
    write(6,'(a,1x,f14.7)')    'Peso:',ensemble(n_Ge)%peso(i)
    write(6,'(a,1x,f14.7)')    'Partition Function:',ensemble(n_Ge)%partition_function
    write(6,'(a,1x,26(i2,1x))')'Resonadores:',( ensemble(n_Ge)%resonator(i,j),j=0,n_resonator_max-1 )
@@ -287,6 +330,26 @@ program NMR
   write(u,'(f14.7,1x,4(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,&
    ( NMR_unify(n_Ge,resonator), resonator=1,4 )
  end do 
+ close(u)
+ do n_Ge=0,60
+  suma=0.0
+  do j=1,6
+   suma=0.0
+   do i=1,ensemble(n_Ge)%n_configurations
+    suma=suma+ensemble(n_Ge)%cell_parameter(j,i)*ensemble(n_Ge)%peso(i)
+   end do
+   ensemble(n_Ge)%cell_parameter(j,0)=suma
+  end do
+  suma=0.0
+  do i=1,ensemble(n_Ge)%n_configurations
+   suma=suma+ensemble(n_Ge)%volume(i)*ensemble(n_Ge)%peso(i)
+  end do
+  ensemble(n_Ge)%volume(0)=suma
+ end do
+ open(u,file="cell.txt")
+ do n_Ge=0,60
+  write(u,*)n_Ge,( ensemble(n_Ge)%cell_parameter(j,0),j=1,6 ), ensemble(n_Ge)%volume(0)
+ end do
  close(u)
  stop
  !
@@ -437,15 +500,19 @@ program NMR
   return
  end function Free_Energy
  !
- subroutine inquire_CIFFile(CIFFilename)
+ subroutine inquire_CIFFile(CIFFilename,cell_0,rv,vr)
   implicit none
-  character(len=100),intent(in) :: CIFFilename
-  character(len=80)             :: string_stop_head= "_atom_site_charge"
-  integer                       :: uu = 120
-  character(len=20)             :: spam
-  real                          :: cell_0(6)
+  character(len=1024),intent(in) :: CIFFilename
+  character(len=80)              :: string_stop_head= "_atom_site_charge"
+  integer                        :: uu = 120
+  character(len=20)              :: spam
+  real,intent(out)               :: cell_0(6)
+  real,intent(out)               :: rv(3,3),vr(3,3)
   open(uu,file=CIFfilename,status='old',iostat=ierr)
-  if(ierr/=0) stop 'Error opening CIF file'
+  if(ierr/=0) then
+   write(6,'(a,1x,a)')'[ERROR] opening CIF file', CIFfilename
+   stop
+  end if
   read_cif: do
    read(uu,'(a)',iostat=ierr) line
    if(ierr/=0) exit read_cif
@@ -475,7 +542,7 @@ program NMR
    end if
    if(line(1:)==string_stop_head) exit read_cif
   end do read_cif
-  !call cell(rv,vr,cell_0)
+  call cell(rv,vr,cell_0)
   return
  end subroutine inquire_CIFFile
  !
