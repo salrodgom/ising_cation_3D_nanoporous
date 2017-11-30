@@ -233,6 +233,11 @@ program NMR
     ensemble(n_Ge)%vr_matrix(1:3,1:3,i) = vr(1:3,1:3)
     call cell(ensemble(n_Ge)%rv_matrix(1:3,1:3,i),ensemble(n_Ge)%vr_matrix(1:3,1:3,i),ensemble(n_Ge)%cell_parameter(1:6,i) )
     ensemble(n_Ge)%volume(i) = volume( ensemble(n_Ge)%rv_matrix(1:3,1:3,i)  )
+    call Symmetrising( &
+         ensemble(n_Ge)%cell_parameter(1:6,i) , &
+         ensemble(n_Ge)%rv_matrix(1:3,1:3,i),   &
+         ensemble(n_Ge)%vr_matrix(1:3,1:3,i),   &
+         ensemble(n_Ge)%volume(i) )
    end if
   end do
   ensemble(n_Ge)%partition_function=sum( ensemble(n_Ge)%peso( 1:ensemble(n_Ge)%n_configurations ) )
@@ -374,6 +379,80 @@ program NMR
  i = LEN_TRIM(s) ; Clen_trim = i
  IF (s(i:i) == CHAR(0)) Clen_trim = Clen(s)   ! len of C string
  END FUNCTION Clen_trim
+!
+ subroutine symmetrising(cell_0,rv,vr,vol)
+  implicit none
+  real,intent(inout) :: cell_0(1:6)
+  real,intent(inout) :: rv(3,3),vr(3,3)
+  real,intent(in)    :: vol,factor,sumfactor
+  real               :: cell_1_tmp
+  cell_0(4)=90.0
+  cell_0(5)=90.0
+  cell_0(6)=120.0
+  cell_0(1) = extract_a(cell_0,vol)
+  cell_0(2) = cell_0(1)
+  call cell(rv,vr,cell_0)
+  return
+ end subroutine symmetrising
+!
+ real function csc_deg(x)
+  implicit none
+  real :: x
+  csc_deg = -(2*sin(x))/(cos(2*x)-1.0)
+  return
+ end function csc_deg
+ real function cot_deg(x)
+  implicit none
+  real :: x
+  cot_deg = -(sin(2*x))/(cos(2*x)-1.0)
+  return
+ end function cot_deg
+ !
+ real function extract_a(cell_0,v)
+  implicit none
+  real :: cell_0(6),v
+  real :: pi,DEGTORAD
+  real :: alp,bet,gam
+  real :: cosa,cosb,cosg
+  real :: sina,sinb,sing
+  pi = ACOS(-1.0)
+  DEGTORAD=pi/180.0
+  IF(cell_0(4) == 90.0) THEN
+    cosa = 0.0
+  ELSE
+    ALP=cell_0(4)*degtorad
+    COSA=cos(ALP)
+  ENDIF
+  IF(cell_0(5) == 90.0) THEN
+    cosb = 0.0
+  ELSE
+    bet = cell_0(5)*degtorad
+    cosb = cos(bet)
+  ENDIF
+  IF(cell_0(6) == 90.0) then
+    sing = 1.0
+    cosg = 0.0
+  ELSE
+    gam = cell_0(6)*degtorad
+    sing = sin(gam)
+    cosg = cos(gam)
+  ENDIF
+  extract_a = (sqrt(v)*sqrt(csc_deg(gam)))/( sqrt(cell_0(3))*( &
+   1.0-cosb**2-(cosb**2)*(cot_deg(gam)**2)+&
+   2.0*cosa*cosb*cot_deg(gam)*csc_deg(gam)-(cosa**2)*(csc_deg(gam)**2))**(1.0/4.0))
+ ! Mathematica Solution: 
+ ! Sqrt[Csc[\[Gamma]]])/(Sqrt[
+ !   c] (1 - Cos[\[Beta]]^2 - Cos[\[Beta]]^2 Cot[\[Gamma]]^2 + 
+ !     2 Cos[\[Alpha]] Cos[\[Beta]] Cot[\[Gamma]] Csc[\[Gamma]] - 
+ !     Cos[\[Alpha]]^2 Csc[\[Gamma]]^2)^(1/4))
+ ! extract_a = (sqrt(v)*sqrt(csc_deg(gam))/ &
+ !  ( cell_0(3))*(1.0-cosb**2-(cosb**2)*(cot_deg(gam)**2)+&
+ !  2.0*cosa*cosb*cot_deg(gam)*csc_deg(gam)-(cosa**2)*(csc_deg(gam)**2))**(1.0/4.0)) )
+ !extract_a= (V*csc_deg(gam))/(cell_0(2)*cell_0(3)*Sqrt( &
+ !  1.0-cosb**2-(cosb**2)*(cot_deg(gam)**2)+&
+ !  2.0*cosa*cosb*cot_deg(gam)*csc_deg(gam)-(cosa**2)*(csc_deg(gam)**2))**(1.0/4.0))
+  return
+ end function extract_a
 !
  subroutine Quasi_Random_Virtual_Structures(n_cells,n_virtual_systems_max,n_average,n_virtual_systems,virtual_n_Ge)
   use mod_random 
