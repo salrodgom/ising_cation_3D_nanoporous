@@ -24,13 +24,28 @@ set key outside
 # 19 17 number of Ge 6 by D4R
 # 20 18 number of Ge 7 by D4R
 # 21 19 number of Ge 8 by D4R
+#a = -0.0662039244447209
+#b = 1.71078713844417
+#c = -1.00344
+#d = -0.979639597268414
+#e = -0.125766436064929
+#f = 1.25971743513089
+#g = 0.258831388095964
+a               = -0.0662039  #     +/- 1.339e+10    (2.023e+13%)
+b               = 1.71079     #     +/- 1.867e+11    (1.091e+13%)
+c               = -0.0557977  #     +/- 8.26e+09     (1.48e+13%)
+d               = -0.97964    #     +/- 2.107e+11    (2.151e+13%)
+e               = -0.125766   #     +/- 3.474e+10    (2.762e+13%)
+f               = 1.25972     #     +/- 0.7347       (58.32%)
+g               = 0.258831    #     +/- 5.576e+10    (2.154e+13%)
+f(x)=a+b*(x-c)+d*(x-e)**2+f*(x-g)**3
 set xrange [0:1]
 set yrange [0:1]
 plot 'NMR_unify.txt' u ($1/60):2 w lp lt 1 pt 7 lc rgb 'red'   t '  I (sim)',\
-     '../I_pick.txt' u 1:2    w lp lt 2 pt 6 lc rgb 'red'   t '  I (exp)',\
+     'I_pick.txt'    u (f($1)):2 w lp lt 2 pt 6 lc rgb 'red'   t '  I (exp)',\
      'NMR_unify.txt' u ($1/60):3 w lp lt 1 pt 7 lc rgb 'green' t ' II (sim)',\
-     '../II_pick.txt'         w lp lt 2 pt 6 lc rgb 'green' t ' II (exp)',\
+     'II_pick.txt'   u (f($1)):2 w lp lt 2 pt 6 lc rgb 'green' t ' II (exp)',\
      'NMR_unify.txt' u ($1/60):4 w lp lt 1 pt 7 lc rgb 'blue'  t 'III (sim)',\
-     '../III_pick.txt'        w lp lt 2 pt 6 lc rgb 'blue'  t 'III (exp)',\
+     'III_pick.txt'  u (f($1)):2 w lp lt 2 pt 6 lc rgb 'blue'  t 'III (exp)',\
      'NMR_unify.txt' u ($1/60):5 w lp lt 1 pt 7 lc rgb 'black' t ' IV (sim)',\
-     '../IV_pick.txt'         w lp lt 2 pt 6 lc rgb 'black' t ' IV (exp)'
+     'IV_pick.txt'   u (f($1)):2 w lp lt 2 pt 6 lc rgb 'black' t ' IV (exp)'
