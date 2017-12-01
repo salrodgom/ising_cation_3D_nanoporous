@@ -84,7 +84,7 @@ program NMR
  integer                         :: virtual_n_configurations = 0
  integer,parameter               :: virtual_n_configurations_max = 1000
  integer,parameter               :: n_cells = 4*4*4
- integer,parameter               :: initialisation_steps = 1e7
+ integer,parameter               :: initialisation_steps = 10000000
  real                            :: virtual_n_Ge(n_cells,virtual_n_configurations_max)
  logical                         :: Quasi_Random_Virtual_Structures_flag = .false.
  logical                         :: forcefield = .false.
@@ -113,18 +113,15 @@ program NMR
   real                           :: volume(0:n_configurations_max)
   real                           :: rv_matrix(3,3,1:n_configurations_max)
   real                           :: vr_matrix(3,3,1:n_configurations_max)
-  ! # GeO_distances OGeO_angles GeGe_distances TO_distances TT_distances TOT_angles TO_T1 TO_T2 TO_T3 TO_T4 TO_T5 OTO_T1 OTO_T2 OTO_T3 OTO_T4 OTO_T5
-  real                           :: TO_distance(0:7,0:n_configurations_max) 
-                                 ! 0: TO, 1: GeO, 2-6, T1O-T5O
-  real                           :: OTO_angle(0:7,0:n_configurations_max)
-  real                           :: TT_distance(0:2,0:n_configurations_max)
+  real                           :: distance_TO(0:7,0:n_configurations_max) 
+  real                           :: angle_OTO(0:7,0:n_configurations_max)
+  real                           :: distance_TT(0:2,0:n_configurations_max)
  end type                        
  type(microstate)                :: ensemble(0:60)
  real                            :: count_(0:60,0:n_resonator_max-1) = 0.0
  real                            :: NMR_(0:60,0:n_resonator_max-1) = 0.0
  real                            :: NMR_unify(0:60,1:4) = 0.0
- real                            :: extended_NMR(0:60,0:n_resonator_max-1) = 0.0
- real                            :: suma
+ real                            :: suma,x(1:16)
  real                            :: cell_0(6),vr(3,3),rv(3,3)
  integer                         :: cont,resonator
  real                            :: r4_average(0:60,1:6)
@@ -247,21 +244,20 @@ program NMR
     ensemble(n_Ge)%vr_matrix(1:3,1:3,i) = vr(1:3,1:3)
     call cell(ensemble(n_Ge)%rv_matrix(1:3,1:3,i),ensemble(n_Ge)%vr_matrix(1:3,1:3,i),ensemble(n_Ge)%cell_parameter(1:6,i) )
     ensemble(n_Ge)%volume(i) = volume( ensemble(n_Ge)%rv_matrix(1:3,1:3,i)  )
-    call Symmetrising( &
-         ensemble(n_Ge)%cell_parameter(1:6,i) , &
-         ensemble(n_Ge)%rv_matrix(1:3,1:3,i),   &
+    call Symmetrising(ensemble(n_Ge)%cell_parameter(1:6,i) ,ensemble(n_Ge)%rv_matrix(1:3,1:3,i),   &
          ensemble(n_Ge)%vr_matrix(1:3,1:3,i),   &
          ensemble(n_Ge)%volume(i) )
    end if
-   if(inquite_Geometry_information)then
-  ! ! # GeO_distances OGeO_angles GeGe_distances TO_distances TT_distances TOT_angles TO_T1 TO_T2 TO_T3 TO_T4 TO_T5 OTO_T1 OTO_T2 OTO_T3 OTO_T4 OTO_T5
-  !real                           :: TO_distance(0:6,0:n_configurations_max)
-  !                               ! 0: TO, 1: GeO, 2-6, T1O-T5O
-  !real                           :: OTO_angle(0:6,0:n_configurations_max)
-  !real                           :: TT_distance(2,0:n_configurations_max)
-    read(345,*)TO_distance(2,i),OTO_angle(2,i),TT_distance(2,i),TO_distance(1,i),& 
-     OTO_angle(1,i),TT_distance(1,i),( TO_distance(j,i), j=3,7 ),( OTO_angle(j,i), j=3,7 ) 
+   if( inquite_Geometry_information ) then
+     read(345,*,iostat=ierr)ensemble(n_Ge)%distance_TO(2,i),ensemble(n_Ge)%angle_OTO(2,i),&
+      ensemble(n_Ge)%distance_TT(2,i),ensemble(n_Ge)%distance_TO(1,i),ensemble(n_Ge)%angle_OTO(1,i),&
+      ensemble(n_Ge)%distance_TT(1,i),( ensemble(n_Ge)%distance_TO(j,i), j=3,7 ),&
+      ( ensemble(n_Ge)%angle_OTO(j,i), j=3,7 )
    end if
+   !if ( inquite_Geometry_information ) then
+    !read(345,*)TO_distance(2,i),OTO_angle(2,i),TT_distance(2,i),TO_distance(1,i),OTO_angle(1,i),&
+    !TT_distance(1,i),( TO_distance(j,i), j=3,7 ),( OTO_angle(j,i), j=3,7 ) 
+   !end if
   end do
   if(inquite_Geometry_information) close(345)
   ensemble(n_Ge)%partition_function=sum( ensemble(n_Ge)%peso( 1:ensemble(n_Ge)%n_configurations ) )
@@ -284,6 +280,11 @@ program NMR
    if( inquire_CIFFiles_flag ) then
     write(6,'(a,1x,6(f14.7,1x))')    'Cell Parameters:',(ensemble(n_Ge)%cell_parameter(j,i),j=1,6)
     write(6,'(a,1x,f14.7)')    'Volume:',ensemble(n_Ge)%volume(i)
+   end if
+   if ( inquite_Geometry_information ) then
+    write(6,'(a,1x,7(f14.7,1x))')    'TO Distances:',(ensemble(n_Ge)%distance_TT(j,i),j=1,7)
+    write(6,'(a,1x,7(f14.7,1x))')    'OTO Angles:',(ensemble(n_Ge)%angle_OTO(j,i),j=1,7)
+    write(6,'(a,1x,2(f14.7,1x))')    'TT Distances:',(ensemble(n_Ge)%distance_TT(j,i),j=1,2)
    end if
    write(6,'(a,1x,f14.7)')    'Peso:',ensemble(n_Ge)%peso(i)
    write(6,'(a,1x,f14.7)')    'Partition Function:',ensemble(n_Ge)%partition_function
@@ -443,7 +444,6 @@ program NMR
   real,intent(inout) :: cell_0(1:6)
   real,intent(inout) :: rv(3,3),vr(3,3)
   real,intent(in)    :: vol
-  real               :: cell_1_tmp
   cell_0(4)=90.0
   cell_0(5)=90.0
   cell_0(6)=120.0
@@ -472,7 +472,7 @@ program NMR
   real :: pi,DEGTORAD
   real :: alp,bet,gam
   real :: cosa,cosb,cosg
-  real :: sina,sinb,sing
+  real :: sing
   pi = ACOS(-1.0)
   DEGTORAD=pi/180.0
   IF(cell_0(4) == 90.0) THEN
@@ -527,7 +527,7 @@ program NMR
   real    :: temperature=448.0     ! K
   real    :: k_B  = 8.61734E-5     ! eV/K
   real    :: beta, x, partition = 0.0
-  real    :: probability_cell(n_cells),free(n_cells),free_min
+  real    :: probability_cell(n_cells),free(n_cells)
   real    :: e_1,e_2
   integer :: production_steps
   !
@@ -685,7 +685,6 @@ program NMR
  !
  SUBROUTINE cell(rv,vr,cell_0)
   implicit none
-  integer :: i,j
   real, intent(in)  :: cell_0(6)
   real, intent(out) :: rv(3,3),vr(3,3)
   real, parameter   :: pi = ACOS(-1.0)
