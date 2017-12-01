@@ -1,0 +1,16 @@
+#!/usr/bin/gnuplot -persist
+set term postscript eps color enhanced blacktext 'Helvetica,20'
+set out 'cell.eps'
+set xlabel 'Ge Molar Fraction in Zeolite / -'
+set ylabel 'Cell Parameter a / '
+a               = -0.0662039  #     +/- 1.339e+10    (2.023e+13%)
+b               = 1.71079     #     +/- 1.867e+11    (1.091e+13%)
+c               = -0.0557977  #     +/- 8.26e+09     (1.48e+13%)
+d               = -0.97964    #     +/- 2.107e+11    (2.151e+13%)
+e               = -0.125766   #     +/- 3.474e+10    (2.762e+13%)
+f               = 1.25972     #     +/- 0.7347       (58.32%)
+g               = 0.258831    #     +/- 5.576e+10    (2.154e+13%)
+f(x)=a+b*(x-c)+d*(x-e)**2+f*(x-g)**3
+plot 'cell.txt'   u 1:2 w lp lt 1 pt 7 lc rgb 'red'   t 'a',\
+     'cell_RR_01_a.txt' u (f($1)):2 w p lt 2 pt 6 lc rgb 'black'   t 'RR_01',\
+     'cell_RR_01_a.txt' u (f($1)):2 w p lt 2 pt 6 lc rgb 'blue'   t 'RR_03'

@@ -113,9 +113,10 @@ program NMR
   real                           :: volume(0:n_configurations_max)
   real                           :: rv_matrix(3,3,1:n_configurations_max)
   real                           :: vr_matrix(3,3,1:n_configurations_max)
-  real                           :: distance_TO(0:7,0:n_configurations_max) 
-  real                           :: angle_OTO(0:7,0:n_configurations_max)
+  real                           :: distance_TO(0:2,0:n_configurations_max)
   real                           :: distance_TT(0:2,0:n_configurations_max)
+  real                           :: angle_OTO(0:2,0:n_configurations_max)
+  real                           :: angle_TOT(0:2,0:n_configurations_max)
  end type                        
  type(microstate)                :: ensemble(0:60)
  real                            :: count_(0:60,0:n_resonator_max-1) = 0.0
@@ -148,6 +149,10 @@ program NMR
      inquire_CIFFiles_flag = .true.
     case('-t','--inquire-topology')
      inquite_Geometry_information = .true.
+    case default
+     forcefield=.true.
+     Quasi_Random_Virtual_Structures_flag = .true.
+     inquire_CIFFiles_flag = .true.
    end select
   end do
  end if
@@ -160,6 +165,14 @@ program NMR
  ensemble(0)%extended_virtual_n_Ge=0.0
  ensemble(0)%extended_n_configurations = 1
  ensemble(0)%extended_ensemble(1:n_cells,1:1)%n_Ge = 0.0
+ ensemble(0)%distance_TO(1,1)=1.620421
+ ensemble(0)%distance_TO(2,1)=0.0
+ ensemble(0)%distance_TT(1,1)=3.000330
+ ensemble(0)%distance_TT(2,1)=0.0
+ ensemble(0)%angle_OTO(1,1)=109.45
+ ensemble(0)%angle_OTO(2,1)=0.0
+ ensemble(0)%angle_TOT(1,1)=142.151852
+ ensemble(0)%angle_TOT(2,1)=0.0
  !
  ensemble(60)%n_configurations=1
  ensemble(60)%peso(1)=1.0
@@ -169,6 +182,14 @@ program NMR
  ensemble(60)%extended_virtual_n_Ge=60.0
  ensemble(60)%extended_n_configurations = 1
  ensemble(60)%extended_ensemble(1:n_cells,1:1)%n_Ge = 60.0
+ ensemble(60)%distance_TO(1,1)=1.722453
+ ensemble(60)%distance_TO(2,1)=1.724428
+ ensemble(60)%distance_TT(1,1)=3.214147
+ ensemble(60)%distance_TT(2,1)=3.214147
+ ensemble(60)%angle_OTO(1,1)=109.157674
+ ensemble(60)%angle_OTO(2,1)=109.157674
+ ensemble(60)%angle_TOT(1,1)=138.354665
+ ensemble(60)%angle_TOT(2,1)=138.354665
  !
  count_(0,0) = 6.0
  count_(60,n_resonator_max-1) = 6.0
@@ -249,15 +270,11 @@ program NMR
          ensemble(n_Ge)%volume(i) )
    end if
    if( inquite_Geometry_information ) then
-     read(345,*,iostat=ierr)ensemble(n_Ge)%distance_TO(2,i),ensemble(n_Ge)%angle_OTO(2,i),&
-      ensemble(n_Ge)%distance_TT(2,i),ensemble(n_Ge)%distance_TO(1,i),ensemble(n_Ge)%angle_OTO(1,i),&
-      ensemble(n_Ge)%distance_TT(1,i),( ensemble(n_Ge)%distance_TO(j,i), j=3,7 ),&
-      ( ensemble(n_Ge)%angle_OTO(j,i), j=3,7 )
+     read(345,*) ( ensemble(n_Ge)%distance_TO(j,i),j=1,2)
+     read(345,*) ( ensemble(n_Ge)%distance_TT(j,i),j=1,2)
+     read(345,*) (   ensemble(n_Ge)%angle_OTO(j,i),j=1,2)
+     read(345,*) (   ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
    end if
-   !if ( inquite_Geometry_information ) then
-    !read(345,*)TO_distance(2,i),OTO_angle(2,i),TT_distance(2,i),TO_distance(1,i),OTO_angle(1,i),&
-    !TT_distance(1,i),( TO_distance(j,i), j=3,7 ),( OTO_angle(j,i), j=3,7 ) 
-   !end if
   end do
   if(inquite_Geometry_information) close(345)
   ensemble(n_Ge)%partition_function=sum( ensemble(n_Ge)%peso( 1:ensemble(n_Ge)%n_configurations ) )
@@ -282,9 +299,10 @@ program NMR
     write(6,'(a,1x,f14.7)')    'Volume:',ensemble(n_Ge)%volume(i)
    end if
    if ( inquite_Geometry_information ) then
-    write(6,'(a,1x,7(f14.7,1x))')    'TO Distances:',(ensemble(n_Ge)%distance_TT(j,i),j=1,7)
-    write(6,'(a,1x,7(f14.7,1x))')    'OTO Angles:',(ensemble(n_Ge)%angle_OTO(j,i),j=1,7)
-    write(6,'(a,1x,2(f14.7,1x))')    'TT Distances:',(ensemble(n_Ge)%distance_TT(j,i),j=1,2)
+    write(6,*) ( ensemble(n_Ge)%distance_TO(j,i),j=1,2)
+    write(6,*) ( ensemble(n_Ge)%distance_TT(j,i),j=1,2)
+    write(6,*) (   ensemble(n_Ge)%angle_OTO(j,i),j=1,2)
+    write(6,*) (   ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
    end if
    write(6,'(a,1x,f14.7)')    'Peso:',ensemble(n_Ge)%peso(i)
    write(6,'(a,1x,f14.7)')    'Partition Function:',ensemble(n_Ge)%partition_function
@@ -361,40 +379,53 @@ program NMR
    ( NMR_unify(n_Ge,resonator), resonator=1,4 )
  end do 
  close(u)
+ !! cell averages
  do n_Ge=0,60
-  suma=0.0
   do j=1,6
-   suma=0.0
-   do i=1,ensemble(n_Ge)%n_configurations
-    suma=suma+ensemble(n_Ge)%cell_parameter(j,i)*ensemble(n_Ge)%peso(i)
-   end do
-   ensemble(n_Ge)%cell_parameter(j,0)=suma
+   call average(ensemble(n_Ge)%n_configurations,&
+                ensemble(n_Ge)%cell_parameter(j,0:ensemble(n_Ge)%n_configurations),&
+                ensemble(n_Ge)%peso )
   end do
-  suma=0.0
-  do i=1,ensemble(n_Ge)%n_configurations
-   suma=suma+ensemble(n_Ge)%volume(i)*ensemble(n_Ge)%peso(i)
+  call average(ensemble(n_Ge)%n_configurations,ensemble(n_Ge)%volume,ensemble(n_Ge)%peso)
+  do j=1,2
+   call average( ensemble(n_Ge)%n_configurations,&
+                 ensemble(n_Ge)%distance_TO(j,0:ensemble(n_Ge)%n_configurations),&
+                 ensemble(n_Ge)%peso )
+   call average( ensemble(n_Ge)%n_configurations,&
+                 ensemble(n_Ge)%distance_TT(j,0:ensemble(n_Ge)%n_configurations),&
+                 ensemble(n_Ge)%peso )
+   call average( ensemble(n_Ge)%n_configurations,&
+                 ensemble(n_Ge)%angle_OTO(j,0:ensemble(n_Ge)%n_configurations),&
+                 ensemble(n_Ge)%peso )
+   call average( ensemble(n_Ge)%n_configurations,&
+                 ensemble(n_Ge)%angle_TOT(j,0:ensemble(n_Ge)%n_configurations),&
+                 ensemble(n_Ge)%peso )
   end do
-  ensemble(n_Ge)%volume(0)=suma
  end do
+ ! QRVS averages:
  if( Quasi_Random_Virtual_Structures_flag.and.n_cells>=2 )then
+  ! cell parameters 
+  r4_average(0:60,1:6)=0.0
   do n_Ge=0,60
-   suma=0.0
-   do j=1,6
-    do i=1,ensemble(n_Ge)%extended_n_configurations
+   cps: do j=1,6
+    resonator=0
+    suma=0.0
+    ik_extended: do i=1,ensemble(n_Ge)%extended_n_configurations
      do k = 1,n_cells
-      suma=suma+ensemble( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) )%cell_parameter(j,0) 
+      resonator=resonator+1
+      cont = int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge )
+      suma=suma+ensemble(cont)%cell_parameter(j,0) 
      end do
-    end do
- !   suma=sum( ensemble( int( &
- !ensemble(n_Ge)%extended_ensemble(1:n_cells,ensemble(n_Ge)%extended_n_configurations)%n_Ge) )%cell_parameter(j,0) )
-    r4_average(n_Ge,j)=suma/real(n_cells*ensemble(n_Ge)%extended_n_configurations)
-   end do
+    end do ik_extended
+    r4_average(n_Ge,j)=suma/real(resonator)
+   end do cps
   end do
   do n_Ge=0,60
    do j=1,6
     ensemble(n_Ge)%cell_parameter(j,0)=r4_average(n_Ge,j)
    end do
   end do
+  ! volume:
   do n_Ge=0,60
    suma = 0.0
    do i=1,ensemble(n_Ge)%extended_n_configurations
@@ -402,8 +433,6 @@ program NMR
      suma=suma+ensemble( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) )%volume(0)
     end do
    end do
- !  suma=sum( ensemble( int( &
- !ensemble(n_Ge)%extended_ensemble(1:n_cells,1:ensemble(n_Ge)%extended_n_configurations)%n_Ge) )%volume(0) )
    r4_average(n_Ge,1)=suma/real(n_cells*ensemble(n_Ge)%extended_n_configurations)
   end do
   do n_Ge=0,60
@@ -411,13 +440,44 @@ program NMR
   end do
  end if
  open(u,file="cell.txt")
+ open(789,file="properties.txt")
  do n_Ge=0,60
-  write(u,*)n_Ge,( ensemble(n_Ge)%cell_parameter(j,0),j=1,6 ), ensemble(n_Ge)%volume(0)
+  write(u,*)ensemble(n_Ge)%extended_virtual_n_Ge,( ensemble(n_Ge)%cell_parameter(j,0),j=1,6 ), ensemble(n_Ge)%volume(0)
+  write(789,*)n_Ge,(ensemble(n_Ge)%distance_TO(j,0),j=1,2),(ensemble(n_Ge)%distance_TT(j,0),j=1,2),&
+                   (ensemble(n_Ge)%angle_OTO(j,0),j=1,2),(ensemble(n_Ge)%angle_TOT(j,0),j=1,2) 
  end do
  close(u)
+ close(789)
  stop
  !
  contains
+!
+ subroutine average(n,data_,peso)
+  implicit none
+  integer,intent(in) :: n
+  real,intent(inout) :: data_(0:n)
+  real,intent(in)    :: peso(1:n)
+  real               :: suma = 0.0,w(1:n)
+  integer            :: i
+  !
+  !check: data
+  w(1:n)=peso(1:n)
+  suma=0.0
+  do i=1,n
+   if(ISNAN(data_(i)))then
+    w(i)=0.0
+   end if
+   suma=suma+w(i)
+  end do
+  w(1:n)=w(1:n)/suma
+  suma=0.0
+  do i=1,n
+   if(ISNAN(data_(i)).eqv..false.) suma=suma+data_(i)*w(i)
+  end do
+  data_(0)=suma
+  return
+ end subroutine average
+!
  character(len=20) function str(k)
  !Convert an integer to string
     integer, intent(in) :: k
