@@ -1,8 +1,14 @@
 #!/usr/bin/gnuplot -persist
-set term postscript eps color enhanced blacktext 'Helvetica,20'
+set term postscript eps color enhanced blacktext 'Helvetica,8'
 set out 'cell.eps'
 set xlabel 'Ge Molar Fraction in Zeolite / -'
 set ylabel 'Cell Parameter a / '
+set xrange [0:1]
+set size ratio 1
+set size 1,0.3333
+set multiplot
+set size 0.3333,0.3333
+set key top left
 a               = -0.0662039  #     +/- 1.339e+10    (2.023e+13%)
 b               = 1.71079     #     +/- 1.867e+11    (1.091e+13%)
 c               = -0.0557977  #     +/- 8.26e+09     (1.48e+13%)
@@ -11,6 +17,18 @@ e               = -0.125766   #     +/- 3.474e+10    (2.762e+13%)
 f               = 1.25972     #     +/- 0.7347       (58.32%)
 g               = 0.258831    #     +/- 5.576e+10    (2.154e+13%)
 f(x)=a+b*(x-c)+d*(x-e)**2+f*(x-g)**3
-plot 'cell.txt'   u 1:2 w lp lt 1 pt 7 lc rgb 'red'   t 'a',\
-     'cell_RR_01_a.txt' u (f($1)):2 w p lt 2 pt 6 lc rgb 'black'   t 'RR_01',\
-     'cell_RR_01_a.txt' u (f($1)):2 w p lt 2 pt 6 lc rgb 'blue'   t 'RR_03'
+set origin 0,0
+plot 'cell.txt'   u ($1/60):2 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
+     'a_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig3',\
+     'a_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig3',\
+     'a_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig3'
+set origin 0.3333,0
+plot 'cell.txt'   u ($1/60):4 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
+     'c_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig4',\
+     'c_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig4',\
+     'c_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig4'
+set origin 0.6666,0
+plot 'cell.txt'   u ($1/60):8 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
+     'v_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig5',\
+     'v_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig5',\
+     'v_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig5'
