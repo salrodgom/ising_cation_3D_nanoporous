@@ -88,31 +88,36 @@ program NMR
  real                            :: virtual_n_Ge(n_cells,virtual_n_configurations_max)
  logical                         :: Quasi_Random_Virtual_Structures_flag = .false.
  logical                         :: forcefield = .false.
- logical                         :: inquire_CIFFiles_flag = .false.
+ logical                         :: inquire_CIFFiles_flag = .false., inquite_Geometry_information=.false.
 ! arguments in line:
  integer                         :: num_args = 0
  character(len=100),dimension(:), allocatable :: args
 ! allocatables
  type                            :: virtual_extension
   real                           :: n_Ge
-  real                           :: cell_parameter(6)
  end type
  type  :: microstate
   integer                        :: id = 0
   integer                        :: n_configurations = 0
   real                           :: peso(1:n_configurations_max) = 0.0
   real                           :: partition_function = 0.0
-  character(len=10)              :: CIFFile(1:n_configurations_max) = " "
+  character(len=1024)            :: CIFFile(1:n_configurations_max) = " "
   integer                        :: resonator(1:n_configurations_max,0:n_resonator_max-1) = 0
   integer                        :: T_population(1:n_configurations_max,1:5) = 0
   real                           :: extended_virtual_n_Ge = 0.0
   real                           :: extended_virtual_n_Ge_sigma = 0.0
   integer                        :: extended_n_configurations = 0
   type(virtual_extension)        :: extended_ensemble(1:n_cells,virtual_n_configurations_max)
-  real                           :: cell_parameter(6,1:n_configurations_max)
-  real                           :: volume(1:n_configurations_max)
+! cell properties:
+  real                           :: cell_parameter(6,0:n_configurations_max)
+  real                           :: volume(0:n_configurations_max)
   real                           :: rv_matrix(3,3,1:n_configurations_max)
   real                           :: vr_matrix(3,3,1:n_configurations_max)
+  ! # GeO_distances OGeO_angles GeGe_distances TO_distances TT_distances TOT_angles TO_T1 TO_T2 TO_T3 TO_T4 TO_T5 OTO_T1 OTO_T2 OTO_T3 OTO_T4 OTO_T5
+  real                           :: TO_distance(0:7,0:n_configurations_max) 
+                                 ! 0: TO, 1: GeO, 2-6, T1O-T5O
+  real                           :: OTO_angle(0:7,0:n_configurations_max)
+  real                           :: TT_distance(0:2,0:n_configurations_max)
  end type                        
  type(microstate)                :: ensemble(0:60)
  real                            :: count_(0:60,0:n_resonator_max-1) = 0.0
@@ -122,7 +127,8 @@ program NMR
  real                            :: suma
  real                            :: cell_0(6),vr(3,3),rv(3,3)
  integer                         :: cont,resonator
- character(len=80)               :: filename = " "
+ real                            :: r4_average(0:60,1:6)
+ character(len=1024)             :: filename = " "
  character(len=1024)             :: line = " "
  logical                         :: lex
  ! Read Arguments in line
@@ -143,6 +149,8 @@ program NMR
      Quasi_Random_Virtual_Structures_flag = .true.
     case('-g','--inquire-CIF')
      inquire_CIFFiles_flag = .true.
+    case('-t','--inquire-topology')
+     inquite_Geometry_information = .true.
    end select
   end do
  end if
@@ -154,7 +162,7 @@ program NMR
  ensemble(0)%T_population(1,1:5)=0
  ensemble(0)%extended_virtual_n_Ge=0.0
  ensemble(0)%extended_n_configurations = 1
- ensemble(0)%extended_ensemble(1:n_cells,1:ensemble(0)%extended_n_configurations)%n_Ge = 0.0
+ ensemble(0)%extended_ensemble(1:n_cells,1:1)%n_Ge = 0.0
  !
  ensemble(60)%n_configurations=1
  ensemble(60)%peso(1)=1.0
@@ -163,10 +171,27 @@ program NMR
  ensemble(60)%T_population(1,1:5)=1
  ensemble(60)%extended_virtual_n_Ge=60.0
  ensemble(60)%extended_n_configurations = 1
- ensemble(60)%extended_ensemble(1:n_cells,1:ensemble(0)%extended_n_configurations)%n_Ge = 60.0
+ ensemble(60)%extended_ensemble(1:n_cells,1:1)%n_Ge = 60.0
  !
  count_(0,0) = 6.0
  count_(60,n_resonator_max-1) = 6.0
+ !
+ if( inquire_CIFFiles_flag ) then
+  ! 0
+  call inquire_CIFFile( ensemble(0)%CIFFile(1), cell_0, rv, vr)
+  ensemble(0)%cell_parameter(1:6,1) = cell_0(1:6)
+  ensemble(0)%rv_matrix(1:3,1:3,1) = rv(1:3,1:3)
+  ensemble(0)%vr_matrix(1:3,1:3,1) = vr(1:3,1:3)
+  call cell(ensemble(0)%rv_matrix(1:3,1:3,1),ensemble(0)%vr_matrix(1:3,1:3,1),ensemble(0)%cell_parameter(1:6,1) )
+  ensemble(0)%volume(1) = volume( ensemble(0)%rv_matrix(1:3,1:3,1)  )
+  ! 60
+  call inquire_CIFFile( ensemble(60)%CIFFile(1), cell_0, rv, vr)
+  ensemble(60)%cell_parameter(1:6,1) = cell_0(1:6)
+  ensemble(60)%rv_matrix(1:3,1:3,1) = rv(1:3,1:3)
+  ensemble(60)%vr_matrix(1:3,1:3,1) = vr(1:3,1:3)
+  call cell(ensemble(60)%rv_matrix(1:3,1:3,1),ensemble(60)%vr_matrix(1:3,1:3,1),ensemble(60)%cell_parameter(1:6,1) )
+  ensemble(60)%volume(1) = volume( ensemble(60)%rv_matrix(1:3,1:3,1)  )
+ end if
  !
  read_properties: do n_Ge=1,59
   n_lines=0
@@ -180,6 +205,11 @@ program NMR
    ensemble(n_Ge)%CIFFile(1)=" "
    ensemble(n_Ge)%partition_function=0.0
    cycle read_properties
+  end if
+  if( inquite_Geometry_information ) then
+   open(345, file='inputs/configuration_topology.'//trim(str(n_Ge))//'.txt',status='old',iostat=ierr)
+   read(345,'(a)') line
+   if(ierr/=0) stop
   end if
   inquire(u,EXIST=lex,name=filename)
   inquire_analysis: do
@@ -195,7 +225,45 @@ program NMR
    if (ierr/=0) exit
    read(line,*)ensemble(n_Ge)%peso(i),(ensemble(n_Ge)%resonator(i,j),j=0,n_resonator_max-1),&
     (ensemble(n_Ge)%T_population(i,j),j=1,5),ensemble(n_Ge)%CIFFile(i)
+   if( inquire_CIFFiles_flag ) then
+    vjw: do j=1,1024
+     if(line(j:j)=="S") then
+      cont=j
+      exit vjw 
+     end if
+    end do vjw
+    pql: do j=cont,1024
+     if(line(j:j)==" ")then
+      resonator=j
+      exit pql
+     end if
+    end do pql
+    read(line(cont:resonator),'(a)') ensemble(n_Ge)%CIFFile(i)
+    ensemble(n_Ge)%CIFFile(i)="inputs/"//ensemble(n_Ge)%CIFFile(i)
+    ensemble(n_Ge)%CIFFile(i)=adjustl( trim( ensemble(n_Ge)%CIFFile(i) ) )
+    call inquire_CIFFile( ensemble(n_Ge)%CIFFile(i), cell_0, rv, vr)
+    ensemble(n_Ge)%cell_parameter(1:6,i) = cell_0(1:6)
+    ensemble(n_Ge)%rv_matrix(1:3,1:3,i) = rv(1:3,1:3)
+    ensemble(n_Ge)%vr_matrix(1:3,1:3,i) = vr(1:3,1:3)
+    call cell(ensemble(n_Ge)%rv_matrix(1:3,1:3,i),ensemble(n_Ge)%vr_matrix(1:3,1:3,i),ensemble(n_Ge)%cell_parameter(1:6,i) )
+    ensemble(n_Ge)%volume(i) = volume( ensemble(n_Ge)%rv_matrix(1:3,1:3,i)  )
+    call Symmetrising( &
+         ensemble(n_Ge)%cell_parameter(1:6,i) , &
+         ensemble(n_Ge)%rv_matrix(1:3,1:3,i),   &
+         ensemble(n_Ge)%vr_matrix(1:3,1:3,i),   &
+         ensemble(n_Ge)%volume(i) )
+   end if
+   if(inquite_Geometry_information)then
+  ! ! # GeO_distances OGeO_angles GeGe_distances TO_distances TT_distances TOT_angles TO_T1 TO_T2 TO_T3 TO_T4 TO_T5 OTO_T1 OTO_T2 OTO_T3 OTO_T4 OTO_T5
+  !real                           :: TO_distance(0:6,0:n_configurations_max)
+  !                               ! 0: TO, 1: GeO, 2-6, T1O-T5O
+  !real                           :: OTO_angle(0:6,0:n_configurations_max)
+  !real                           :: TT_distance(2,0:n_configurations_max)
+    read(345,*)TO_distance(2,i),OTO_angle(2,i),TT_distance(2,i),TO_distance(1,i),& 
+     OTO_angle(1,i),TT_distance(1,i),( TO_distance(j,i), j=3,7 ),( OTO_angle(j,i), j=3,7 ) 
+   end if
   end do
+  if(inquite_Geometry_information) close(345)
   ensemble(n_Ge)%partition_function=sum( ensemble(n_Ge)%peso( 1:ensemble(n_Ge)%n_configurations ) )
   do i=1,ensemble(n_Ge)%n_configurations
    do j=0,n_resonator_max-1
@@ -212,7 +280,11 @@ program NMR
   end do
   write(6,'(a,1x,i4)')'N configurations:',ensemble(n_Ge)%n_configurations
   do i=1,ensemble(n_Ge)%n_configurations
-   write(6,'(a,1x,a)')        'CIFFile:',ensemble(n_Ge)%CIFFile(i)
+   write(6,'(a,1x,a)')        'CIFFile:',ensemble(n_Ge)%CIFFile(i)(1:clen_trim(ensemble(n_Ge)%CIFFile(i)))
+   if( inquire_CIFFiles_flag ) then
+    write(6,'(a,1x,6(f14.7,1x))')    'Cell Parameters:',(ensemble(n_Ge)%cell_parameter(j,i),j=1,6)
+    write(6,'(a,1x,f14.7)')    'Volume:',ensemble(n_Ge)%volume(i)
+   end if
    write(6,'(a,1x,f14.7)')    'Peso:',ensemble(n_Ge)%peso(i)
    write(6,'(a,1x,f14.7)')    'Partition Function:',ensemble(n_Ge)%partition_function
    write(6,'(a,1x,26(i2,1x))')'Resonadores:',( ensemble(n_Ge)%resonator(i,j),j=0,n_resonator_max-1 )
@@ -288,6 +360,60 @@ program NMR
    ( NMR_unify(n_Ge,resonator), resonator=1,4 )
  end do 
  close(u)
+ do n_Ge=0,60
+  suma=0.0
+  do j=1,6
+   suma=0.0
+   do i=1,ensemble(n_Ge)%n_configurations
+    suma=suma+ensemble(n_Ge)%cell_parameter(j,i)*ensemble(n_Ge)%peso(i)
+   end do
+   ensemble(n_Ge)%cell_parameter(j,0)=suma
+  end do
+  suma=0.0
+  do i=1,ensemble(n_Ge)%n_configurations
+   suma=suma+ensemble(n_Ge)%volume(i)*ensemble(n_Ge)%peso(i)
+  end do
+  ensemble(n_Ge)%volume(0)=suma
+ end do
+ if( Quasi_Random_Virtual_Structures_flag.and.n_cells>=2 )then
+  do n_Ge=0,60
+   suma=0.0
+   do j=1,6
+    do i=1,ensemble(n_Ge)%extended_n_configurations
+     do k = 1,n_cells
+      suma=suma+ensemble( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) )%cell_parameter(j,0) 
+     end do
+    end do
+ !   suma=sum( ensemble( int( &
+ !ensemble(n_Ge)%extended_ensemble(1:n_cells,ensemble(n_Ge)%extended_n_configurations)%n_Ge) )%cell_parameter(j,0) )
+    r4_average(n_Ge,j)=suma/real(n_cells*ensemble(n_Ge)%extended_n_configurations)
+   end do
+  end do
+  do n_Ge=0,60
+   do j=1,6
+    ensemble(n_Ge)%cell_parameter(j,0)=r4_average(n_Ge,j)
+   end do
+  end do
+  do n_Ge=0,60
+   suma = 0.0
+   do i=1,ensemble(n_Ge)%extended_n_configurations
+    do k = 1,n_cells
+     suma=suma+ensemble( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) )%volume(0)
+    end do
+   end do
+ !  suma=sum( ensemble( int( &
+ !ensemble(n_Ge)%extended_ensemble(1:n_cells,1:ensemble(n_Ge)%extended_n_configurations)%n_Ge) )%volume(0) )
+   r4_average(n_Ge,1)=suma/real(n_cells*ensemble(n_Ge)%extended_n_configurations)
+  end do
+  do n_Ge=0,60
+   ensemble(n_Ge)%volume(0)=r4_average(n_Ge,1)
+  end do
+ end if
+ open(u,file="cell.txt")
+ do n_Ge=0,60
+  write(u,*)n_Ge,( ensemble(n_Ge)%cell_parameter(j,0),j=1,6 ), ensemble(n_Ge)%volume(0)
+ end do
+ close(u)
  stop
  !
  contains
@@ -311,6 +437,80 @@ program NMR
  i = LEN_TRIM(s) ; Clen_trim = i
  IF (s(i:i) == CHAR(0)) Clen_trim = Clen(s)   ! len of C string
  END FUNCTION Clen_trim
+!
+ subroutine symmetrising(cell_0,rv,vr,vol)
+  implicit none
+  real,intent(inout) :: cell_0(1:6)
+  real,intent(inout) :: rv(3,3),vr(3,3)
+  real,intent(in)    :: vol
+  real               :: cell_1_tmp
+  cell_0(4)=90.0
+  cell_0(5)=90.0
+  cell_0(6)=120.0
+  cell_0(1) = extract_a(cell_0,vol)
+  cell_0(2) = cell_0(1)
+  call cell(rv,vr,cell_0)
+  return
+ end subroutine symmetrising
+!
+ real function csc_deg(x)
+  implicit none
+  real :: x
+  csc_deg = -(2*sin(x))/(cos(2*x)-1.0)
+  return
+ end function csc_deg
+ real function cot_deg(x)
+  implicit none
+  real :: x
+  cot_deg = -(sin(2*x))/(cos(2*x)-1.0)
+  return
+ end function cot_deg
+ !
+ real function extract_a(cell_0,v)
+  implicit none
+  real :: cell_0(6),v
+  real :: pi,DEGTORAD
+  real :: alp,bet,gam
+  real :: cosa,cosb,cosg
+  real :: sina,sinb,sing
+  pi = ACOS(-1.0)
+  DEGTORAD=pi/180.0
+  IF(cell_0(4) == 90.0) THEN
+    cosa = 0.0
+  ELSE
+    ALP=cell_0(4)*degtorad
+    COSA=cos(ALP)
+  ENDIF
+  IF(cell_0(5) == 90.0) THEN
+    cosb = 0.0
+  ELSE
+    bet = cell_0(5)*degtorad
+    cosb = cos(bet)
+  ENDIF
+  IF(cell_0(6) == 90.0) then
+    sing = 1.0
+    cosg = 0.0
+  ELSE
+    gam = cell_0(6)*degtorad
+    sing = sin(gam)
+    cosg = cos(gam)
+  ENDIF
+  extract_a = (sqrt(v)*sqrt(csc_deg(gam)))/( sqrt(cell_0(3))*( &
+   1.0-cosb**2-(cosb**2)*(cot_deg(gam)**2)+&
+   2.0*cosa*cosb*cot_deg(gam)*csc_deg(gam)-(cosa**2)*(csc_deg(gam)**2))**(1.0/4.0))
+ ! Mathematica Solution: 
+ ! Sqrt[Csc[\[Gamma]]])/(Sqrt[
+ !   c] (1 - Cos[\[Beta]]^2 - Cos[\[Beta]]^2 Cot[\[Gamma]]^2 + 
+ !     2 Cos[\[Alpha]] Cos[\[Beta]] Cot[\[Gamma]] Csc[\[Gamma]] - 
+ !     Cos[\[Alpha]]^2 Csc[\[Gamma]]^2)^(1/4))
+ ! extract_a = (sqrt(v)*sqrt(csc_deg(gam))/ &
+ !  ( cell_0(3))*(1.0-cosb**2-(cosb**2)*(cot_deg(gam)**2)+&
+ !  2.0*cosa*cosb*cot_deg(gam)*csc_deg(gam)-(cosa**2)*(csc_deg(gam)**2))**(1.0/4.0)) )
+ !extract_a= (V*csc_deg(gam))/(cell_0(2)*cell_0(3)*Sqrt( &
+ !  1.0-cosb**2-(cosb**2)*(cot_deg(gam)**2)+&
+ !  2.0*cosa*cosb*cot_deg(gam)*csc_deg(gam)-(cosa**2)*(csc_deg(gam)**2))**(1.0/4.0))
+  return
+ end function extract_a
 !
  subroutine Quasi_Random_Virtual_Structures(n_cells,n_virtual_systems_max,n_average,n_virtual_systems,virtual_n_Ge)
   use mod_random 
@@ -437,15 +637,19 @@ program NMR
   return
  end function Free_Energy
  !
- subroutine inquire_CIFFile(CIFFilename)
+ subroutine inquire_CIFFile(CIFFilename,cell_0,rv,vr)
   implicit none
-  character(len=100),intent(in) :: CIFFilename
-  character(len=80)             :: string_stop_head= "_atom_site_charge"
-  integer                       :: uu = 120
-  character(len=20)             :: spam
-  real                          :: cell_0(6)
+  character(len=1024),intent(in) :: CIFFilename
+  character(len=80)              :: string_stop_head= "_atom_site_charge"
+  integer                        :: uu = 120
+  character(len=20)              :: spam
+  real,intent(out)               :: cell_0(6)
+  real,intent(out)               :: rv(3,3),vr(3,3)
   open(uu,file=CIFfilename,status='old',iostat=ierr)
-  if(ierr/=0) stop 'Error opening CIF file'
+  if(ierr/=0) then
+   write(6,'(a,1x,a)')'[ERROR] opening CIF file', CIFfilename
+   stop
+  end if
   read_cif: do
    read(uu,'(a)',iostat=ierr) line
    if(ierr/=0) exit read_cif
@@ -475,7 +679,7 @@ program NMR
    end if
    if(line(1:)==string_stop_head) exit read_cif
   end do read_cif
-  !call cell(rv,vr,cell_0)
+  call cell(rv,vr,cell_0)
   return
  end subroutine inquire_CIFFile
  !
