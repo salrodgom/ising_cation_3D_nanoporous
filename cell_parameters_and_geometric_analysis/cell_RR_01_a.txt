@@ -1,1 +1,0 @@
-../exp_Camblor_Reus/cell_RR_01_a.txt
