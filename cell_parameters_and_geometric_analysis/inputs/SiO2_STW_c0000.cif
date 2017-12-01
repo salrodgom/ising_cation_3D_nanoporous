@@ -1,0 +1,1 @@
+../../src/SiO2_STW_c0000.cif
