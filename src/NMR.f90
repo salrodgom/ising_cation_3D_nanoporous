@@ -87,7 +87,7 @@ program NMR
  integer,parameter               :: initialisation_steps = 10000000
  real                            :: virtual_n_Ge(n_cells,virtual_n_configurations_max)
  logical                         :: Quasi_Random_Virtual_Structures_flag = .false.
- logical                         :: forcefield = .false.
+ logical                         :: forcefield = .false., inquite_Geometry_information_debug = .false.
  logical                         :: inquire_CIFFiles_flag = .false., inquite_Geometry_information=.false.
 ! arguments in line:
  integer                         :: num_args = 0
@@ -103,7 +103,7 @@ program NMR
   real                           :: partition_function = 0.0
   character(len=1024)            :: CIFFile(1:n_configurations_max) = " "
   integer                        :: resonator(1:n_configurations_max,0:n_resonator_max-1) = 0
-  integer                        :: T_population(1:n_configurations_max,1:5) = 0
+  real                           :: T_population(1:n_configurations_max,1:5) = 0
   real                           :: extended_virtual_n_Ge = 0.0
   real                           :: extended_virtual_n_Ge_sigma = 0.0
   integer                        :: extended_n_configurations = 0
@@ -119,8 +119,8 @@ program NMR
   real                           :: angle_TOT(0:2,0:n_configurations_max)
  end type                        
  type(microstate)                :: ensemble(0:60)
- real                            :: count_(0:60,0:n_resonator_max-1) = 0.0
- real                            :: NMR_(0:60,0:n_resonator_max-1) = 0.0
+ real                            :: count_(0:60,0:n_resonator_max-1+5) = 0.0
+ real                            :: NMR_(0:60,0:n_resonator_max-1+5) = 0.0
  real                            :: NMR_unify(0:60,1:4) = 0.0
  real                            :: suma,x(1:16)
  real                            :: cell_0(6),vr(3,3),rv(3,3)
@@ -149,10 +149,8 @@ program NMR
      inquire_CIFFiles_flag = .true.
     case('-t','--inquire-topology')
      inquite_Geometry_information = .true.
-    case default
-     forcefield=.true.
-     Quasi_Random_Virtual_Structures_flag = .true.
-     inquire_CIFFiles_flag = .true.
+    case('-x')
+     inquite_Geometry_information_debug = .true.
    end select
   end do
  end if
@@ -173,6 +171,7 @@ program NMR
  ensemble(0)%angle_OTO(2,1)=0.0
  ensemble(0)%angle_TOT(1,1)=142.151852
  ensemble(0)%angle_TOT(2,1)=0.0
+ ensemble(0)%T_population(1,1:5)=0.0
  !
  ensemble(60)%n_configurations=1
  ensemble(60)%peso(1)=1.0
@@ -190,6 +189,7 @@ program NMR
  ensemble(60)%angle_OTO(2,1)=109.157674
  ensemble(60)%angle_TOT(1,1)=138.354665
  ensemble(60)%angle_TOT(2,1)=138.354665
+ ensemble(60)%T_population(1,1:5)=1.0
  !
  count_(0,0) = 6.0
  count_(60,n_resonator_max-1) = 6.0
@@ -211,6 +211,13 @@ program NMR
   ensemble(60)%volume(1) = volume( ensemble(60)%rv_matrix(1:3,1:3,1)  )
  end if
  !
+ if( inquite_Geometry_information_debug ) then
+  open(825,file="overall_input.txt",status='old',iostat=ierr)
+  if(ierr/=0) stop
+  open(826,file="germanium_input.txt",status='old',iostat=ierr)
+  if(ierr/=0) stop
+ end if
+ ! ---------------------------------------------------------------------------------------------------------------------
  read_properties: do n_Ge=1,59
   n_lines=0
   open(u, file='inputs/analysis_'//trim(str(n_Ge))//'.txt',status='old',iostat=ierr)
@@ -228,6 +235,13 @@ program NMR
    open(345, file='inputs/configuration_topology.'//trim(str(n_Ge))//'.txt',status='old',iostat=ierr)
    read(345,'(a)') line
    if(ierr/=0) stop
+  end if
+  if ( inquite_Geometry_information_debug ) then
+   !1     1.62042773       109.264214       3.05509186       142.151260 
+   read(825,*) j,ensemble(n_Ge)%distance_TO(1,1),ensemble(n_Ge)%angle_OTO(1,1),&
+               ensemble(n_Ge)%distance_TT(1,1),ensemble(n_Ge)%angle_TOT(1,1)
+   read(826,*) j,ensemble(n_Ge)%distance_TO(2,1),ensemble(n_Ge)%angle_OTO(2,1),&
+               ensemble(n_Ge)%distance_TT(2,1),ensemble(n_Ge)%angle_TOT(2,1)
   end if
   inquire(u,EXIST=lex,name=filename)
   inquire_analysis: do
@@ -279,14 +293,23 @@ program NMR
   if(inquite_Geometry_information) close(345)
   ensemble(n_Ge)%partition_function=sum( ensemble(n_Ge)%peso( 1:ensemble(n_Ge)%n_configurations ) )
   do i=1,ensemble(n_Ge)%n_configurations
-   do j=0,n_resonator_max-1
+   do j=0,n_resonator_max-1+5
     !FORBIDEN RESONATORS
     if (j/=2.and.j/=6.and.j/=10.and.j/=16.and.j/=20) then
      if(forcefield)then
+      if(j<=n_resonator_max-1)then
       count_(n_Ge,j) = count_(n_Ge,j) + &
        ensemble(n_Ge)%resonator(i,j)*ensemble(n_Ge)%peso(i)/ensemble(n_Ge)%partition_function
+      else
+       count_(n_Ge,j) = count_(n_Ge,j) + &
+       ensemble(n_Ge)%T_population(i,j-n_resonator_max+1)*ensemble(n_Ge)%peso(i)/ensemble(n_Ge)%partition_function
+      end if
      else
-      count_(n_Ge,j) = count_(n_Ge,j) + ensemble(n_Ge)%resonator(i,j)
+      if(j<=n_resonator_max-1)then
+       count_(n_Ge,j) = count_(n_Ge,j) + ensemble(n_Ge)%resonator(i,j)
+      else  
+       count_(n_Ge,j) = count_(n_Ge,j) + ensemble(n_Ge)%T_population(i,j-n_resonator_max+1)
+      end if
      end if
     end if
    end do 
@@ -304,21 +327,37 @@ program NMR
     write(6,*) (   ensemble(n_Ge)%angle_OTO(j,i),j=1,2)
     write(6,*) (   ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
    end if
+   if ( inquite_Geometry_information_debug ) then
+    write(6,*) j,ensemble(n_Ge)%distance_TO(1,1),ensemble(n_Ge)%angle_OTO(1,1),&
+               ensemble(n_Ge)%distance_TT(1,1),ensemble(n_Ge)%angle_TOT(1,1)
+    write(6,*) j,ensemble(n_Ge)%distance_TO(2,1),ensemble(n_Ge)%angle_OTO(2,1),&
+               ensemble(n_Ge)%distance_TT(2,1),ensemble(n_Ge)%angle_TOT(2,1) 
+   end if
    write(6,'(a,1x,f14.7)')    'Peso:',ensemble(n_Ge)%peso(i)
    write(6,'(a,1x,f14.7)')    'Partition Function:',ensemble(n_Ge)%partition_function
    write(6,'(a,1x,26(i2,1x))')'Resonadores:',( ensemble(n_Ge)%resonator(i,j),j=0,n_resonator_max-1 )
-   write(6,'(a,1x,5(i2,1x),1x,a,1x,i2)') 'Populations:',( ensemble(n_Ge)%T_population(i,j),j=1,5),&
-    ':',sum(ensemble(n_Ge)%T_population(i,1:5))
+   write(6,'(a,1x,5(i2,1x),1x,a,1x,i2)') 'Populations:',(int(ensemble(n_Ge)%T_population(i,j)),j=1,5),&
+    ':',int(sum(ensemble(n_Ge)%T_population(i,1:5)))
   end do
   write(6,*)'===='
   close(u)
  end do read_properties
+ if( inquite_Geometry_information_debug) then
+  do i=2,ensemble(n_Ge)%n_configurations
+   ensemble(n_Ge)%distance_TO(1:2,i)=ensemble(n_Ge)%distance_TO(1:2,1)
+   ensemble(n_Ge)%distance_TT(1:2,i)=ensemble(n_Ge)%distance_TT(1:2,1)
+   ensemble(n_Ge)%angle_OTO(1:2,i)=ensemble(n_Ge)%angle_OTO(1:2,1)
+   ensemble(n_Ge)%angle_TOT(1:2,i)=ensemble(n_Ge)%angle_TOT(1:2,1)
+  end do
+  close(825)
+  close(826)
+ end if
  write(6,'(a)')'Counts:'
  do n_Ge=0,60
-  write(6,'(26(f5.2,1x))')(count_(n_Ge,j), j=0,n_resonator_max-1 )
+  write(6,'(26(f5.2,1x))')(count_(n_Ge,j), j=0,n_resonator_max-1 + 5 )
  end do
  write(6,*)'===='
- write(6,'(26(i4,1x))')( sum(int(count_(0:60,j)) ), j=0,n_resonator_max-1 )
+ write(6,'(26(i4,1x))')( sum(int(count_(0:60,j)) ), j=0,n_resonator_max-1 + 5 )
  write(6,*)'===='
  !
  if( Quasi_Random_Virtual_Structures_flag.and.n_cells>=2 ) write(6,'(a)')"Quasi Random Virtual Structures"
@@ -341,8 +380,9 @@ program NMR
   end if
   write(6,'(i3,1x,f14.7,1x,i5)')n_Ge,ensemble(n_Ge)%extended_virtual_n_Ge,ensemble(n_Ge)%extended_n_configurations
  end do
+ ensemble(n_Ge)%T_population(1:n_configurations_max,1:5) = 0.0
  do n_Ge=0,60
-  do resonator=0,n_resonator_max-1
+  do resonator=0,n_resonator_max-1+5
    NMR_(n_Ge,resonator)=0.0
    if (resonator/=2.and.resonator/=6.and.resonator/=10.and.resonator/=16.and.resonator/=20) then
    do i=1,ensemble(n_Ge)%extended_n_configurations
@@ -357,6 +397,9 @@ program NMR
        NMR_unify(n_Ge,3)=NMR_unify(n_Ge,3)+count_( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) ,resonator)
       case(11,18,24,25)
        NMR_unify(n_Ge,4)=NMR_unify(n_Ge,4)+count_( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) ,resonator)
+      case(n_resonator_max,n_resonator_max+1,n_resonator_max+2,n_resonator_max+3,n_resonator_max+4)
+       ensemble(n_Ge)%T_population(1,resonator-n_resonator_max+1) = ensemble(n_Ge)%T_population(1,resonator-n_resonator_max+1) + &
+        count_( int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge) ,resonator )
      end select
     end do
    end do
@@ -366,7 +409,17 @@ program NMR
   NMR_(n_Ge,0:n_resonator_max-1)=NMR_(n_Ge,0:n_resonator_max-1)/suma
   suma=sum(NMR_unify(n_Ge,1:4))
   NMR_unify(n_Ge,1:4)=NMR_unify(n_Ge,1:4)/suma
+  !
+  !suma=sum( NMR_(n_Ge,n_resonator_max:n_resonator_max-1+5))
+  !if(suma/=0.0) NMR_(n_Ge,n_resonator_max:n_resonator_max-1+5)=NMR_(n_Ge,n_resonator_max:n_resonator_max-1+5)/suma
+  !suma=sum( ensemble(n_Ge)%T_population(1,1:5) )
+  !if(suma/=0.0) ensemble(n_Ge)%T_population(1,1:5)=ensemble(n_Ge)%T_population(1,1:5)/suma
  end do
+ open(u,file="populations.txt")
+ do n_Ge=0,60
+  write(u,'(f14.7,1x,5(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,( ensemble(n_Ge)%T_population(1,j) ,j=1,5 )
+ end do
+ close(u)
  open(u,file="NMR.txt")
  do n_Ge=0,60
   write(u,'(f14.7,1x,27(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,&
@@ -377,7 +430,7 @@ program NMR
  do n_Ge=0,60
   write(u,'(f14.7,1x,4(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,&
    ( NMR_unify(n_Ge,resonator), resonator=1,4 )
- end do 
+ end do
  close(u)
  !! cell averages
  do n_Ge=0,60
