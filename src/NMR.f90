@@ -417,7 +417,8 @@ program NMR
  end do
  open(u,file="populations.txt")
  do n_Ge=0,60
-  write(u,'(f14.7,1x,5(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,( ensemble(n_Ge)%T_population(1,j) ,j=1,5 )
+  write(u,'(f14.7,1x,5(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,&
+  ( ensemble(n_Ge)%T_population(1,j)/real(n_cells*ensemble(n_Ge)%extended_n_configurations) ,j=1,5 )
  end do
  close(u)
  open(u,file="NMR.txt")
