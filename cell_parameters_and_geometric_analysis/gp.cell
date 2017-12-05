@@ -17,11 +17,15 @@ e               = -0.125766   #     +/- 3.474e+10    (2.762e+13%)
 f               = 1.25972     #     +/- 0.7347       (58.32%)
 g               = 0.258831    #     +/- 5.576e+10    (2.154e+13%)
 f(x)=a+b*(x-c)+d*(x-e)**2+f*(x-g)**3
+g(x)=h+p*x
+fit [0.2:1] g(x) 'a_2_3.txt' u (f($1)):2 via h,p
 set origin 0,0
+set ylabel 'Cell Parameter /'
 plot 'cell.txt'   u ($1/60):2 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
      'a_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig3',\
      'a_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig3',\
-     'a_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig3'
+     'a_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig3',\
+     g(x) w l  lt 1 lc rgb 'black' notitle
 set origin 0.3333,0
 plot 'cell.txt'   u ($1/60):4 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
      'c_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig4',\
@@ -29,6 +33,4 @@ plot 'cell.txt'   u ($1/60):4 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
      'c_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig4'
 set origin 0.6666,0
 plot 'cell.txt'   u ($1/60):8 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
-     'v_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig5',\
-     'v_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig5',\
-     'v_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig5'
+     'v_corrected.txt'        w p ps 0.75 pt 6 lc rgb 'blue'  t  'set 4'

@@ -456,6 +456,10 @@ program NMR
                  ensemble(n_Ge)%peso )
   end do
  end do
+ do n_Ge=0,60
+  write(*,*)n_Ge,(ensemble(n_Ge)%distance_TO(j,0),j=1,2),(ensemble(n_Ge)%distance_TT(j,0),j=1,2),&
+                   (ensemble(n_Ge)%angle_OTO(j,0),j=1,2),(ensemble(n_Ge)%angle_TOT(j,0),j=1,2)
+ end do
  ! QRVS averages:
  if( Quasi_Random_Virtual_Structures_flag.and.n_cells>=2 )then
   ! cell parameters 
