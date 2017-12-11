@@ -1,7 +1,7 @@
 #!/usr/bin/gnuplot -persist
 set term postscript eps color enhanced blacktext 'Helvetica,8'
 set out 'cell.eps'
-set xlabel 'Ge Molar Fraction in Zeolite / -'
+set xlabel 'Ge/(Ge+Si) in Zeolite / -'
 set ylabel 'Cell Parameter a / '
 set xrange [0:1]
 set size ratio 1
@@ -18,19 +18,19 @@ f               = 1.25972     #     +/- 0.7347       (58.32%)
 g               = 0.258831    #     +/- 5.576e+10    (2.154e+13%)
 f(x)=a+b*(x-c)+d*(x-e)**2+f*(x-g)**3
 g(x)=h+p*x
-fit [0.2:1] g(x) 'a_2_3.txt' u (f($1)):2 via h,p
+fit [0.4:1] g(x) 'a_7_8.txt' u (f($1)):2 via h,p
 set origin 0,0
 set ylabel 'Cell Parameter /'
-plot 'cell.txt'   u ($1/60):2 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
-     'a_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig3',\
-     'a_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig3',\
-     'a_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig3',\
-     g(x) w l  lt 1 lc rgb 'black' notitle
+plot 'cell.txt'   u ($1/60):2 w p ps 0.75 pt 6 lc rgb 'red'    t 'Simulation',\
+     g(x) w l  lt -1 lc rgb 'gray' notitle,\
+     'a_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t 'IPC No-linear',\
+     'a_updated.txt' u 1:2 w p ps 0.75 pt 6 lc rgb 'black'     t 'IPC Linear'
+unset key 
 set origin 0.3333,0
 plot 'cell.txt'   u ($1/60):4 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
-     'c_2_3.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'black'   t 'set 1 Fig4',\
-     'c_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 2 Fig4',\
-     'c_icp.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig4'
+     'c_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig4',\
+     'c_updated.txt' u 1:2 w p ps 0.75 pt 6 lc rgb 'black'     t 'IPC calibrated'
 set origin 0.6666,0
 plot 'cell.txt'   u ($1/60):8 w p ps 0.75 pt 6 lc rgb 'red'   t 'Simulation',\
-     'v_corrected.txt'        w p ps 0.75 pt 6 lc rgb 'blue'  t  'set 4'
+     'v_7_8.txt'  u (f($1)):2 w p ps 0.75 pt 6 lc rgb 'blue'   t  'set 3 Fig4',\
+     'vol_updated.txt'        w p ps 0.75 pt 6 lc rgb 'black'  t  'set updated'
