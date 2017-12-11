@@ -1,3 +1,4 @@
+<<<<<<< HEAD
    0.00000000       1.62042773       1.80007946       3.05508542       3.00030398       109.264267       106.184563       142.150940       125.849007    
    1.00006032       1.62113214       1.79811287       3.05590796       3.00287032       109.250488       106.252625       142.148315       126.155647    
    1.99989474       1.62252676       1.79437315       3.05829453       3.00874758       109.242424       106.410042       142.182175       126.704918    
@@ -59,3 +60,66 @@
    57.9699783       1.71910036       1.72527027       3.20821190       3.20821381       109.163788       109.149208       138.475357       138.452545    
    58.9721298       1.72073174       1.72475660       3.21122932       3.21122956       109.141296       109.131111       138.410645       138.408035    
    60.0000000       1.72247112       1.72444391       3.21415687       3.21415687       109.157700       109.152946       138.352432       138.352432    
+=======
+           0   1.62042105       0.00000000       3.00032997       0.00000000       109.449997       0.00000000       142.151855       0.00000000    
+           1              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           2              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           3  0.471309960      0.523534298      0.888589621      0.872713447       31.7800751       30.8859177       41.3454475       36.6083069    
+           4              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           5              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           6              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           7              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           8              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+           9              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          10              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          11              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          12              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          13              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          14              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          15              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          16              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          17              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          18              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          19              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          20              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          21              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          22              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          23              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          24              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          25              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          26              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          27              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          28              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          29              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          30              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          31              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          32              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          33              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          34              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          35              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          36              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          37              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          38              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          39              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          40              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          41              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          42              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          43              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          44              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          45              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          46              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          47              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          48              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          49              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          50              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          51              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          52              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          53              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          54              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          55              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          56              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          57              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          58              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          59              NaN              NaN              NaN              NaN              NaN              NaN              NaN              NaN
+          60   1.72245300       1.72442806       3.21414709       3.21414709       109.157677       109.157677       138.354660       138.354660    
+>>>>>>> b5419f996b5bf3711422b0dff98b05d67d158e85

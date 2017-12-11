@@ -1,3 +1,4 @@
+<<<<<<< HEAD
    0.00000000       11.9020996       11.9020996       29.6920090       90.0000000       90.0000000       120.000000       3642.65186    
   0.999953747       11.9389715       11.9389715       29.5104790       90.0000000       90.0000000       120.000000       3643.16602    
    2.00005317       11.9545641       11.9545641       29.4780960       90.0000000       90.0000000       120.000000       3648.33423    
@@ -59,3 +60,66 @@
    57.9693031       12.5748720       12.5748720       30.4795551       90.0000000       90.0000000       120.000000       4173.43506    
    58.9708900       12.5937862       12.5937862       30.5051880       90.0000000       90.0000000       120.000000       4190.07031    
    60.0000000       12.6639862       12.6620502       30.9720764       90.0000000       90.0000000       120.000000       4301.06299    
+=======
+   0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000    
+   1.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   2.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   3.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000    
+   4.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   5.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   6.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   7.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   8.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   9.00000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   10.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   11.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   12.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   13.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   14.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   15.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   16.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   17.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   18.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   19.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   20.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   21.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   22.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   23.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   24.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   25.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   26.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   27.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   28.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   29.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   30.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   31.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   32.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   33.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   34.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   35.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   36.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   37.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   38.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   39.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   40.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   41.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   42.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   43.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   44.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   45.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   46.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   47.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   48.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   49.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   50.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   51.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   52.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   53.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   54.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   55.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   56.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   57.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   58.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   59.0000000                  NaN              NaN              NaN              NaN              NaN              NaN              NaN
+   60.0000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000       0.00000000    
+>>>>>>> b5419f996b5bf3711422b0dff98b05d67d158e85
