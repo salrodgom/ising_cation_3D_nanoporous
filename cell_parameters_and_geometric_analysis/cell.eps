@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: cell.eps
-%%Creator: gnuplot 5.0 patchlevel 5
-%%CreationDate: Sat Dec  2 00:45:30 2017
+%%Creator: gnuplot 5.0 patchlevel rc2
+%%CreationDate: Mon Dec 11 16:28:37 2017
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 133
 %%EndComments
@@ -48,7 +48,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 5.1 (Oct 2015)
+% Gnuplot Prolog Version 5.0 (Apr 2014)
 %
 %/SuppressPDFMark true def
 %
@@ -83,7 +83,7 @@ gnudict begin
 /PL {stroke userlinewidth setlinewidth
 	Rounded {1 setlinejoin 1 setlinecap} if} def
 3.8 setmiterlimit
-% Classic Line colors (version 5.0)
+% Default Line colors
 /LCw {1 1 1} def
 /LCb {0 0 0} def
 /LCa {0 0 0} def
@@ -96,20 +96,19 @@ gnudict begin
 /LC6 {0 0 0} def
 /LC7 {1 0.3 0} def
 /LC8 {0.5 0.5 0.5} def
-% Default dash patterns (version 5.0)
-/LTB {BL [] LCb DL} def
+% Default Line Types
 /LTw {PL [] 1 setgray} def
-/LTb {PL [] LCb DL} def
+/LTb {BL [] LCb DL} def
 /LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
 /LT0 {PL [] LC0 DL} def
-/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
-/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
-/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
-/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
-/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
-/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
-/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
-/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
 /SL {[] 0 setdash} def
 /Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
 /Dia {stroke [] 0 setdash 2 copy vpt add M
@@ -466,13 +465,15 @@ systemdict /pdfmark known not {
 SDict begin [
   /Title (cell.eps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 5.0 patchlevel 5)
+  /Creator (gnuplot 5.0 patchlevel rc2)
+  /Author (salvador)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Sat Dec  2 00:45:30 2017)
+  /CreationDate (Mon Dec 11 16:28:37 2017)
   /DOCINFO pdfmark
 end
 } ifelse
+end
 %
 % Support for boxed text - Ethan A Merritt May 2005
 %
@@ -498,10 +499,6 @@ end
 /Boxing false def
 /textshow { ExtendTextBox Gshow } def
 %
-% redundant definitions for compatibility with prologue.ps older than 5.0.2
-/LTB {BL [] LCb DL} def
-/LTb {PL [] LCb DL} def
-end
 %%EndProlog
 %%Page: 1 1
 gnudict begin
@@ -693,7 +690,7 @@ stroke
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 684 1583 N
 684 256 L
@@ -729,66 +726,66 @@ LTb
 1.000 UL
 LTb
 1.00 0.00 0.00 C 684 407 Circle
-706 483 Circle
-728 485 Circle
-750 518 Circle
-772 509 Circle
-795 519 Circle
-817 536 Circle
-839 608 Circle
-861 618 Circle
-883 631 Circle
+706 461 Circle
+728 486 Circle
+750 491 Circle
+772 505 Circle
+795 514 Circle
+817 534 Circle
+839 572 Circle
+861 614 Circle
+883 628 Circle
 905 640 Circle
 927 652 Circle
-949 666 Circle
-972 677 Circle
-994 694 Circle
-1016 699 Circle
-1038 703 Circle
-1060 720 Circle
-1082 738 Circle
-1104 736 Circle
-1126 722 Circle
-1148 785 Circle
-1171 739 Circle
-1193 745 Circle
-1215 827 Circle
-1237 792 Circle
-1259 812 Circle
-1281 850 Circle
-1303 848 Circle
-1325 852 Circle
-1348 860 Circle
-1370 872 Circle
-1392 844 Circle
-1414 894 Circle
-1436 917 Circle
-1458 866 Circle
-1480 938 Circle
-1502 906 Circle
-1524 957 Circle
-1547 967 Circle
-1569 993 Circle
-1591 1000 Circle
-1613 1035 Circle
-1635 1057 Circle
-1657 1070 Circle
-1679 1099 Circle
-1701 1130 Circle
-1723 1164 Circle
-1746 1162 Circle
-1768 1186 Circle
-1790 1207 Circle
-1812 1238 Circle
-1834 1265 Circle
-1856 1291 Circle
-1878 1319 Circle
-1900 1342 Circle
-1923 1370 Circle
-1945 1396 Circle
-1967 1426 Circle
-1989 1455 Circle
-2011 1530 Circle
+950 664 Circle
+972 676 Circle
+994 687 Circle
+1016 697 Circle
+1038 707 Circle
+1060 718 Circle
+1082 724 Circle
+1104 730 Circle
+1126 738 Circle
+1148 747 Circle
+1171 751 Circle
+1193 761 Circle
+1215 775 Circle
+1237 789 Circle
+1259 803 Circle
+1281 819 Circle
+1303 833 Circle
+1325 844 Circle
+1347 852 Circle
+1369 859 Circle
+1392 866 Circle
+1414 875 Circle
+1436 888 Circle
+1458 897 Circle
+1480 911 Circle
+1502 925 Circle
+1524 941 Circle
+1547 961 Circle
+1569 980 Circle
+1591 1002 Circle
+1613 1024 Circle
+1635 1046 Circle
+1657 1069 Circle
+1679 1093 Circle
+1702 1115 Circle
+1724 1139 Circle
+1746 1160 Circle
+1768 1182 Circle
+1790 1204 Circle
+1812 1227 Circle
+1834 1252 Circle
+1856 1276 Circle
+1878 1295 Circle
+1900 1319 Circle
+1922 1344 Circle
+1944 1371 Circle
+1966 1399 Circle
+1988 1427 Circle
+2011 1528 Circle
 1387 1480 Circle
 % End plot #1
 % Begin plot #2
@@ -856,7 +853,7 @@ LTb
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 684 1583 N
 684 256 L
@@ -1037,7 +1034,7 @@ stroke
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 3083 1583 N
 0 -1327 V
@@ -1073,65 +1070,65 @@ LTb
 1.000 UL
 LTb
 1.00 0.00 0.00 C 3083 498 Circle
-3105 269 Circle
-3127 320 Circle
-3149 322 Circle
-3171 342 Circle
-3194 350 Circle
-3216 376 Circle
-3238 353 Circle
-3260 379 Circle
+3105 348 Circle
+3127 316 Circle
+3149 310 Circle
+3171 324 Circle
+3194 338 Circle
+3216 357 Circle
+3238 367 Circle
+3260 386 Circle
 3282 407 Circle
-3304 425 Circle
-3326 447 Circle
-3348 475 Circle
-3371 463 Circle
-3393 534 Circle
-3415 430 Circle
-3437 441 Circle
-3459 590 Circle
-3481 539 Circle
-3503 562 Circle
-3525 608 Circle
-3547 650 Circle
-3570 612 Circle
-3592 665 Circle
-3614 620 Circle
-3636 605 Circle
-3658 674 Circle
-3680 718 Circle
-3702 695 Circle
-3724 720 Circle
-3747 717 Circle
-3769 736 Circle
-3791 699 Circle
-3813 777 Circle
-3835 839 Circle
-3857 699 Circle
-3879 802 Circle
-3901 694 Circle
-3923 767 Circle
-3946 772 Circle
-3968 800 Circle
-3990 782 Circle
-4012 822 Circle
-4034 834 Circle
-4056 847 Circle
-4078 854 Circle
-4100 925 Circle
-4122 946 Circle
-4145 916 Circle
-4167 938 Circle
-4189 1009 Circle
-4211 1013 Circle
-4233 1038 Circle
-4255 1059 Circle
-4277 1063 Circle
-4299 1109 Circle
-4322 1130 Circle
-4344 1143 Circle
-4366 1172 Circle
-4388 1198 Circle
+3304 426 Circle
+3326 446 Circle
+3349 465 Circle
+3371 482 Circle
+3393 485 Circle
+3415 478 Circle
+3437 498 Circle
+3459 528 Circle
+3481 549 Circle
+3503 566 Circle
+3525 589 Circle
+3547 611 Circle
+3570 629 Circle
+3592 631 Circle
+3614 632 Circle
+3636 635 Circle
+3658 641 Circle
+3680 663 Circle
+3702 687 Circle
+3724 702 Circle
+3746 710 Circle
+3768 719 Circle
+3791 733 Circle
+3813 745 Circle
+3835 764 Circle
+3857 756 Circle
+3879 761 Circle
+3901 758 Circle
+3923 759 Circle
+3946 771 Circle
+3968 781 Circle
+3990 797 Circle
+4012 812 Circle
+4034 829 Circle
+4056 850 Circle
+4078 870 Circle
+4101 891 Circle
+4123 913 Circle
+4145 934 Circle
+4167 955 Circle
+4189 977 Circle
+4211 1000 Circle
+4233 1022 Circle
+4255 1042 Circle
+4277 1060 Circle
+4299 1080 Circle
+4321 1104 Circle
+4343 1128 Circle
+4365 1151 Circle
+4387 1171 Circle
 4410 1560 Circle
 3786 1480 Circle
 % End plot #1
@@ -1200,7 +1197,7 @@ LTb
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 3083 1583 N
 0 -1327 V
@@ -1221,84 +1218,95 @@ LCb setrgbcolor
 -63 0 V
 stroke
 5435 256 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 3600)]
+[ [(Helvetica) 80.0 0.0 true true 0 ( 0)]
 ] -26.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5483 422 M
+5483 403 M
 63 0 V
 1264 0 R
 -63 0 V
 stroke
-5435 422 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 3700)]
+5435 403 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 500)]
 ] -26.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5483 588 M
+5483 551 M
 63 0 V
 1264 0 R
 -63 0 V
 stroke
-5435 588 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 3800)]
+5435 551 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 1000)]
 ] -26.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5483 754 M
+5483 698 M
 63 0 V
 1264 0 R
 -63 0 V
 stroke
-5435 754 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 3900)]
+5435 698 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 1500)]
 ] -26.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5483 920 M
+5483 846 M
 63 0 V
 1264 0 R
 -63 0 V
 stroke
-5435 920 M
+5435 846 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 2000)]
+] -26.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5483 993 M
+63 0 V
+1264 0 R
+-63 0 V
+stroke
+5435 993 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 2500)]
+] -26.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5483 1141 M
+63 0 V
+1264 0 R
+-63 0 V
+stroke
+5435 1141 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 3000)]
+] -26.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5483 1288 M
+63 0 V
+1264 0 R
+-63 0 V
+stroke
+5435 1288 M
+[ [(Helvetica) 80.0 0.0 true true 0 ( 3500)]
+] -26.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5483 1436 M
+63 0 V
+1264 0 R
+-63 0 V
+stroke
+5435 1436 M
 [ [(Helvetica) 80.0 0.0 true true 0 ( 4000)]
-] -26.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5483 1085 M
-63 0 V
-1264 0 R
--63 0 V
-stroke
-5435 1085 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 4100)]
-] -26.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5483 1251 M
-63 0 V
-1264 0 R
--63 0 V
-stroke
-5435 1251 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 4200)]
-] -26.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5483 1417 M
-63 0 V
-1264 0 R
--63 0 V
-stroke
-5435 1417 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 4300)]
 ] -26.7 MRshow
 1.000 UL
 LTb
@@ -1309,7 +1317,7 @@ LCb setrgbcolor
 -63 0 V
 stroke
 5435 1583 M
-[ [(Helvetica) 80.0 0.0 true true 0 ( 4400)]
+[ [(Helvetica) 80.0 0.0 true true 0 ( 4500)]
 ] -26.7 MRshow
 1.000 UL
 LTb
@@ -1381,7 +1389,7 @@ stroke
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 5483 1583 N
 0 -1327 V
@@ -1416,67 +1424,67 @@ LTb
 0.750 UP
 1.000 UL
 LTb
-1.00 0.00 0.00 C 5483 327 Circle
-5505 323 Circle
-5527 337 Circle
-5549 360 Circle
-5571 359 Circle
-5594 367 Circle
-5616 386 Circle
-5638 430 Circle
-5660 443 Circle
-5682 459 Circle
-5704 470 Circle
-5726 484 Circle
-5748 501 Circle
-5771 506 Circle
-5793 536 Circle
-5815 513 Circle
-5837 518 Circle
-5859 568 Circle
-5881 568 Circle
-5903 572 Circle
-5925 573 Circle
-5947 629 Circle
-5970 587 Circle
-5992 605 Circle
-6014 651 Circle
-6036 622 Circle
-6058 655 Circle
-6080 693 Circle
-6102 686 Circle
-6124 695 Circle
-6147 700 Circle
-6169 713 Circle
-6191 683 Circle
-6213 739 Circle
-6235 772 Circle
-6257 699 Circle
-6279 777 Circle
-6301 726 Circle
-6323 782 Circle
-6346 791 Circle
-6368 816 Circle
-6390 816 Circle
-6412 853 Circle
-6434 871 Circle
-6456 884 Circle
-6478 907 Circle
-6500 949 Circle
-6522 980 Circle
-6545 970 Circle
-6567 993 Circle
-6589 1027 Circle
-6611 1051 Circle
-6633 1078 Circle
-6655 1103 Circle
-6677 1125 Circle
-6699 1155 Circle
-6722 1181 Circle
-6744 1204 Circle
-6766 1234 Circle
-6788 1264 Circle
-6810 1419 Circle
+1.00 0.00 0.00 C 5483 256 Circle
+5505 1020 Circle
+5527 1274 Circle
+5549 1316 Circle
+5571 1335 Circle
+5594 1336 Circle
+5616 1340 Circle
+5638 1345 Circle
+5660 1351 Circle
+5682 1353 Circle
+5704 1356 Circle
+5726 1358 Circle
+5749 1361 Circle
+5771 1363 Circle
+5793 1364 Circle
+5815 1365 Circle
+5837 1367 Circle
+5859 1370 Circle
+5881 1372 Circle
+5903 1373 Circle
+5925 1376 Circle
+5947 1378 Circle
+5970 1379 Circle
+5992 1381 Circle
+6014 1383 Circle
+6036 1384 Circle
+6058 1386 Circle
+6080 1389 Circle
+6102 1392 Circle
+6124 1394 Circle
+6146 1395 Circle
+6168 1396 Circle
+6191 1398 Circle
+6213 1399 Circle
+6235 1402 Circle
+6257 1403 Circle
+6279 1405 Circle
+6301 1406 Circle
+6323 1408 Circle
+6346 1411 Circle
+6368 1414 Circle
+6390 1418 Circle
+6412 1421 Circle
+6434 1425 Circle
+6456 1429 Circle
+6478 1433 Circle
+6501 1437 Circle
+6523 1441 Circle
+6545 1445 Circle
+6567 1449 Circle
+6589 1453 Circle
+6611 1457 Circle
+6633 1461 Circle
+6655 1465 Circle
+6677 1469 Circle
+6699 1473 Circle
+6721 1477 Circle
+6743 1482 Circle
+6765 1487 Circle
+6787 1492 Circle
+6810 256 Circle
 6186 1480 Circle
 % End plot #1
 % Begin plot #2
@@ -1490,15 +1498,15 @@ LTb
 0.750 UP
 1.000 UL
 LTb
-0.00 0.00 0.00 C 5490 326 Circle
-5516 329 Circle
-5545 326 Circle
-5660 329 Circle
-5838 499 Circle
-6076 626 Circle
-6265 735 Circle
-6488 891 Circle
-6636 987 Circle
+0.00 0.00 0.00 C 5490 1330 Circle
+5516 1331 Circle
+5545 1330 Circle
+5660 1331 Circle
+5838 1361 Circle
+6076 1383 Circle
+6265 1403 Circle
+6488 1431 Circle
+6636 1447 Circle
 6186 1400 Circle
 % End plot #2
 % Begin plot #3
@@ -1512,15 +1520,15 @@ LTb
 0.750 UP
 1.000 UL
 LTb
-0.00 0.00 1.00 C 5490 317 Circle
-5516 322 Circle
-5545 322 Circle
-5660 317 Circle
-5838 497 Circle
-6076 621 Circle
-6265 730 Circle
-6488 866 Circle
-6639 985 Circle
+0.00 0.00 1.00 C 5490 1328 Circle
+5516 1329 Circle
+5545 1329 Circle
+5660 1328 Circle
+5838 1360 Circle
+6076 1383 Circle
+6265 1402 Circle
+6488 1426 Circle
+6639 1447 Circle
 6186 1320 Circle
 % End plot #3
 % Begin plot #4
@@ -1534,17 +1542,17 @@ LTb
 0.750 UP
 1.000 UL
 LTb
-0.00 0.00 1.00 C 5685 329 Circle
-5927 499 Circle
-6133 626 Circle
-6410 889 Circle
+0.00 0.00 1.00 C 5685 1331 Circle
+5927 1361 Circle
+6133 1383 Circle
+6410 1430 Circle
 6186 1240 Circle
 % End plot #4
 2.000 UL
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 5483 1583 N
 0 -1327 V

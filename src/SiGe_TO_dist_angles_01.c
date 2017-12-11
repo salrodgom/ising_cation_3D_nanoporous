@@ -2692,6 +2692,17 @@ double  atomsangle(double x11, double y11, double z11, double x22, double y22, d
 /*    printf(" 4            angle %f\n", angle1); */
     
     angle1 = angle1/(s12*s13);
+    if ( (angle1 < -1.0) && (angle1 > -1.02) )
+     { 
+       angle1 = -1.0 ; 
+     }
+    if ( (angle1 > 1.0 )  && (angle1 < 1.02) )
+     {
+       angle1 = 1.0 ;
+     }  
+    //   { angle1 = -1.0;
+    //   }
+    // }
 /*    printf(" cosin of the angle %f\n", angle1); */
     
     angle1 = acos(angle1)*180.0/M_PI;

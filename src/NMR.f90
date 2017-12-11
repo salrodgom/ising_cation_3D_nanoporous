@@ -125,7 +125,7 @@ program NMR
  real                            :: suma,x(1:16)
  real                            :: cell_0(6),vr(3,3),rv(3,3)
  integer                         :: cont,resonator
- real                            :: r4_average(0:60,1:6)
+ real                            :: r4_average(0:60,1:8)=0.0
  character(len=1024)             :: filename = " "
  character(len=1024)             :: line = " "
  logical                         :: lex
@@ -181,14 +181,14 @@ program NMR
  ensemble(60)%extended_virtual_n_Ge=60.0
  ensemble(60)%extended_n_configurations = 1
  ensemble(60)%extended_ensemble(1:n_cells,1:1)%n_Ge = 60.0
- ensemble(60)%distance_TO(1,1)=1.722453
- ensemble(60)%distance_TO(2,1)=1.724428
- ensemble(60)%distance_TT(1,1)=3.214147
- ensemble(60)%distance_TT(2,1)=3.214147
- ensemble(60)%angle_OTO(1,1)=109.157674
- ensemble(60)%angle_OTO(2,1)=109.157674
- ensemble(60)%angle_TOT(1,1)=138.354665
- ensemble(60)%angle_TOT(2,1)=138.354665
+ ensemble(60)%distance_TO(1,0:)=1.722453
+ ensemble(60)%distance_TO(2,0:)=1.724428
+ ensemble(60)%distance_TT(1,0:)=3.214147
+ ensemble(60)%distance_TT(2,0:)=3.214147
+ ensemble(60)%angle_OTO(1,0:)=109.157674
+ ensemble(60)%angle_OTO(2,0:)=109.157674
+ ensemble(60)%angle_TOT(1,0:)=138.354665
+ ensemble(60)%angle_TOT(2,0:)=138.354665
  ensemble(60)%T_population(1,1:5)=1.0
  !
  count_(0,0) = 6.0
@@ -233,15 +233,21 @@ program NMR
   end if
   if( inquite_Geometry_information ) then
    open(345, file='inputs/configuration_topology.'//trim(str(n_Ge))//'.txt',status='old',iostat=ierr)
-   read(345,'(a)') line
-   if(ierr/=0) stop
+   if(ierr/=0) stop "File not found."
   end if
   if ( inquite_Geometry_information_debug ) then
-   !1     1.62042773       109.264214       3.05509186       142.151260 
-   read(825,*) j,ensemble(n_Ge)%distance_TO(1,1),ensemble(n_Ge)%angle_OTO(1,1),&
-               ensemble(n_Ge)%distance_TT(1,1),ensemble(n_Ge)%angle_TOT(1,1)
-   read(826,*) j,ensemble(n_Ge)%distance_TO(2,1),ensemble(n_Ge)%angle_OTO(2,1),&
-               ensemble(n_Ge)%distance_TT(2,1),ensemble(n_Ge)%angle_TOT(2,1)
+   read(825,*) j,ensemble(n_Ge)%distance_TO(1,0),ensemble(n_Ge)%angle_OTO(1,0),&
+                 ensemble(n_Ge)%distance_TT(1,0),ensemble(n_Ge)%angle_TOT(1,0)
+   read(826,*) j,ensemble(n_Ge)%distance_TO(2,0),ensemble(n_Ge)%angle_OTO(2,0),&
+                 ensemble(n_Ge)%distance_TT(2,0),ensemble(n_Ge)%angle_TOT(2,0)
+   do k=1,2
+    do i=1,ensemble(n_Ge)%n_configurations
+     ensemble(n_Ge)%distance_TO(k,i)=ensemble(n_Ge)%distance_TO(k,0)
+     ensemble(n_Ge)%distance_TT(k,i)=ensemble(n_Ge)%distance_TT(k,0)
+       ensemble(n_Ge)%angle_OTO(k,i)=  ensemble(n_Ge)%angle_OTO(k,0)
+       ensemble(n_Ge)%angle_TOT(k,i)=  ensemble(n_Ge)%angle_TOT(k,0)
+    end do
+   end do
   end if
   inquire(u,EXIST=lex,name=filename)
   inquire_analysis: do
@@ -284,10 +290,18 @@ program NMR
          ensemble(n_Ge)%volume(i) )
    end if
    if( inquite_Geometry_information ) then
-     read(345,*) ( ensemble(n_Ge)%distance_TO(j,i),j=1,2)
-     read(345,*) ( ensemble(n_Ge)%distance_TT(j,i),j=1,2)
-     read(345,*) (   ensemble(n_Ge)%angle_OTO(j,i),j=1,2)
-     read(345,*) (   ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
+     read(345,'(a)') line
+     if(scan(line,"nan")==0)then
+      read(line,*) ( ensemble(n_Ge)%distance_TO(j,i),j=1,2), ( ensemble(n_Ge)%distance_TT(j,i),j=1,2), &
+                   (   ensemble(n_Ge)%angle_OTO(j,i),j=1,2), (   ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
+     else
+      write(6,'(a,a)')'Found NaN: ',line
+      ensemble(n_Ge)%peso(i)=0.0 
+      ensemble(n_Ge)%distance_TO(1:2,i)=0.0
+      ensemble(n_Ge)%distance_TT(1:2,i)=0.0
+      ensemble(n_Ge)%angle_OTO(1:2,i)=0.0
+      ensemble(n_Ge)%angle_TOT(1:2,i)=0.0
+     end if
    end if
   end do
   if(inquite_Geometry_information) close(345)
@@ -297,12 +311,14 @@ program NMR
     !FORBIDEN RESONATORS
     if (j/=2.and.j/=6.and.j/=10.and.j/=16.and.j/=20) then
      if(forcefield)then
-      if(j<=n_resonator_max-1)then
-      count_(n_Ge,j) = count_(n_Ge,j) + &
-       ensemble(n_Ge)%resonator(i,j)*ensemble(n_Ge)%peso(i)/ensemble(n_Ge)%partition_function
-      else
-       count_(n_Ge,j) = count_(n_Ge,j) + &
-       ensemble(n_Ge)%T_population(i,j-n_resonator_max+1)*ensemble(n_Ge)%peso(i)/ensemble(n_Ge)%partition_function
+      if(ensemble(n_Ge)%partition_function/=0)then
+       if(j<=n_resonator_max-1)then
+        count_(n_Ge,j) = count_(n_Ge,j) + &
+        ensemble(n_Ge)%resonator(i,j)*ensemble(n_Ge)%peso(i)/ensemble(n_Ge)%partition_function
+       else
+        count_(n_Ge,j) = count_(n_Ge,j) + &
+        ensemble(n_Ge)%T_population(i,j-n_resonator_max+1)*ensemble(n_Ge)%peso(i)/ensemble(n_Ge)%partition_function
+       end if
       end if
      else
       if(j<=n_resonator_max-1)then
@@ -322,16 +338,16 @@ program NMR
     write(6,'(a,1x,f14.7)')    'Volume:',ensemble(n_Ge)%volume(i)
    end if
    if ( inquite_Geometry_information ) then
-    write(6,*) ( ensemble(n_Ge)%distance_TO(j,i),j=1,2)
-    write(6,*) ( ensemble(n_Ge)%distance_TT(j,i),j=1,2)
-    write(6,*) (   ensemble(n_Ge)%angle_OTO(j,i),j=1,2)
-    write(6,*) (   ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
+    write(6,*) (ensemble(n_Ge)%distance_TO(j,i),j=1,2)
+    write(6,*) (ensemble(n_Ge)%distance_TT(j,i),j=1,2)
+    write(6,*) (  ensemble(n_Ge)%angle_OTO(j,i),j=1,2)
+    write(6,*) (  ensemble(n_Ge)%angle_TOT(j,i),j=1,2)
    end if
    if ( inquite_Geometry_information_debug ) then
-    write(6,*) j,ensemble(n_Ge)%distance_TO(1,1),ensemble(n_Ge)%angle_OTO(1,1),&
-               ensemble(n_Ge)%distance_TT(1,1),ensemble(n_Ge)%angle_TOT(1,1)
-    write(6,*) j,ensemble(n_Ge)%distance_TO(2,1),ensemble(n_Ge)%angle_OTO(2,1),&
-               ensemble(n_Ge)%distance_TT(2,1),ensemble(n_Ge)%angle_TOT(2,1) 
+    write(6,*) ensemble(n_Ge)%distance_TO(1,i),ensemble(n_Ge)%angle_OTO(1,i),&
+               ensemble(n_Ge)%distance_TT(1,i),ensemble(n_Ge)%angle_TOT(1,i)
+    write(6,*) ensemble(n_Ge)%distance_TO(2,i),ensemble(n_Ge)%angle_OTO(2,i),&
+               ensemble(n_Ge)%distance_TT(2,i),ensemble(n_Ge)%angle_TOT(2,i) 
    end if
    write(6,'(a,1x,f14.7)')    'Peso:',ensemble(n_Ge)%peso(i)
    write(6,'(a,1x,f14.7)')    'Partition Function:',ensemble(n_Ge)%partition_function
@@ -343,12 +359,6 @@ program NMR
   close(u)
  end do read_properties
  if( inquite_Geometry_information_debug) then
-  do i=2,ensemble(n_Ge)%n_configurations
-   ensemble(n_Ge)%distance_TO(1:2,i)=ensemble(n_Ge)%distance_TO(1:2,1)
-   ensemble(n_Ge)%distance_TT(1:2,i)=ensemble(n_Ge)%distance_TT(1:2,1)
-   ensemble(n_Ge)%angle_OTO(1:2,i)=ensemble(n_Ge)%angle_OTO(1:2,1)
-   ensemble(n_Ge)%angle_TOT(1:2,i)=ensemble(n_Ge)%angle_TOT(1:2,1)
-  end do
   close(825)
   close(826)
  end if
@@ -409,11 +419,6 @@ program NMR
   NMR_(n_Ge,0:n_resonator_max-1)=NMR_(n_Ge,0:n_resonator_max-1)/suma
   suma=sum(NMR_unify(n_Ge,1:4))
   NMR_unify(n_Ge,1:4)=NMR_unify(n_Ge,1:4)/suma
-  !
-  !suma=sum( NMR_(n_Ge,n_resonator_max:n_resonator_max-1+5))
-  !if(suma/=0.0) NMR_(n_Ge,n_resonator_max:n_resonator_max-1+5)=NMR_(n_Ge,n_resonator_max:n_resonator_max-1+5)/suma
-  !suma=sum( ensemble(n_Ge)%T_population(1,1:5) )
-  !if(suma/=0.0) ensemble(n_Ge)%T_population(1,1:5)=ensemble(n_Ge)%T_population(1,1:5)/suma
  end do
  open(u,file="populations.txt")
  do n_Ge=0,60
@@ -434,7 +439,7 @@ program NMR
  end do
  close(u)
  !! cell averages
- do n_Ge=0,60
+ do n_Ge=1,59
   do j=1,6
    call average(ensemble(n_Ge)%n_configurations,&
                 ensemble(n_Ge)%cell_parameter(j,0:ensemble(n_Ge)%n_configurations),&
@@ -456,10 +461,92 @@ program NMR
                  ensemble(n_Ge)%peso )
   end do
  end do
+! 0
+!_cell_length_a                       11.9021
+!_cell_length_b                       11.9021
+!_cell_length_c                       29.6920
+! 60
+!_cell_length_a                       12.663980
+!_cell_length_b                       12.662056
+!_cell_length_c                       30.972105
+!ensemble(0)%cell_parameter(1,0:1)=11.9021
+!ensemble(0)%cell_parameter(2,0:1)=11.9021
+!ensemble(0)%cell_parameter(3,0:1)=29.6920
+!ensemble(0)%cell_parameter(4,0:1)=90.0
+!ensemble(0)%cell_parameter(5,0:1)=90.0
+!ensemble(0)%cell_parameter(6,0:1)=120.0
+!
+!
+!ensemble(60)%cell_parameter(1,0:1)=12.663
+!ensemble(60)%cell_parameter(2,0:1)=12.663
+!ensemble(60)%cell_parameter(3,0:1)=30.9721
+!ensemble(60)%cell_parameter(4,0:1)=90.0
+!ensemble(60)%cell_parameter(5,0:1)=90.0
+!ensemble(60)%cell_parameter(6,0:1)=120.0
+!
+ if( inquire_CIFFiles_flag ) then
+  ! 0
+  call inquire_CIFFile( ensemble(0)%CIFFile(1), cell_0, rv, vr)
+  ensemble(0)%cell_parameter(1:6,0) = cell_0(1:6)
+  ensemble(0)%rv_matrix(1:3,1:3,1) = rv(1:3,1:3)
+  ensemble(0)%vr_matrix(1:3,1:3,1) = vr(1:3,1:3)
+  call cell(ensemble(0)%rv_matrix(1:3,1:3,1),ensemble(0)%vr_matrix(1:3,1:3,1),ensemble(0)%cell_parameter(1:6,0) )
+  ensemble(0)%volume(0) = volume( ensemble(0)%rv_matrix(1:3,1:3,1)  )
+  ! 60
+  call inquire_CIFFile( ensemble(60)%CIFFile(1), cell_0, rv, vr)
+  ensemble(60)%cell_parameter(1:6,0) = cell_0(1:6)
+  ensemble(60)%rv_matrix(1:3,1:3,1) = rv(1:3,1:3)
+  ensemble(60)%vr_matrix(1:3,1:3,1) = vr(1:3,1:3)
+  call cell(ensemble(60)%rv_matrix(1:3,1:3,1),ensemble(60)%vr_matrix(1:3,1:3,1),ensemble(60)%cell_parameter(1:6,0) )
+  ensemble(60)%volume(0) = volume( ensemble(60)%rv_matrix(1:3,1:3,1)  )
+ end if
+
  ! QRVS averages:
  if( Quasi_Random_Virtual_Structures_flag.and.n_cells>=2 )then
+  !ensemble(n_Ge)%distance_TO(,0)=ensemble(n_Ge)%distance_TO(j,0)
+  ! properties: TO
+  r4_average(0:60,1:8)=0.0
+  do n_Ge = 0,60
+   do j=1,8
+    resonator=0
+    suma=0.0
+    do i=1,ensemble(n_Ge)%extended_n_configurations
+     do k=1,n_cells
+      resonator=resonator+1
+      cont = int(ensemble(n_Ge)%extended_ensemble(k,i)%n_Ge )
+      if(cont==0)cont=1
+      if(cont==60)cont=59
+      kopwq: select case(j)
+       case(1,2)
+       suma=suma+ensemble(cont)%distance_TO(j  ,0)
+       case(3,4)
+       suma=suma+ensemble(cont)%distance_TT(j-2,0)
+       case(5,6)
+       suma=suma+  ensemble(cont)%angle_OTO(j-4,0)
+       case(7,8)
+       suma=suma+  ensemble(cont)%angle_TOT(j-6,0)
+      end select kopwq
+     end do
+    end do 
+    r4_average(n_Ge,j)=suma/real(resonator)
+   end do 
+  end do
+  do n_Ge=0,60
+   do j=1,8 
+    kosa: select case(j)
+     case(1,2)
+     ensemble(n_Ge)%distance_TO(j,0)=r4_average(n_Ge,j)
+     case(3,4)
+     ensemble(n_Ge)%distance_TT(j-2,0)=r4_average(n_Ge,j)
+     case(5,6)
+     ensemble(n_Ge)%angle_OTO(j-4,0)=r4_average(n_Ge,j)
+     case(7,8)
+     ensemble(n_Ge)%angle_TOT(j-6,0)=r4_average(n_Ge,j)
+    end select kosa
+   end do
+  end do
   ! cell parameters 
-  r4_average(0:60,1:6)=0.0
+  r4_average(0:60,1:8)=0.0
   do n_Ge=0,60
    cps: do j=1,6
     resonator=0
@@ -497,8 +584,8 @@ program NMR
  open(789,file="properties.txt")
  do n_Ge=0,60
   write(u,*)ensemble(n_Ge)%extended_virtual_n_Ge,( ensemble(n_Ge)%cell_parameter(j,0),j=1,6 ), ensemble(n_Ge)%volume(0)
-  write(789,*)n_Ge,(ensemble(n_Ge)%distance_TO(j,0),j=1,2),(ensemble(n_Ge)%distance_TT(j,0),j=1,2),&
-                   (ensemble(n_Ge)%angle_OTO(j,0),j=1,2),(ensemble(n_Ge)%angle_TOT(j,0),j=1,2) 
+  write(789,*)ensemble(n_Ge)%extended_virtual_n_Ge,(ensemble(n_Ge)%distance_TO(j,0),j=1,2),&
+   (ensemble(n_Ge)%distance_TT(j,0),j=1,2),(ensemble(n_Ge)%angle_OTO(j,0),j=1,2),(ensemble(n_Ge)%angle_TOT(j,0),j=1,2) 
  end do
  close(u)
  close(789)
