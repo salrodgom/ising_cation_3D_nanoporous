@@ -1,14 +1,16 @@
 #!/usr/bin/gnuplot -persist
 #set term postscript color eps enhanced blacktext 'Helvetica,24'
 #set out 'internal_energy.eps'
-set ylabel "Free energy difference (with respect quartz) / eV" 
-set xlabel "Ge molar fraction / a.u."
-set y2label 'Rendimiento / %'
+set y2label "Free energy with respect quartz / eV" 
+set xlabel "Ge/(Ge+Si) in Zeolite / -"
+set ylabel 'Yield / wt%'
 set size ratio 1
-set key bottom right
+set key top right
 set xrange [0:1]
-set y2range [0:50]
-set y2tics
+set yrange [0:50]
+set y2range [:-12]
+set ytics  nomirror
+set y2tics nomirror
 e_quartz_si=-10432.72150366
 e_quartz_ge=-9866.77608526
 temperature1=450
@@ -22,17 +24,27 @@ g=1e-10
 h=0.3
 i=1
 j=0.3
-set yrange [-20:-40]
+a2               = -0.0662039  #     +/- 1.339e+10    (2.023e+13%)
+b2               = 1.71079     #     +/- 1.867e+11    (1.091e+13%)
+c2               = -0.0557977  #     +/- 8.26e+09     (1.48e+13%)
+d2               = -0.97964    #     +/- 2.107e+11    (2.151e+13%)
+e2               = -0.125766   #     +/- 3.474e+10    (2.762e+13%)
+f2               = 1.25972     #     +/- 0.7347       (58.32%)
+g2               = 0.258831    #     +/- 5.576e+10    (2.154e+13%)
+fff(x)=a2+b2*(x-c2)+d2*(x-e2)**2+f2*(x-g2)**3
+#set y2range [-28:-12]
 f(x)=a*(x-b)**2+c*(x-d)**3+e*(x-f)**4+g*(x-h)**5+i*(j-x)**6
-g(x)=a1*(x-b1)**2+c1*(x-d1)**3+e1*(x-f1)**4+g1*(x-h1)**5+i1*(j1-x)**6
-s(value, left, right) = (value < left || value > right ? 1/0 : value)
-fit [0:0.4]  f(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via a,c
-fit [0:0.4]  f(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via a,b,c,d
-fit [0:0.4]  f(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via e,f,g,h
-fit [0:0.4]  f(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via b,d,f,h
-fit [0:0.4]  f(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via a,b,c,d,e,f,g,h,i,j
-# (f($1, 3, 7))
-plot   'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) w p pt 6 ps 2 lc rgb 'red' title '450 K'
+#fit [0:0.4] f(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1) via a,b,c,d,e,f,g,h,i,j
+a               = -1.11942     #    +/- 6.937e+10    (6.197e+12%)
+b               = 6.65918      #    +/- 2.576e+11    (3.869e+12%)
+c               = 0.38118      #    +/- 1.961e+10    (5.146e+12%)
+d               = -3.03521     #    +/- 1.251e+11    (4.122e+12%)
+e               = 0.384902     #    +/- 1.435e+10    (3.728e+12%)
+f               = 0.598131     #    +/- 1.534e+10    (2.565e+12%)
+g               = 0.0568431    #    +/- 2.813e+09    (4.949e+12%)
+h               = 0.308569     #    +/- 2.648e+10    (8.583e+12%)
+i               = 6.05265      #    +/- 1.343e+05    (2.219e+06%)
+j               = 1.23367      #    +/- 7.746e+07    (6.279e+09%)
 a1=a
 b1=b
 c1=c
@@ -43,14 +55,36 @@ g1=g
 h1=h
 i1=i
 j1=j
-replot 'exp_Camblor_Reus/rendimiento.txt' w lp pt 6 ps 2 lc rgb 'black' title 'EXP',s(f(x),0.0,0.3) w l lc rgb 'blue' notitle
-fit [0.3:]  g(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via a1,c1
-fit [0.3:]  g(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via a1,b1,c1,d1
-fit [0.3:]  g(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via e1,f1,g1,h1
-fit [0.3:]  g(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via b1,d1,f1,h1
-fit [0.3:]  g(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1-$6) via a1,b1,c1,d1,e1,f1,g1,h1,i1,j1
-replot s(g(x),0.3,1) w l lc rgb 'blue' notitle
-set term postscript color eps enhanced blacktext 'Helvetica,24'
+g(x)=a1*(x-b1)**2+c1*(x-d1)**3+e1*(x-f1)**4+g1*(x-h1)**5+i1*(j1-x)**6
+#fit [0.2:1]  g(x) 'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1) via a1,b1,c1,d1,e1,f1,g1,h1,i1,j1
+a1              = -0.757015    #    +/- 6.658e+09    (8.795e+11%)
+b1              = 6.56801      #    +/- 3.323e+10    (5.06e+11%)
+c1              = 0.0402857    #    +/- 8.964e+08    (2.225e+12%)
+d1              = -2.8526      #    +/- 6.02e+10     (2.11e+12%)
+e1              = 0.995262     #    +/- 1.227e+10    (1.233e+12%)
+f1              = 0.369757     #    +/- 6.134e+09    (1.659e+12%)
+g1              = 2.35359      #    +/- 2.611e+09    (1.11e+11%)
+h1              = -0.134501    #    +/- 8.005e+08    (5.952e+11%)
+i1              = 6.15701      #    +/- 759          (1.233e+04%)
+j1              = 1.10198      #    +/- 7.069e+07    (6.415e+09%)
+set table "fit1"
+plot f(x) 
+unset table
+set table "fit2"
+plot g(x)
+unset table
+s(value, left, right) = (value < left || value > right ? 1/0 : value)
+plot 'yield_set2.txt' u 1:2 axes x1y1 w p pt 1 ps 1.5 lc rgb 'black' title 'Time 1',\
+     'yield_set1.txt' u 1:2 axes x1y1 w p pt 2 ps 1.5 lc rgb 'black' title 'Time 2',\
+     'yield_set3.txt' u 1:2 axes x1y1 w p pt 3 ps 1.5 lc rgb 'black' title 'Time 3',\
+     'yield_set4.txt' u 1:2 axes x1y1 w p pt 4 ps 1.5 lc rgb 'black' title 'Time 4',\
+     'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*temperature1) axes x1y2 w p pt 6 ps 1.5 lc rgb 'red' title 'Simul. 450 K',\
+     'c' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*3) axes x1y2 w p pt 6 ps 1.5 lc rgb 'blue' title 'Simul. 3 K',\
+     'c.fit' u ($1/60):($2-(60-$1)*(e_quartz_si/81.0)-$1*(e_quartz_ge/81.0)-$3*3):(6000) axes x1y2 s acs w l lc rgb 'blue' notitle,\
+     'yield.txt' u (fff($1)):2 s b axes x1y1 w l lt 3 lc rgb 'black' notitle,\
+     'fit1' u (s($1,0.0,0.37)):2   axes x1y2 w l lt 3 lc rgb 'red' notitle,\
+     'fit2' u (s($1,0.37,1.0)):2   axes x1y2 w l lt 3 lc rgb 'red' notitle
+set term postscript eps color dashed enhanced blacktext 'Helvetica,20'
 set out 'internal_energy_new.eps'
 replot
 exit 

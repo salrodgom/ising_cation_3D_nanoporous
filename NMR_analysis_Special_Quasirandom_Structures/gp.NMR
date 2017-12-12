@@ -1,8 +1,8 @@
 #!/usr/bin/gnuplot -persist
 set term postscript eps color enhanced blacktext 'Helvetica,20'
 set out 'NMR_all_modes.eps'
-set xlabel 'Ge Molar Fraction Overall, x'
-set ylabel '(Ge_x,Si_{1-x})/D4R Relative Population'
+set xlabel 'Ge/(Ge+Si) in Zeolite / -'
+set ylabel 'Relative Population / -'
 set key outside
 set size ratio 1
 #
