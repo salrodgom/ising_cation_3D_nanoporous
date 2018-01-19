@@ -83,7 +83,7 @@ program NMR
  integer,parameter               :: n_configurations_max = 1000
  integer                         :: virtual_n_configurations = 0
  integer,parameter               :: virtual_n_configurations_max = 1000
- integer,parameter               :: n_cells = 4*4*4
+ integer,parameter               :: n_cells = 2*2*2
  integer,parameter               :: initialisation_steps = 10000000
  real                            :: virtual_n_Ge(n_cells,virtual_n_configurations_max)
  logical                         :: Quasi_Random_Virtual_Structures_flag = .false.
@@ -422,8 +422,13 @@ program NMR
  end do
  open(u,file="populations.txt")
  do n_Ge=0,60
+  suma=sum(ensemble(n_Ge)%T_population(1,1:5)/real(n_cells*ensemble(n_Ge)%extended_n_configurations))
+  do j=1,5
+   ensemble(n_Ge)%T_population(1,j)=ensemble(n_Ge)%T_population(1,j)*ensemble(n_Ge)%extended_virtual_n_Ge/ &
+    real(suma*n_cells*ensemble(n_Ge)%extended_n_configurations)
+  end do
   write(u,'(f14.7,1x,5(f14.7,1x))') ensemble(n_Ge)%extended_virtual_n_Ge,&
-  ( ensemble(n_Ge)%T_population(1,j)/real(n_cells*ensemble(n_Ge)%extended_n_configurations) ,j=1,5 )
+  ( ensemble(n_Ge)%T_population(1,j) ,j=1,5 )
  end do
  close(u)
  open(u,file="NMR.txt")

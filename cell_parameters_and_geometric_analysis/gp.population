@@ -18,16 +18,10 @@ set clip one
 unset clip two
 set bar 1.000000 front
 set border 31 front linetype -1 linewidth 1.000
-set timefmt z "%d/%m/%y,%H:%M"
 set zdata 
-set timefmt y "%d/%m/%y,%H:%M"
 set ydata 
-set timefmt x "%d/%m/%y,%H:%M"
 set xdata 
-set timefmt cb "%d/%m/%y,%H:%M"
-set timefmt y2 "%d/%m/%y,%H:%M"
 set y2data 
-set timefmt x2 "%d/%m/%y,%H:%M"
 set x2data 
 set boxwidth
 set style fill  empty border
@@ -162,5 +156,8 @@ plot 'populations.txt' u ($1/60):($2/12) w lp t 'T1',\
      'populations.txt' u ($1/60):($3/12) w lp t 'T2',\
      'populations.txt' u ($1/60):($4/12) w lp t 'T3',\
      'populations.txt' u ($1/60):($5/12) w lp t 'T4',\
-     'populations.txt' u ($1/60):($6/12) w lp t 'T5'
+     'populations.txt' u ($1/60):($6/12) w lp t 'T5',\
+     'populations.txt' u ($1/60):(($1-$2-$3-$4-$5-$6)/12) w lp t 'SIN ASIGNAR',\
+     'populations.txt' u ($1/60):(($2+$3+$4+$5+$6)/60) w lp t 'total',\
+     x w l lt 1 notitle
 #    EOF
